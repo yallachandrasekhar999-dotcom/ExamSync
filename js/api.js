@@ -1,7 +1,4 @@
-// API Configuration
-const API_BASE_URL = (typeof window !== 'undefined' && window.location && window.location.origin && window.location.origin.includes(':8000'))
-    ? window.location.origin
-    : 'http://localhost:8000';
+const API_BASE_URL = 'window.location.origin';
 // API Client Class
 class APIClient {
     constructor(baseURL) {
