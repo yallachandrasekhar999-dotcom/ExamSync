@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "semester_id": 1,
+        "name": "Engineering Mathematics I",
+        "code": "MAT101"
+    },
+    {
+        "id": 2,
+        "semester_id": 1,
+        "name": "Engineering Physics",
+        "code": "PHY101"
+    },
+    {
+        "id": 3,
+        "semester_id": 2,
+        "name": "Engineering Mathematics II",
+        "code": "MAT102"
+    },
+    {
+        "id": 4,
+        "semester_id": 2,
+        "name": "Basic Electronics",
+        "code": "ECE101"
+    },
+    {
+        "id": 5,
+        "semester_id": 3,
+        "name": "Data Structures",
+        "code": "CS201"
+    },
+    {
+        "id": 6,
+        "semester_id": 3,
+        "name": "Digital Logic",
+        "code": "CS202"
+    }
+]

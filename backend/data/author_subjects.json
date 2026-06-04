@@ -1,0 +1,58 @@
+[
+    {
+        "author_id": 41,
+        "subject_id": 1000
+    },
+    {
+        "author_id": 40,
+        "subject_id": 1004
+    },
+    {
+        "author_id": 20,
+        "subject_id": 101
+    },
+    {
+        "author_id": 18,
+        "subject_id": 10300
+    },
+    {
+        "author_id": 3,
+        "subject_id": 10301
+    },
+    {
+        "author_id": 16,
+        "subject_id": 10300
+    },
+    {
+        "author_id": 16,
+        "subject_id": 10301
+    },
+    {
+        "author_id": 28,
+        "subject_id": 10302
+    },
+    {
+        "author_id": 28,
+        "subject_id": 10400
+    },
+    {
+        "author_id": 25,
+        "subject_id": 10400
+    },
+    {
+        "author_id": 24,
+        "subject_id": 10400
+    },
+    {
+        "author_id": 18,
+        "subject_id": 10400
+    },
+    {
+        "author_id": 29,
+        "subject_id": 20400
+    },
+    {
+        "author_id": 30,
+        "subject_id": 20400
+    }
+]

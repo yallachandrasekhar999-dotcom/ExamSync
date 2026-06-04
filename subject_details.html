@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subject Details - Exam Sync</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background: transparent;
+            color: var(--text-dark);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+
+        .dashboard-nav {
+            background: var(--surface);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-soft);
+            padding: 14px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-brand {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--navy);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .subject-hero {
+            background: linear-gradient(135deg, rgba(124, 119, 255, 1) 0%, rgba(64, 217, 198, 1) 100%);
+            border-radius: 24px;
+            padding: 60px;
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .subject-hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin: 0 0 10px;
+        }
+
+        .code-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .section-card {
+            background: var(--surface-strong);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-soft);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .section-header h2 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--navy);
+            margin: 0;
+        }
+
+        .content-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #f8fafc;
+        }
+
+        .content-item:last-child {
+            border-bottom: none;
+        }
+
+        .content-item span {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .download-btn {
+            background: rgba(124, 119, 255, 0.10);
+            color: var(--navy);
+            padding: 8px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background: rgba(124, 119, 255, 0.18);
+            color: var(--navy);
+        }
+
+        .roadmap-container {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .roadmap-container::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0;
+        }
+
+        .roadmap-step {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .roadmap-step::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background: var(--purple);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 4px rgba(124, 119, 255, 0.14);
+        }
+
+        .roadmap-step h4 {
+            margin: 0 0 5px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .roadmap-step p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .marks-badge {
+            padding: 4px 10px;
+            border-radius: 8px;
+        }
+
+        .status-badge {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+        }
+
+        .status-active {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .status-pending {
+            background: #f1f5f9;
+            color: #64748b;
+        }
+
+        /* Professor Selection UI */
+        #professorOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .prof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .prof-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+            border: 2px solid #f1f5f9;
+            box-shadow: var(--shadow-md);
+        }
+
+        .prof-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--purple);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .prof-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--purple) 0%, var(--navy) 100%);
+            color: white;
+            font-size: 32px;
+            font-weight: 800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .prof-name {
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--navy);
+            margin-bottom: 5px;
+        }
+
+        .prof-role {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .btn-select {
+            background: var(--purple);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="professorOverlay" style="display: none;">
+        <div style="text-align: center; max-width: 600px;">
+            <div style="font-size: 50px; margin-bottom: 20px;">🎓</div>
+            <h1 style="font-weight: 800; color: var(--navy); margin-bottom: 15px;">Select Your Professor</h1>
+            <p style="color: var(--text-light);">This subject is taught by multiple faculties. Please select the professor whose content you wish to view.</p>
+        </div>
+        <div class="prof-grid" id="professorGrid">
+            <!-- Dynamic professor cards -->
+        </div>
+    </div>
+    <nav class="dashboard-nav">
+        <div class="nav-brand">
+            <span>Exam Sync</span>
+        </div>
+        <a href="#" id="backBtn" class="back-link">
+            <span>←</span> Back to Dashboard
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="subject-hero">
+            <span class="code-badge" id="subCode">CODE-01</span>
+            <h1 id="subName">Loading Subject...</h1>
+        </div>
+
+        <div class="section-card">
+            <div class="section-header">
+                <span style="font-size: 24px;">🛣️</span>
+                <h2>Course Roadmap</h2>
+            </div>
+            <div id="roadmapContent" class="roadmap-container">
+                <p style="color: var(--text-light);">Loading roadmap items...</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-header">
+                <span style="font-size: 24px;">🎯</span>
+                <h2>Course Outcomes</h2>
+            </div>
+            <div id="coContent">
+                <p style="color: var(--text-light);">Loading course outcomes...</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-header">
+                <span style="font-size: 24px;">📄</span>
+                <h2>Previous Year Questions</h2>
+            </div>
+            <div id="pyqContent">
+                <p style="color: var(--text-light);">Loading papers...</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-header">
+                <span style="font-size: 24px;">⭐</span>
+                <h2>Important Questions</h2>
+            </div>
+            <div id="impContent">
+                <p style="color: var(--text-light);">Loading questions...</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-header">
+                <span style="font-size: 24px;">📚</span>
+                <h2>Notes</h2>
+            </div>
+            <div id="notesContent">
+                <p style="color: var(--text-light);">Loading notes...</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-header">
+                <span style="font-size: 24px;">🤝</span>
+                <h2>Meet for Doubt clarification</h2>
+            </div>
+            <div id="doubtContent">
+                <p style="color: var(--text-light);">Loading sessions...</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-header">
+                <span style="font-size: 24px;">🎥</span>
+                <h2>Reference Videos</h2>
+            </div>
+            <div id="videoContent">
+                <p style="color: var(--text-light);">Loading videos...</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { contentAPI, curriculumAPI } from './js/api.js';
+        import { requireAuth } from './js/auth.js';
+
+        const user = await requireAuth(['student', 'author', 'admin']);
+        const urlParams = new URLSearchParams(window.location.search);
+        const subjectId = urlParams.get('id');
+
+        if (!subjectId) {
+            window.location.href = user.role === 'admin' ? '/admin2005' :
+                user.role === 'author' ? 'author_dashboard.html' :
+                    'student_dashboard.html';
+        }
+
+        document.getElementById('backBtn').onclick = (e) => {
+            e.preventDefault();
+            window.location.href = user.role === 'admin' ? '/admin2005' :
+                user.role === 'author' ? 'author_dashboard.html' :
+                    'student_dashboard.html';
+        };
+
+        async function loadContent() {
+            try {
+                // Get URL parameters
+                const urlParams = new URLSearchParams(window.location.search);
+                const subjectId = urlParams.get('id');
+                const subjectName = urlParams.get('name') || 'Subject';
+                const branch = urlParams.get('branch') || 'CSE';
+                const sem = urlParams.get('sem') || '1';
+
+                // Set initial header from URL params
+                document.getElementById('subName').textContent = subjectName;
+                document.getElementById('subCode').textContent = `${branch} • Sem ${sem}`;
+
+                // Load assigned authors
+                const authors = await contentAPI.getSubjectAuthors(subjectId || 0);
+                
+                if (authors.length > 1) {
+                    showProfessorSelection(authors, subjectId, subjectName, branch, sem);
+                } else if (authors.length === 1) {
+                    // Only one author, load their content automatically
+                    loadSubjectData(subjectId, authors[0].id, subjectName, branch, sem);
+                } else {
+                    // No authors assigned yet, load general content
+                    loadSubjectData(subjectId, null, subjectName, branch, sem);
+                }
+
+            } catch (error) {
+                console.error("Failed to load content:", error);
+            }
+        }
+
+        function showProfessorSelection(authors, subjectId, subjectName, branch, sem) {
+            const overlay = document.getElementById('professorOverlay');
+            const grid = document.getElementById('professorGrid');
+            overlay.style.display = 'flex';
+            
+            grid.innerHTML = authors.map(author => `
+                <div class="prof-card" onclick="selectProfessor(${author.id}, '${author.name.replace(/'/g, "\\'")}', ${subjectId}, '${subjectName.replace(/'/g, "\\'")}', '${branch}', ${sem})">
+                    <div class="prof-avatar">${author.name.charAt(0)}</div>
+                    <div class="prof-name">${author.name}</div>
+                    <div class="prof-role">Faculty of ${branch}</div>
+                    <div class="btn-select">Select Professor</div>
+                </div>
+            `).join('');
+        }
+
+        window.selectProfessor = function(authorId, authorName, subjectId, subjectName, branch, sem) {
+            document.getElementById('professorOverlay').style.display = 'none';
+            // Optionally update header or subtitle with professor name
+            document.getElementById('subName').innerHTML = `${subjectName} <br><span style="font-size:18px; font-weight:500; opacity:0.8;">Prof. ${authorName}</span>`;
+            loadSubjectData(subjectId, authorId, subjectName, branch, sem);
+        }
+
+        async function loadSubjectData(subjectId, authorId, subjectName, branch, sem) {
+            try {
+                // Load all content from the API filtered by authorId
+                const content = await contentAPI.getSubjectContent(subjectId || 0, authorId);
+                
+                // Update header info once API responds
+                if (content.subject) {
+                    const profLabel = authorId ? `<br><span style="font-size:18px; font-weight:500; opacity:0.8;">Prof. ${content.notes?.[0]?.author_name || ''}</span>` : '';
+                    // Note: If we had author name in getSubjectContent we could use it here. 
+                    // For now, selectivity was already handled.
+                }
+
+                const theme = getSubjectTheme(content.subject?.name || subjectName);
+                const hero = document.querySelector('.subject-hero');
+                hero.style.background = theme.gradient;
+
+                // Render all sections
+                renderRoadmap(content.roadmap_steps);
+                renderPYQs(content.pyqs);
+                renderImportantQuestions(content.important_questions);
+                renderCourseOutcomes(content.course_outcomes);
+                renderNotes(content.notes);
+                renderDoubtSessions(content.doubt_sessions);
+                renderReferenceVideos(content.reference_videos);
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        function getSubjectTheme(name) {
+            name = name.toLowerCase();
+            if (name.includes('programming') || name.includes('java') || name.includes('python')) {
+                return { primary: '#3b82f6', gradient: 'linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)' };
+            }
+            if (name.includes('math') || name.includes('algebra')) {
+                return { primary: '#8b5cf6', gradient: 'linear-gradient(135deg, #6c63ff 0%, #8b5cf6 100%)' };
+            }
+            if (name.includes('physics') || name.includes('chemistry')) {
+                return { primary: '#06b6d4', gradient: 'linear-gradient(135deg, #0891b2 0%, #06b6d4 100%)' };
+            }
+            if (name.includes('network') || name.includes('security')) {
+                return { primary: '#10b981', gradient: 'linear-gradient(135deg, #059669 0%, #10b981 100%)' };
+            }
+            return { primary: '#6366f1', gradient: 'linear-gradient(135deg, #4f46e5 0%, #6366f1 100%)' };
+        }
+
+        function renderRoadmap(steps) {
+            const roadmapDiv = document.getElementById('roadmapContent');
+            if (!steps || steps.length === 0) {
+                roadmapDiv.innerHTML = '<p style="color: var(--text-light);">No roadmap available yet.</p>';
+                return;
+            }
+
+            roadmapDiv.innerHTML = steps.map(step => {
+                const img = step.image_url || step.roadmap_image;
+                return `
+                <div class="roadmap-step">
+                    <h4>Step ${step.step_number}: ${step.title}</h4>
+                    <p>${step.description || ''}</p>
+                    ${img ? `<div style="margin-top:15px;"><img src="${img}" style="width:100%; border-radius:12px; box-shadow:var(--shadow-sm); border:1px solid #f1f5f9;"></div>` : ''}
+                </div>
+            `;}).join('');
+        }
+
+        function renderPYQs(pyqs) {
+            const pyqDiv = document.getElementById('pyqContent');
+            if (!pyqs || pyqs.length === 0) {
+                pyqDiv.innerHTML = '<p style="color: var(--text-light);">No previous year questions available yet.</p>';
+                return;
+            }
+
+            pyqDiv.innerHTML = pyqs.map(p => {
+                const paperUrl = p.link || p.image_url;
+                return `
+                <div class="content-item" style="flex-direction:column; align-items:flex-start; gap:10px; padding:15px 0;">
+                    <div style="display:flex; justify-content:space-between; width:100%; align-items:center;">
+                        <span style="font-size:16px;">${p.name || p.title || 'Exam Paper'} ${p.year ? '(' + p.year + ')' : ''}</span>
+                        ${paperUrl ? `<a href="${paperUrl}" class="download-btn" target="_blank">View Paper</a>` : ''}
+                    </div>
+                </div>
+            `;}).join('');
+        }
+
+        function renderImportantQuestions(questions) {
+            const impDiv = document.getElementById('impContent');
+            if (!questions || questions.length === 0) {
+                impDiv.innerHTML = '<p style="color: var(--text-light);">No important questions listed yet.</p>';
+                return;
+            }
+
+            impDiv.innerHTML = questions.map(q => `
+                <div class="content-item" style="flex-direction:column; align-items:flex-start; gap:10px; padding:15px 0;">
+                    <div style="display:flex; justify-content:space-between; width:100%; align-items:flex-start;">
+                        <div style="flex:1; margin-right:20px;">
+                            <span style="display:block; font-size:16px; margin-bottom:5px;">${q.question_text}</span>
+                            <div style="display:flex; gap:10px; font-size:12px; color:var(--text-light);">
+                                <span>Unit: ${q.unit || 'N/A'}</span>
+                                <span>Topic: ${q.topic || 'General'}</span>
+                            </div>
+                        </div>
+                        <span class="marks-badge">${q.marks} Marks</span>
+                    </div>
+                    ${q.image_url ? `<div style="width:100%;"><img src="${q.image_url}" style="width:100%; border-radius:12px; border:1px solid #f1f5f9;"></div>` : ''}
+                </div>
+            `).join('');
+        }
+
+        function renderCourseOutcomes(cos) {
+            const coSection = document.getElementById('coContent');
+            if (!cos || cos.length === 0) {
+                coSection.innerHTML = '<p style="color: var(--text-light);">No course outcomes listed yet.</p>';
+                return;
+            }
+
+            coSection.innerHTML = cos
+                .sort((a, b) => a.order - b.order)
+                .map(co => `
+                <div class="content-item">
+                    <span><strong>${co.co_no || 'CO'}:</strong> ${co.outcome_text}</span>
+                    <span style="font-size:12px; color:var(--text-light); white-space:nowrap; margin-left:15px;">Unit: ${co.unit || 'N/A'}</span>
+                </div>
+            `).join('');
+        }
+
+        function renderNotes(notes) {
+            const notesDiv = document.getElementById('notesContent');
+            if (!notes || notes.length === 0) {
+                notesDiv.innerHTML = '<p style="color: var(--text-light);">No notes available yet.</p>';
+                return;
+            }
+
+            notesDiv.innerHTML = notes.map(n => `
+                <div class="content-item">
+                    <span>${n.title}</span>
+                    <a href="${n.file_path || '#'}" class="download-btn" target="_blank">View Notes</a>
+                </div>
+            `).join('');
+        }
+
+        function renderDoubtSessions(sessions) {
+            const doubtDiv = document.getElementById('doubtContent');
+            if (!sessions || sessions.length === 0) {
+                doubtDiv.innerHTML = '<p style="color: var(--text-light);">No doubt clarification sessions scheduled yet.</p>';
+                return;
+            }
+
+            const now = new Date();
+            const today = now.toISOString().split('T')[0];
+            const currentTime = now.getHours() * 60 + now.getMinutes();
+
+            doubtDiv.innerHTML = sessions.map(s => {
+                const sessionDate = s.date;
+                const [hFrom, mFrom] = s.time_from.split(':').map(Number);
+                const [hTo, mTo] = s.time_to.split(':').map(Number);
+                const fromMinutes = hFrom * 60 + mFrom;
+                const toMinutes = hTo * 60 + mTo;
+
+                const isActive = (sessionDate === today && currentTime >= fromMinutes && currentTime <= toMinutes);
+                
+                return `
+                <div class="content-item">
+                    <div style="display: flex; flex-direction: column;">
+                        <div style="display:flex; align-items:center; gap:10px;">
+                            <span style="font-size: 16px;">${s.title}</span>
+                            <span class="status-badge ${isActive ? 'status-active' : 'status-pending'}">
+                                ${isActive ? '● Live Now' : 'Scheduled'}
+                            </span>
+                        </div>
+                        <span style="font-size: 13px; color: var(--text-light); font-weight: 400;">
+                            📅 ${s.date} | ⏰ ${s.time_from} - ${s.time_to}
+                        </span>
+                    </div>
+                    ${isActive 
+                        ? `<a href="${s.zoom_link}" class="download-btn" style="background: var(--purple); color: white;" target="_blank">Join Now</a>`
+                        : `<span class="download-btn" style="background: #f1f5f9; color: #94a3b8; cursor: not-allowed; opacity: 0.7;">Join Link Inactive</span>`
+                    }
+                </div>
+            `;}).join('');
+        }
+
+        function renderReferenceVideos(videos) {
+            const videoDiv = document.getElementById('videoContent');
+            if (!videos || videos.length === 0) {
+                videoDiv.innerHTML = '<p style="color: var(--text-light);">No reference videos available yet.</p>';
+                return;
+            }
+
+            videoDiv.innerHTML = videos.map(v => `
+                <div class="content-item">
+                    <div style="display: flex; align-items: center; gap: 12px; flex: 1;">
+                        <div style="width: 40px; height: 40px; background: rgba(239, 68, 68, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #ef4444;">
+                            <span style="font-size: 20px;">🎥</span>
+                        </div>
+                        <div style="display:flex; flex-direction:column;">
+                            <span style="font-weight:700;">${v.topic}</span>
+                            <span style="font-size:12px; color:var(--text-light);">${v.unit || 'General Topic'}</span>
+                        </div>
+                    </div>
+                    <a href="${v.video_link}" class="download-btn" style="background: rgba(239, 68, 68, 0.1); color: #ef4444;" target="_blank">Watch Video</a>
+                </div>
+            `).join('');
+        }
+
+        loadContent();
+
+
+
+    </script>
+</body>
+
+</html>

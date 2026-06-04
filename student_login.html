@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Login - Exam Sync</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 20px;
+            font-family: 'Poppins', sans-serif;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .login-container {
+            position: relative;
+            z-index: 10;
+            padding: 50px;
+            border-radius: 24px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            animation: slideUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            color: white;
+            background: rgba(10, 40, 40, 0.7);
+            border: 1px solid rgba(0, 201, 167, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 201, 167, 0.3);
+        }
+
+        .login-header h2 {
+            margin-bottom: 12px;
+            color: white;
+            font-weight: 800;
+            font-size: 36px;
+        }
+
+        .login-header p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            font-size: 16px;
+            transition: 0.3s;
+            color: var(--navy);
+            font-weight: 500;
+        }
+
+        .form-group input:focus {
+            border-color: #00c9a7;
+            outline: none;
+            box-shadow: 0 0 15px rgba(0, 201, 167, 0.3);
+        }
+
+        .btn-block {
+            width: 100%;
+            margin-top: 20px;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #00c9a7, #00897b);
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-block:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 201, 167, 0.4);
+        }
+
+        .footer-links {
+            margin-top: 25px;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-links a {
+            color: #00c9a7;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body class="auth-page">
+    <a href="index.html" class="back-arrow"
+        style="position: fixed; top: 20px; left: 20px; text-decoration: none; color: white; font-size: 14px; font-weight: 600; background: rgba(0,0,0,0.3); padding: 8px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(4px); transition: 0.3s; z-index: 1000;">&larr; Back to Home</a>
+    <div class="login-container">
+        <div class="login-header">
+            <h2>Welcome Back</h2>
+            <p>Enter your details to access your dashboard.</p>
+        </div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="name@example.com" required />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••" required />
+            </div>
+
+            <button type="submit" class="btn primary btn-block" id="loginBtn">Student Login</button>
+        </form>
+
+        <div class="footer-links">
+            <a href="forgot_password.html?role=student">Forgot Password?</a>
+            <br><br>
+            Don't have an account? <a href="signup.html?role=student">Create Account</a>
+        </div>
+    </div>
+
+    <script type="module">
+        import { login } from './js/auth.js';
+        import { showToast } from './js/notifications.js';
+
+        const loginForm = document.getElementById('loginForm');
+        const loginBtn = document.getElementById('loginBtn');
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            loginBtn.disabled = true;
+            loginBtn.textContent = "Verifying...";
+
+            try {
+                const result = await login(email, password);
+                if (result.success) {
+                    showToast("Login Successful! Redirecting...", "success");
+                    setTimeout(() => {
+                        window.location.href = 'academic_profile.html';
+                    }, 1000);
+                } else {
+                    showToast(result.message || "Invalid email or password.", "error");
+                    loginBtn.disabled = false;
+                    loginBtn.textContent = "Student Login";
+                }
+            } catch (error) {
+                showToast("Server Error. Please try again.", "error");
+                loginBtn.disabled = false;
+                loginBtn.textContent = "Student Login";
+            }
+        });
+    </script>
+</body>
+
+</html>

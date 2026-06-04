@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faculty Dashboard - Exam Sync</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --subject-primary: #00c9a7;
+            --subject-accent: rgba(0, 201, 167, 0.2);
+        }
+
+        body {
+            transition: background 0.5s ease;
+            background-color: transparent;
+            background-image: none;
+            color: var(--text-dark);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        .dashboard-nav {
+            background: var(--surface);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-soft);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-brand {
+            font-weight: 800;
+            font-size: 24px;
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-pill {
+            background: rgba(124, 119, 255, 0.10);
+            color: var(--navy);
+            padding: 8px 18px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--border-soft);
+        }
+
+        .logout-link {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .logout-link:hover {
+            color: var(--navy);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .welcome-row {
+            margin-bottom: 40px;
+        }
+
+        .welcome-row h1 {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--navy);
+            margin: 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--surface-strong);
+            backdrop-filter: blur(12px);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-soft);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(124, 119, 255, 0.22);
+        }
+
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        /* Subject Sidebar */
+        .subject-sidebar {
+            background: var(--surface-strong);
+            backdrop-filter: blur(16px);
+            border-radius: 28px;
+            padding: 25px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-soft);
+            height: fit-content;
+        }
+
+        .subject-item {
+            padding: 18px 20px;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 12px;
+            border: 1px solid var(--border-soft);
+            background: rgba(255, 255, 255, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subject-item:hover {
+            background: rgba(124, 119, 255, 0.08);
+            transform: translateX(5px);
+            border-color: rgba(124, 119, 255, 0.22);
+        }
+
+        .subject-item.active {
+            background: rgba(64, 217, 198, 0.16);
+            border-color: rgba(64, 217, 198, 0.35);
+            color: var(--navy);
+            box-shadow: var(--shadow-md);
+        }
+
+        .subject-item h4 {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .subject-item p {
+            margin: 5px 0 0;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* Content Editor Area */
+        .editor-container {
+            background: var(--surface-strong);
+            backdrop-filter: blur(16px);
+            border-radius: 28px;
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-soft);
+            min-height: 650px;
+        }
+
+        .editor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid rgba(16, 24, 40, 0.06);
+            padding-bottom: 20px;
+        }
+
+        .tab-menu {
+            display: flex;
+            gap: 10px;
+            background: rgba(16, 24, 40, 0.04);
+            padding: 5px;
+            border-radius: 12px;
+        }
+
+        .tab-btn {
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .tab-btn.active {
+            background: var(--surface-strong);
+            color: var(--navy);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(124, 119, 255, 0.22);
+        }
+
+        .btn {
+            padding: 14px 24px;
+            border-radius: 12px;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, #00c9a7, #00897b);
+            color: white;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 201, 167, 0.3);
+        }
+        .fab {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #00c9a7 0%, #00897b 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: 400;
+            box-shadow: 0 10px 30px rgba(0, 201, 167, 0.4);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2000;
+            border: 4px solid white;
+        }
+
+        .fab:hover {
+            transform: scale(1.1) rotate(90deg);
+            box-shadow: 0 15px 40px rgba(0, 201, 167, 0.6);
+        }
+
+        /* Modal Redesign */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(16, 24, 40, 0.4);
+            backdrop-filter: blur(8px);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            width: 550px;
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 32px;
+            padding: 35px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        #contentForm {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        #formFields {
+            overflow-y: auto;
+            max-height: calc(90vh - 200px);
+            padding-right: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Custom scrollbar for form fields */
+        #formFields::-webkit-scrollbar {
+            width: 6px;
+        }
+        #formFields::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        #formFields::-webkit-scrollbar-thumb {
+            background: #00c9a780;
+            border-radius: 10px;
+        }
+        #formFields::-webkit-scrollbar-thumb:hover {
+            background: #00c9a7;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--navy);
+            font-size: 14px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 16px 20px;
+            border-radius: 16px;
+            border: 1px solid #eef2f6;
+            background: #fcfdfe;
+            font-family: inherit;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #00c9a7;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(0, 201, 167, 0.1);
+        }
+
+        /* Custom File Upload */
+        .file-upload-custom {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: rgba(0, 201, 167, 0.04);
+            border: 2px dashed rgba(0, 201, 167, 0.2);
+            border-radius: 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .file-upload-custom:hover {
+            background: rgba(0, 201, 167, 0.08);
+            border-color: #00c9a7;
+        }
+
+        .file-upload-custom input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .file-upload-text {
+            color: #00897b;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* Content Item Styles */
+        .content-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            background: white;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            border: 1px solid var(--border-soft);
+            transition: all 0.3s ease;
+        }
+
+        .content-item:hover {
+            box-shadow: var(--shadow-sm);
+            transform: translateY(-2px);
+            border-color: rgba(124, 119, 255, 0.2);
+        }
+
+        .content-info h4 {
+            margin: 0 0 4px 0;
+            color: var(--navy);
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .content-info p {
+            margin: 0;
+            color: var(--text-light);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .content-item img {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .content-item img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .delete-btn {
+            background: rgba(255, 107, 107, 0.1);
+            color: var(--coral);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 16px;
+        }
+
+        .delete-btn:hover {
+            background: var(--coral);
+            color: white;
+            transform: rotate(8deg);
+        }
+
+        /* Logout Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(16, 24, 40, 0.4);
+            backdrop-filter: blur(8px);
+            z-index: 4000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInLogout 0.3s ease;
+        }
+
+        @keyframes fadeInLogout {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .logout-modal {
+            background: white;
+            width: 450px;
+            max-width: 90%;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            border: 1px solid var(--border-soft, #eee);
+            animation: slideUpLogout 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes slideUpLogout {
+            from { transform: translateY(40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .logout-modal h2 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--navy, #111827);
+            margin: 0 0 15px 0;
+            line-height: 1.3;
+        }
+
+        .logout-modal p {
+            font-size: 14px;
+            color: var(--text-light, #6b7280);
+            margin: 0 0 30px 0;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn-confirm-logout {
+            background: var(--coral, #ff6b6b);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+        }
+
+        .btn-confirm-logout:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn-cancel-logout {
+            background: #f1f5f9;
+            color: var(--text-light, #6b7280);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+        }
+
+        .btn-cancel-logout:hover {
+            background: #e2e8f0;
+            color: var(--navy, #111827);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="dashboard-nav">
+        <div class="nav-brand">
+            <span>Exam Sync</span>
+            <a href="forgot_password.html" class="reset-btn"
+                style="font-size: 12px; font-weight: 500; color: var(--text-light); text-decoration: none; margin-left: 20px; padding: 6px 12px; border: 1px solid var(--border-soft); border-radius: 20px; transition: 0.3s;">Reset
+                your password</a>
+        </div>
+        <div class="user-menu">
+            <div class="user-pill">
+                <span id="facultyName">Professor</span>
+                <span class="role-badge"
+                    style="background: var(--mint); color: white; font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 800; margin-left: 10px;">FACULTY</span>
+            </div>
+            <span id="logoutBtn" class="logout-link">Logout</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-row">
+            <h1 id="welcomeTitle">Welcome, Professor</h1>
+            <p style="color: var(--text-light); margin: 5px 0 0;">Manage your course contents and track student
+                performance.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(108, 99, 255, 0.1); color: var(--purple);">📚</div>
+                <div>
+                    <div style="font-size: 13px; color: var(--text-light); font-weight: 500;">Assigned Subjects</div>
+                    <div id="statSubjects" style="font-size: 24px; font-weight: 800;">0</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(0, 201, 167, 0.1); color: var(--mint);">📄</div>
+                <div>
+                    <div style="font-size: 13px; color: var(--text-light); font-weight: 500;">Total Resources</div>
+                    <div id="statContent" style="font-size: 24px; font-weight: 800;">0</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(245, 200, 66, 0.1); color: var(--yellow);">👨🎓</div>
+                <div>
+                    <div style="font-size: 13px; color: var(--text-light); font-weight: 500;">Student Reach</div>
+                    <div style="font-size: 24px; font-weight: 800;">450+</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(255, 107, 107, 0.1); color: var(--coral);">📈</div>
+                <div>
+                    <div style="font-size: 13px; color: var(--text-light); font-weight: 500;">Quality Score</div>
+                    <div style="font-size: 24px; font-weight: 800;">94%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-layout">
+            <div class="subject-sidebar">
+                <h3 style="font-size: 18px; font-weight: 800; margin: 0 0 20px;">Your Subjects</h3>
+                <div id="subjectList">
+                    <!-- Dynamic subject list -->
+                </div>
+            </div>
+
+            <div class="editor-container">
+                <div id="editorEmptyState" style="text-align: center; padding: 100px 40px;">
+                    <div style="font-size: 60px; margin-bottom: 20px;">👈</div>
+                    <h2 style="font-weight: 800;">Select a Subject</h2>
+                    <p style="color: var(--text-light);">Choose a subject from the left to manage its contents.</p>
+                </div>
+
+                <div id="editorContent" style="display: none;">
+                    <div class="editor-header">
+                        <div>
+                            <h2 id="currentSubjectName" style="margin: 0; font-weight: 800; color: var(--navy);">Subject
+                                Name</h2>
+                            <p id="currentSubjectCode"
+                                style="margin: 5px 0 0; color: var(--text-light); font-size: 14px;">CODE-01</p>
+                        </div>
+                        <div class="tab-menu" id="contentTabs">
+                            <div class="tab-btn active" data-type="pyqs">PYQs</div>
+                            <div class="tab-btn" data-type="roadmap">Roadmap</div>
+                            <div class="tab-btn" data-type="cos">Outcomes</div>
+                            <div class="tab-btn" data-type="questions">Important</div>
+                            <div class="tab-btn" data-type="notes">Notes</div>
+                            <div class="tab-btn" data-type="doubt_sessions">Meet for Doubt clarification</div>
+                            <div class="tab-btn" data-type="reference_videos">Videos</div>
+                        </div>
+                    </div>
+
+                    <div class="content-list" id="contentList">
+                        <!-- Dynamic content list -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fab" id="addContentBtn" style="display: none;">+</div>
+
+    <!-- Add Content Modal -->
+    <div class="modal" id="contentModal">
+        <div class="modal-content">
+            <h2 id="modalTitle" style="font-weight: 800; margin: 0 0 25px; flex-shrink: 0;">Add Resource</h2>
+            <form id="contentForm">
+                <div id="formFields">
+                    <!-- Dynamic fields based on active tab -->
+                </div>
+                <div style="display: flex; gap: 15px; margin-top: auto; padding-top: 10px; border-top: 1px solid #f1f5f9; flex-shrink: 0;">
+                    <button type="button" class="btn" onclick="window.closeModal()"
+                        style="background: #f1f5f9; color: var(--text-light); flex: 1;">Cancel</button>
+                    <button type="submit" class="btn btn-primary" style="flex: 2;">Save Resource</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Logout Modal -->
+    <div class="modal-overlay" id="logoutModal">
+        <div class="logout-modal">
+            <h2>Are you sure you want to log out?</h2>
+            <p>You will need to log in again to access your account.</p>
+            <div class="modal-buttons">
+                <button class="btn-confirm-logout" id="confirmLogoutBtn">Log out</button>
+                <button class="btn-cancel-logout" id="cancelLogoutBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { curriculumAPI, contentAPI, usersAPI } from './js/api.js';
+        import { requireAuth, logout } from './js/auth.js';
+        import { showToast } from './js/notifications.js';
+
+        let currentUser = null;
+        let subjects = [];
+        let activeSubjectId = null;
+        let activeTab = 'pyqs';
+
+        async function init() {
+            currentUser = await requireAuth(['author', 'admin']);
+            if (currentUser) {
+                document.getElementById('facultyName').textContent = currentUser.name;
+                document.getElementById('welcomeTitle').textContent = `Welcome, ${currentUser.name.split(' ')[0]}`;
+                await loadAssignedSubjects();
+            }
+        }
+
+        async function loadAssignedSubjects() {
+            try {
+                const assigned = await usersAPI.getAssignedSubjects();
+                subjects = assigned;
+                document.getElementById('statSubjects').textContent = subjects.length;
+                renderSubjectList();
+
+                if (subjects.length > 0 && !activeSubjectId) {
+                    await selectSubject(subjects[0]);
+                }
+            } catch (error) {
+                console.error('Error loading subjects:', error);
+            }
+        }
+
+        function renderSubjectList() {
+            const list = document.getElementById('subjectList');
+            if (!list) return;
+
+            if (!subjects || subjects.length === 0) {
+                list.innerHTML = `
+                    <div style="text-align:center; padding:40px 20px; color:var(--text-light); border:1px dashed var(--border-soft); border-radius:16px; background:rgba(255,255,255,0.55);">
+                        <p style="font-size:13px; margin:0;">No subjects assigned yet.</p>
+                        <p style="font-size:11px; margin-top:5px; opacity:0.7;">Contact administrator for access.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            list.innerHTML = '';
+            subjects.forEach(sub => {
+                const theme = sub.theme_config || { primary: '#00c9a7' };
+                const item = document.createElement('div');
+                item.className = `subject-item ${activeSubjectId === sub.id ? 'active' : ''}`;
+                if (activeSubjectId === sub.id) {
+                    item.style.borderLeft = `4px solid ${theme.primary}`;
+                }
+                item.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <h4 style="margin:0;">${sub.name}</h4>
+                        <span style="font-size:10px; padding:2px 6px; background:rgba(16,24,40,0.04); border-radius:6px; opacity:0.8; color:var(--text-light);">${sub.code || 'CORE'}</span>
+                    </div>
+                `;
+                item.onclick = () => selectSubject(sub);
+                list.appendChild(item);
+            });
+        }
+
+        async function selectSubject(sub) {
+            activeSubjectId = sub.id;
+
+            const theme = sub.theme_config || {
+                primary: '#00c9a7',
+                gradient: 'linear-gradient(135deg, #00c9a7 0%, #00d2ff 100%)'
+            };
+            document.documentElement.style.setProperty('--subject-primary', theme.primary);
+            document.documentElement.style.setProperty('--subject-accent', theme.primary + '20');
+
+            document.body.style.backgroundImage = `
+                radial-gradient(at 0% 0%, ${theme.primary}15 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(108, 99, 255, 0.05) 0px, transparent 50%)
+            `;
+
+            renderSubjectList();
+            document.getElementById('editorEmptyState').style.display = 'none';
+            document.getElementById('editorContent').style.display = 'block';
+            document.getElementById('addContentBtn').style.display = 'flex';
+
+            document.getElementById('currentSubjectName').textContent = sub.name;
+            document.getElementById('currentSubjectCode').textContent = sub.code || 'CORE-SUB';
+
+            await loadContentForTab();
+        }
+
+        async function loadContentForTab() {
+            if (!activeSubjectId) return;
+            const list = document.getElementById('contentList');
+            list.innerHTML = '<div style="text-align:center; padding:40px; color:var(--text-light);">Loading content...</div>';
+
+            try {
+                const content = await contentAPI.getSubjectContent(activeSubjectId, currentUser.id);
+                let items = [];
+
+                if (activeTab === 'pyqs') items = content.pyqs || [];
+                if (activeTab === 'questions') items = content.important_questions || [];
+                if (activeTab === 'roadmap') items = content.roadmap_steps || [];
+                if (activeTab === 'cos') items = content.course_outcomes || [];
+                if (activeTab === 'notes') items = content.notes || [];
+                if (activeTab === 'doubt_sessions') items = content.doubt_sessions || [];
+                if (activeTab === 'reference_videos') items = content.reference_videos || [];
+
+                if (items.length === 0) {
+                    list.innerHTML = '<div style="text-align:center; padding:60px; color:var(--text-light);">No content added yet. Click the + button to add.</div>';
+                    return;
+                }
+
+                list.innerHTML = '';
+                items.forEach(item => {
+                    const row = document.createElement('div');
+                    row.className = 'content-item';
+
+                    let title = '', subtitle = '', icon = '';
+                    let displayImage = item.image_url || item.roadmap_image;
+                    
+                    if (activeTab === 'pyqs') { 
+                        title = item.name || item.title || 'Exam Paper'; 
+                        subtitle = `${item.year || 'N/A'} - ${item.link ? 'Resource Linked' : 'Internal'}`;
+                        icon = '📄';
+                        // For PYQs, 'link' might be the image path for legacy items
+                        if (!displayImage && item.link && (item.link.match(/\.(jpeg|jpg|gif|png)$/i))) {
+                            displayImage = item.link;
+                        }
+                    }
+                    if (activeTab === 'questions') { 
+                        title = item.question_text || 'Important Question'; 
+                        subtitle = `${item.marks || '?' } Marks | Unit: ${item.unit || 'General'}`; 
+                        icon = '❓';
+                    }
+                    if (activeTab === 'roadmap') { 
+                        title = item.title || 'Roadmap Step'; 
+                        subtitle = `Step ${item.step_number || '-'}`; 
+                        icon = '🗺️';
+                    }
+                    if (activeTab === 'cos') { 
+                        title = `${item.co_no || 'CO'}: ${item.outcome_text}`; 
+                        subtitle = `Unit: ${item.unit || 'General'} | Priority: ${item.order || '1'}`; 
+                        icon = '🎯';
+                    }
+                    if (activeTab === 'notes') {
+                        title = item.title;
+                        subtitle = "Study Notes (PDF/Image)";
+                        icon = '📚';
+                        displayImage = item.file_path;
+                    }
+                    if (activeTab === 'doubt_sessions') {
+                        title = item.title;
+                        subtitle = `📅 ${item.date} | ⏰ ${item.time_from} - ${item.time_to}`;
+                        icon = '🤝';
+                    }
+                    if (activeTab === 'reference_videos') {
+                        title = item.topic;
+                        subtitle = `Unit: ${item.unit || 'General'}`;
+                        icon = '🎥';
+                    }
+
+                    row.innerHTML = `
+                        <div class="content-info">
+                            <div style="display:flex; align-items:center; gap:12px;">
+                                <span style="font-size:24px;">${icon}</span>
+                                <div>
+                                    <h4 style="margin:0;">${title}</h4>
+                                    <p style="margin:2px 0 0;">${subtitle}</p>
+                                    ${activeTab === 'doubt_sessions' ? `<div style="margin-top:8px;"><a href="${item.zoom_link}" target="_blank" style="font-size:12px; color:var(--purple); text-decoration:none;">🔗 Join Link</a></div>` : ''}
+                                    ${activeTab === 'reference_videos' ? `<div style="margin-top:8px;"><a href="${item.video_link}" target="_blank" style="font-size:12px; color:var(--purple); text-decoration:none;">▶️ Watch Video</a></div>` : ''}
+                                    ${displayImage ? `<div style="margin-top:10px;"><img src="${displayImage}" style="max-height:80px; border-radius:12px; border:1px solid #f1f5f9; box-shadow:0 2px 8px rgba(0,0,0,0.05);"></div>` : ''}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delete-btn" onclick="deleteItem('${activeTab}', ${item.id})">🗑️</div>
+                    `;
+                    list.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Error loading content:', error);
+                list.innerHTML = '<div style="text-align:center; padding:40px; color:var(--coral);">Failed to load resources.</div>';
+            }
+        }
+
+        // Tab Switching
+        document.getElementById('contentTabs').onclick = (e) => {
+            if (e.target.classList.contains('tab-btn')) {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                activeTab = e.target.getAttribute('data-type');
+                loadContentForTab();
+            }
+        };
+
+        // Modal Logic
+        const modal = document.getElementById('contentModal');
+        const fab = document.getElementById('addContentBtn');
+
+        fab.onclick = () => {
+            modal.style.display = 'flex';
+            renderFormFields();
+        };
+
+        window.closeModal = () => {
+            modal.style.display = 'none';
+        };
+
+        function renderFormFields() {
+            const container = document.getElementById('formFields');
+            const title = document.getElementById('modalTitle');
+            container.innerHTML = '';
+
+            const imageUploadHtml = `
+                <div class="form-group">
+                    <label>Upload Image</label>
+                    <div class="file-upload-custom">
+                        <input type="file" id="fieldFile" accept="image/*,application/pdf" onchange="window.updateFileName(this)">
+                        <span class="file-upload-text" id="fileNameLabel">📁 Click to select image</span>
+                    </div>
+                </div>
+            `;
+
+            if (activeTab === 'pyqs') {
+                title.textContent = 'Add Previous Year Question';
+                container.innerHTML = `
+                    <div class="form-group">
+                        <label>Exam Name (e.g. End Semester 2023)</label>
+                        <input type="text" id="fieldName" placeholder="End Semester" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Year</label>
+                        <input type="number" id="fieldYear" placeholder="2023" required>
+                    </div>
+                    ${imageUploadHtml}
+                `;
+            } else if (activeTab === 'questions') {
+                title.textContent = 'Add Important Question';
+                container.innerHTML = `
+                    <div class="form-group">
+                        <label>Question Text</label>
+                        <textarea id="fieldText" rows="3" placeholder="Enter question..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Unit</label>
+                        <input type="text" id="fieldUnit" placeholder="Unit-1">
+                    </div>
+                    <div class="form-group">
+                        <label>Topic</label>
+                        <input type="text" id="fieldTopic" placeholder="Topic name">
+                    </div>
+                    <div class="form-group">
+                        <label>Assigned Marks</label>
+                        <input type="number" id="fieldMarks" placeholder="5" required>
+                    </div>
+                    ${imageUploadHtml}
+                `;
+            } else if (activeTab === 'roadmap') {
+                title.textContent = 'Add Roadmap Step';
+                container.innerHTML = `
+                    <div class="form-group">
+                        <label>Step Number</label>
+                        <input type="number" id="fieldStep" value="1" required>
+                    </div>
+                    ${imageUploadHtml.replace('Upload Image', 'Upload Roadmap Image')}
+                `;
+            } else if (activeTab === 'cos') {
+                title.textContent = 'Add Course Outcome';
+                container.innerHTML = `
+                    <div class="form-group">
+                        <label>CO No (e.g. CO1)</label>
+                        <input type="text" id="fieldCoNo" placeholder="CO1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Unit</label>
+                        <input type="text" id="fieldUnit" placeholder="Unit-1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Outcome Description</label>
+                        <textarea id="fieldText" rows="3" placeholder="Students will be able to..." required></textarea>
+                    </div>
+                `;
+            } else if (activeTab === 'notes') {
+                title.textContent = 'Add Study Notes';
+                container.innerHTML = `
+                    <div class="form-group">
+                        <label>Note Title</label>
+                        <input type="text" id="fieldName" placeholder="Unit 1 Comprehensive Notes" required>
+                    </div>
+                    ${imageUploadHtml.replace('Upload Image', 'Upload Notes (PDF/Image)')}
+                `;
+            } else if (activeTab === 'doubt_sessions') {
+                title.textContent = 'Schedule Doubt Meet';
+                container.innerHTML = `
+                    <div class="form-group">
+                        <label>Topic Title</label>
+                        <input type="text" id="fieldName" placeholder="Weekly Doubt Clarification" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" id="fieldDate" required>
+                    </div>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+                        <div class="form-group">
+                            <label>From Time</label>
+                            <input type="time" id="fieldTimeFrom" required>
+                        </div>
+                        <div class="form-group">
+                            <label>To Time</label>
+                            <input type="time" id="fieldTimeTo" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Meeting Link (Zoom/GMeet)</label>
+                        <input type="url" id="fieldLink" placeholder="https://zoom.us/j/..." required>
+                    </div>
+                `;
+            } else if (activeTab === 'reference_videos') {
+                title.textContent = 'Add Reference Video';
+                container.innerHTML = `
+                    <div class="form-group">
+                        <label>Unit</label>
+                        <input type="text" id="fieldUnit" placeholder="Unit-1">
+                    </div>
+                    <div class="form-group">
+                        <label>Topic Name</label>
+                        <input type="text" id="fieldTopic" placeholder="Diffraction Analysis" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Video Link</label>
+                        <input type="url" id="fieldLink" placeholder="https://youtube.com/..." required>
+                    </div>
+                `;
+            }
+        }
+
+        window.updateFileName = (input) => {
+            const label = document.getElementById('fileNameLabel');
+            if (input.files && input.files[0]) {
+                label.textContent = "✅ " + input.files[0].name;
+                label.style.color = "#00c9a7";
+            }
+        };
+
+        document.getElementById('contentForm').onsubmit = async (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalBtnText = btn.textContent;
+            
+            try {
+                btn.disabled = true;
+                btn.textContent = 'Publishing...';
+
+                if (activeTab === 'pyqs') {
+                    await contentAPI.addPYQ(
+                        activeSubjectId, 
+                        document.getElementById('fieldName').value, 
+                        parseInt(document.getElementById('fieldYear').value),
+                        '', // No longer using direct link field in form as per user screenshot
+                        document.getElementById('fieldFile').files[0]
+                    );
+                } else if (activeTab === 'questions') {
+                    await contentAPI.addImportantQuestion(
+                        activeSubjectId, 
+                        document.getElementById('fieldText').value, 
+                        parseInt(document.getElementById('fieldMarks').value),
+                        document.getElementById('fieldUnit').value,
+                        document.getElementById('fieldTopic').value,
+                        document.getElementById('fieldFile').files[0]
+                    );
+                } else if (activeTab === 'roadmap') {
+                    await contentAPI.addRoadmapStep(
+                        activeSubjectId, 
+                        parseInt(document.getElementById('fieldStep').value), 
+                        'Roadmap Visual', // Fixed title for image-only roadmap
+                        '', // Empty description
+                        document.getElementById('fieldFile').files[0]
+                    );
+                } else if (activeTab === 'cos') {
+                    await contentAPI.addCourseOutcome(
+                        activeSubjectId, 
+                        document.getElementById('fieldName').value, 
+                        1, // Default priority
+                        document.getElementById('fieldCoNo').value,
+                        document.getElementById('fieldUnit').value
+                    );
+                } else if (activeTab === 'notes') {
+                    await contentAPI.addNote(
+                        activeSubjectId,
+                        document.getElementById('fieldName').value,
+                        document.getElementById('fieldFile').files[0]
+                    );
+                } else if (activeTab === 'doubt_sessions') {
+                    await contentAPI.addDoubtSession(
+                        activeSubjectId,
+                        document.getElementById('fieldName').value,
+                        document.getElementById('fieldDate').value,
+                        document.getElementById('fieldTimeFrom').value,
+                        document.getElementById('fieldTimeTo').value,
+                        document.getElementById('fieldLink').value
+                    );
+                } else if (activeTab === 'reference_videos') {
+                    await contentAPI.addReferenceVideo(
+                        activeSubjectId,
+                        document.getElementById('fieldUnit').value,
+                        document.getElementById('fieldTopic').value,
+                        document.getElementById('fieldLink').value
+                    );
+                }
+
+                closeModal();
+                loadContentForTab();
+                
+                if (typeof showToast === 'function') {
+                    showToast("Resource published successfully!", "success");
+                } else {
+                    alert("Resource published successfully!");
+                }
+            } catch (error) {
+                console.error('Publish Error:', error);
+                if (typeof showToast === 'function') {
+                    showToast("Failed to save: " + error.message, "error");
+                } else {
+                    alert("Failed to save: " + error.message);
+                }
+            } finally {
+                btn.disabled = false;
+                btn.textContent = originalBtnText;
+            }
+        };
+
+        window.deleteItem = async (type, id) => {
+            if (!confirm("Are you sure you want to delete this resource?")) return;
+            try {
+                if (type === 'pyqs') await contentAPI.deletePYQ(id);
+                if (type === 'questions') await contentAPI.deleteImportantQuestion(id);
+                if (type === 'roadmap') await contentAPI.deleteRoadmapStep(id);
+                if (type === 'cos') await contentAPI.deleteCourseOutcome(id);
+                if (type === 'notes') await contentAPI.deleteNote(id);
+                if (type === 'doubt_sessions') await contentAPI.deleteDoubtSession(id);
+                if (type === 'reference_videos') await contentAPI.deleteReferenceVideo(id);
+
+                loadContentForTab();
+                if (typeof showToast === 'function') {
+                    showToast("Resource deleted!", "info");
+                }
+            } catch (error) {
+                console.error('Delete Error:', error);
+                if (typeof showToast === 'function') {
+                    showToast("Failed to delete: " + error.message, "error");
+                } else {
+                    alert("Failed to delete: " + error.message);
+                }
+            }
+        };
+
+        const logoutModal = document.getElementById('logoutModal');
+        const confirmLogoutBtn = document.getElementById('confirmLogoutBtn');
+        const cancelLogoutBtn = document.getElementById('cancelLogoutBtn');
+
+        document.getElementById('logoutBtn').onclick = () => {
+            logoutModal.style.display = 'flex';
+        };
+
+        cancelLogoutBtn.onclick = () => {
+            logoutModal.style.display = 'none';
+        };
+
+        confirmLogoutBtn.onclick = () => {
+            logout('faculty_login.html');
+        };
+
+        init();
+    </script>
+</body>
+
+</html>

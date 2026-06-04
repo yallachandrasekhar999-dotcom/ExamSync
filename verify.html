@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email - Exam Sync</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .verify-container {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            animation: slideUp 0.6s ease-out;
+            color: var(--navy);
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            color: var(--navy);
+            font-weight: 800;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .otp-input-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .otp-input-group input {
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.85);
+            color: var(--navy);
+            transition: 0.3s;
+        }
+
+        .otp-input-group input::placeholder {
+            color: rgba(102, 112, 133, 0.9);
+        }
+
+        .otp-input-group input:focus {
+            border-color: rgba(124, 119, 255, 0.35);
+            background: rgba(255, 255, 255, 0.92);
+            outline: none;
+            box-shadow: 0 0 0 6px rgba(124, 119, 255, 0.14);
+        }
+
+        .btn-block {
+            width: 100%;
+            padding: 16px;
+            font-weight: 700;
+            border-radius: 12px;
+            font-size: 16px;
+            background: linear-gradient(90deg, #6c63ff, #4338ca);
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-block:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.4);
+        }
+
+        .resend {
+            margin-top: 25px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .resend span {
+            color: #8b85ff;
+            cursor: pointer;
+            font-weight: 700;
+            margin-left: 5px;
+            transition: 0.3s;
+        }
+
+        .resend span:hover {
+            text-shadow: 0 0 8px rgba(139, 133, 255, 0.5);
+            color: white;
+        }
+
+        /* Faculty Theme Overrides */
+        .verify-container.faculty-theme {
+            background: rgba(10, 40, 40, 0.7);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 201, 167, 0.3);
+            border-color: rgba(0, 201, 167, 0.2);
+        }
+
+        .faculty-theme .btn-block {
+            background: linear-gradient(90deg, #00c9a7, #00897b);
+        }
+
+        .faculty-theme .btn-block:hover {
+            box-shadow: 0 10px 20px rgba(0, 201, 167, 0.4);
+        }
+
+        .faculty-theme .resend span {
+            color: #00c9a7;
+        }
+
+        .faculty-theme .otp-input-group input:focus {
+            border-color: #00c9a7;
+            box-shadow: 0 0 20px rgba(0, 201, 167, 0.3);
+        }
+    </style>
+</head>
+
+<body class="auth-page">
+    <div class="verify-container auth-card">
+        <h2>Verify Your Email</h2>
+        <p id="instructionText">We've sent a 6-digit PIN to your email address.</p>
+
+        <form id="verifyForm">
+            <div class="otp-input-group" id="otpGroup">
+                <!-- Using a single input for simplicity in this version, but styled like boxes -->
+                <input type="text" id="otpCode" placeholder="123456" maxlength="6" pattern="[0-9]*" inputmode="numeric"
+                    style="width: 100%;" required>
+            </div>
+            <button type="submit" class="btn primary btn-block" id="verifyBtn">Verify & Proceed</button>
+        </form>
+
+        <div class="resend">
+            Didn't receive the code? <span id="resendBtn">Resend Code</span>
+        </div>
+    </div>
+
+    <script type="module">
+        import { verifyOTP } from './js/auth.js';
+        import { authAPI } from './js/api.js';
+        import { showToast } from './js/notifications.js';
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const email = urlParams.get('email') || sessionStorage.getItem('pendingVerificationEmail');
+        const type = urlParams.get('type') || sessionStorage.getItem('pendingVerificationType') || 'login';
+        const roleFromUrl = urlParams.get('role') || sessionStorage.getItem('pendingVerificationRole');
+
+        if (!email) {
+            window.location.href = 'Login.html';
+        }
+
+        // Apply theme if faculty/author
+        if (roleFromUrl === 'author' || roleFromUrl === 'faculty') {
+            document.querySelector('.verify-container').classList.add('faculty-theme');
+        }
+
+        document.getElementById('instructionText').textContent = `We've sent a 6-digit PIN to ${email}.`;
+
+        document.getElementById('verifyForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const otpCode = document.getElementById('otpCode').value;
+            const verifyBtn = document.getElementById('verifyBtn');
+
+            verifyBtn.disabled = true;
+            verifyBtn.textContent = "Verifying...";
+
+            try {
+                const result = await verifyOTP(email, otpCode);
+                console.log("Verification result:", result);
+
+                if (result.success) {
+                    showToast("Email Verified Successfully!", "success");
+
+                    if (type === 'signup') {
+                        showToast("Account Registered! Redirecting...", "success");
+                    } else {
+                        showToast("Login Successful!", "success");
+                    }
+
+                    const role = (result.role || roleFromUrl || "").toLowerCase();
+                    console.log("Redirecting for role:", role);
+
+                    setTimeout(() => {
+                        if (role === 'student') {
+                            window.location.href = 'student_dashboard.html';
+                        } else if (role === 'admin') {
+                            window.location.href = 'admin_dashboard.html';
+                        } else if (role === 'author' || role === 'faculty') {
+                            window.location.href = 'author_dashboard.html';
+                        } else {
+                            console.warn("Unknown role, defaulting to Login check:", role);
+                            window.location.href = 'Login.html';
+                        }
+                    }, 1500);
+                } else {
+                    console.error("Verification failed:", result.message);
+                    showToast(result.message || "Invalid or expired PIN", "error");
+                    verifyBtn.disabled = false;
+                    verifyBtn.textContent = "Verify & Proceed";
+                }
+            } catch (error) {
+                showToast("Verification failed. Please try again.", "error");
+                verifyBtn.disabled = false;
+                verifyBtn.textContent = "Verify & Proceed";
+            }
+        });
+
+        document.getElementById('resendBtn').addEventListener('click', async () => {
+            try {
+                await authAPI.requestOTP(email);
+                showToast("Verification code resent!", "info");
+            } catch (e) {
+                showToast("Failed to resend code.", "error");
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Derive the condition for constructive and destructive interference using principle of superposition.",
+        "marks": 10
+    },
+    {
+        "id": 2,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Explain Newton’s Rings experiment. How are wavelength and refractive index determined?",
+        "marks": 10
+    },
+    {
+        "id": 3,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Derive the expression for intensity distribution in Fraunhofer diffraction due to a single slit and obtain condition for minima.",
+        "marks": 10
+    },
+    {
+        "id": 4,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Explain diffraction grating. Define and explain dispersive power and resolving power (qualitative).",
+        "marks": 10
+    },
+    {
+        "id": 5,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Explain polarization by reflection and double refraction. Describe Nicol’s prism and wave plates (HWP & QWP).",
+        "marks": 10
+    },
+    {
+        "id": 6,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Explain space lattice, unit cell, Bravais lattices and crystal systems (3D).",
+        "marks": 10
+    },
+    {
+        "id": 7,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Derive packing fraction for SC, BCC and FCC structures.",
+        "marks": 10
+    },
+    {
+        "id": 8,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Explain Miller indices and derive expression for interplanar spacing in cubic crystals.",
+        "marks": 10
+    },
+    {
+        "id": 9,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "State and derive Bragg’s law. Explain its significance.",
+        "marks": 10
+    },
+    {
+        "id": 10,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Explain Laue’s method and Powder method for crystal structure determination.",
+        "marks": 10
+    },
+    {
+        "id": 11,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Derive expressions for electronic and ionic polarization.",
+        "marks": 10
+    },
+    {
+        "id": 12,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Derive Clausius–Mossotti equation and explain Lorentz internal field.",
+        "marks": 10
+    },
+    {
+        "id": 13,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Explain frequency dependence of polarization and dielectric loss.",
+        "marks": 10
+    },
+    {
+        "id": 14,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Classify magnetic materials (Dia, Para, Ferro, Anti-ferro, Ferri).",
+        "marks": 10
+    },
+    {
+        "id": 15,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Explain domain theory of ferromagnetism and hysteresis curve. Differentiate soft and hard magnetic materials.",
+        "marks": 10
+    },
+    {
+        "id": 16,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Explain dual nature of matter and Heisenberg’s Uncertainty Principle.",
+        "marks": 10
+    },
+    {
+        "id": 17,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Derive time-independent Schrödinger wave equation and solve particle in 1D infinite potential well.",
+        "marks": 10
+    },
+    {
+        "id": 18,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Explain quantum free electron theory. Define Fermi energy and density of states.",
+        "marks": 10
+    },
+    {
+        "id": 19,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Explain formation of energy bands and classification of solids.",
+        "marks": 10
+    },
+    {
+        "id": 20,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "question_text": "Explain intrinsic and extrinsic semiconductors. Derive carrier concentration expression and explain Hall effect with applications.",
+        "marks": 10
+    }
+]

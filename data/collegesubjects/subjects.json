@@ -1,0 +1,2998 @@
+{
+  "college": "GMR Institute of Technology, Rajam",
+  "affiliated_to": "JNTU Kakinada",
+  "branches": {
+    "CSE": {
+      "branch_full_name": "Computer Science and Engineering",
+      "semesters": {
+        "sem1": {
+          "subjects": [
+            {
+              "name": "Engineering Physics/Chemistry",
+              "variants": [
+                {
+                  "subject_variant": "Engineering Physics",
+                  "code": "23PYX01",
+                  "course_outcomes": [
+                    "CO1: Comprehend the basic principle of diffraction and observe the diffraction pattern in various cases",
+                    "CO2: Illustrate the concepts of Interference and polarisation and their applications",
+                    "CO3: Understand the space lattices and crystal symmetry",
+                    "CO4: Summarize the fundamental concepts of quantum mechanics",
+                    "CO5: Explore the properties and applications of dielectric and magnetic materials",
+                    "CO6: Demonstrate the conduction process of charge carriers in semiconductors"
+                  ]
+                },
+                {
+                  "subject_variant": "Chemistry",
+                  "code": "23CYX01",
+                  "course_outcomes": [
+                    "CO1: Illustrate the Molecular Orbital diagrams for simple diatomic and polyatomic molecules",
+                    "CO2: Identify the applications of super conductors, semi conductors and super capacitors & nano materials",
+                    "CO3: Explain the working of spectroscopy and Chromatography",
+                    "CO4: Explain the properties and applications of polymers & fibres",
+                    "CO5: Estimate the analytes using potentiometric & conductometric titrations and electrochemical sensors",
+                    "CO6: Describe the construction and working of electrochemical cells"
+                  ]
+                }
+              ],
+              "category": "theory",
+              "course_outcomes": [
+                "CO1: Comprehend the basic principle of diffraction and observe the diffraction pattern in various cases",
+                "CO2: Illustrate the concepts of interference and polarisation and their applications",
+                "CO3: Understand the space lattices and crystal symmetry",
+                "CO4: Summarize the fundamental concepts of quantum mechanics",
+                "CO5: Explore the properties and applications of dielectric and magnetic materials",
+                "CO6: Demonstrate the conduction process of charge carriers in semiconductors"
+              ]
+            },
+            {
+              "name": "Linear Algebra & Calculus/Differential Equations and Vector calculus",
+              "variants": [
+                {
+                  "subject_variant": "Linear Algebra & Calculus",
+                  "code": "23MAX01",
+                  "course_outcomes": [
+                    "CO1: Solve the system of linear equations",
+                    "CO2: Construct the eigenvectors of a matrix, use the applications of Cayley Hamilton theorem",
+                    "CO3: Identify the nature of the quadratic form using matrix theory",
+                    "CO4: Apply Mean value theorems to solve single variable problems",
+                    "CO5: Make use of partial derivatives to solve multivariable problems",
+                    "CO6: Utilize multiple integrals to find the area and volume of solids"
+                  ]
+                },
+                {
+                  "subject_variant": "Differential Equations and Vector calculus",
+                  "code": "23MAX02",
+                  "course_outcomes": [
+                    "CO1: Model and solve the first order differential equations",
+                    "CO2: Experiment with the practical importance of solving first and higher order differential equations in engineering",
+                    "CO3: Solve higher order differential equations and understand about initial value problems",
+                    "CO4: Identify methods for solving linear partial differential equations",
+                    "CO5: Make use of central concepts in partial differential equations and vector differentiation",
+                    "CO6: Apply vector calculus in the context of estimating the work done, circulation, flux and vector integral theorems"
+                  ]
+                }
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Basic Electrical and Electronics/Basic Civil & Mechanical Engineering",
+              "variants": [
+                {
+                  "subject_variant": "Basic Electrical and Electronics",
+                  "code": "23BEX01",
+                  "course_outcomes": [
+                    "CO1: Demonstrate the electrical parameters of DC & AC circuits",
+                    "CO2: Illustrate the operation of electrical machines and power plants",
+                    "CO3: Summarize electrical measurements and safety measures",
+                    "CO4: Explain the operation of semiconductor devices and their characteristics",
+                    "CO5: Illustrate the operation of rectifiers",
+                    "CO6: Illustrate the number systems, binary codes, and combinational circuits using logic gates"
+                  ]
+                },
+                {
+                  "subject_variant": "Basic Civil & Mechanical Engineering",
+                  "code": "23BEX02",
+                  "course_outcomes": [
+                    "CO1: Describe the basics of civil engineering streams, water resources and environmental engineering",
+                    "CO2: Outline the concepts of surveying",
+                    "CO3: Demonstrate the pavements and the concept of Airport, Harbour, Tunnel & Railway Engineering",
+                    "CO4: Understand the different Engineering Materials, Manufacturing process and the role of mechanical Engineering in different sectors",
+                    "CO5: Understand the basic concepts of thermal engineering and working principles of different power plants",
+                    "CO6: Describe the working of different mechanical power transmission systems and basic configurations and applications of robots"
+                  ]
+                }
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Introduction to Programming",
+              "code": "23BEX03",
+              "course_outcomes": [
+                "CO1: Illustrate algorithms for programming and problem solving",
+                "CO2: Formulate sequential and iterative programming",
+                "CO3: Implement basic dynamic data structures",
+                "CO4: Develop modular program aspects for complex problems",
+                "CO5: Apply concepts for optimal utilization of memory",
+                "CO6: Understand techniques of storage and processing data"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Graphics/Communicative English",
+              "variants": [
+                {
+                  "subject_variant": "Engineering Graphics",
+                  "code": "23BEX04",
+                  "course_outcomes": [
+                    "CO1: Understand the principles of engineering drawing, including engineering curves, scales",
+                    "CO2: Draw and interpret orthographic projections of points, lines, planes in front, top and side views",
+                    "CO3: Construct Orthographic projections of planes inclined to both reference planes and Projections of Solids in simple positions",
+                    "CO4: Understand and apply concepts of projections of solids inclined to a reference plane and sectional views of solids in simple positions using CAD software",
+                    "CO5: Gain a clear understanding of the principles behind development of surfaces and to understand how to unfold basic geometric shapes into flat patterns using CAD software",
+                    "CO6: Develop the ability to draw isometric views and orthographic views and convert isometric views to orthographic views and vice versa using CAD software"
+                  ]
+                },
+                {
+                  "subject_variant": "Communicative English",
+                  "code": "23HSX01",
+                  "course_outcomes": [
+                    "CO1: Understand the context, topic, and specific information from social or transactional dialogues",
+                    "CO2: Speak clearly using discourse markers on a specific topic in formal as well as informal discussions",
+                    "CO3: Comprehend and appreciate literary texts by reading",
+                    "CO4: Write summaries, coherent paragraphs, essays, letters/e-mails and resume",
+                    "CO5: Apply grammatical structures to formulate sentence and use them appropriately",
+                    "CO6: Improve communicative competence with enhanced vocabulary in formal and informal contexts"
+                  ]
+                }
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics Lab/Chemistry Lab",
+              "variants": [
+                {
+                  "subject_variant": "Engineering Physics Lab",
+                  "code": "23PYX02",
+                  "course_outcomes": [
+                    "CO1: Infer the knowledge from the scientific methods and learn the process of measuring different physical parameters",
+                    "CO2: Develop the laboratory skills in handling of electrical and Optical instruments",
+                    "CO3: Demonstrate the interference and diffraction phenomena of light",
+                    "CO4: Inspect and experience physical principles of Magnetic fields and optical fiber communications",
+                    "CO5: Apply the principles of physics and measure the solid state properties of materials",
+                    "CO6: Design and analyze experiment based on physics concepts"
+                  ]
+                },
+                {
+                  "subject_variant": "Chemistry Lab",
+                  "code": "23CYX03",
+                  "course_outcomes": [
+                    "CO1: Determine the concentration of acids by Conductometry",
+                    "CO2: Prepare the Bakelite polymer and ZnO nanomaterial",
+                    "CO3: Estimate the strength of an acid present in secondary battery by pH metry",
+                    "CO4: Identify the organic compounds by IR Spectroscopy",
+                    "CO5: Verify the Beer-Lamberts law and measure the wavelength",
+                    "CO6: Estimate concentration of ferrous iron by potentiometry and dichrometry"
+                  ]
+                }
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Electrical & Electronics Engineering workshop/Engineering Workshop",
+              "variants": [
+                {
+                  "subject_variant": "Electrical & Electronics Engineering workshop",
+                  "code": "23BEX05",
+                  "course_outcomes": [
+                    "CO1: Apply fundamental electrical principles to resolve complex circuit problems",
+                    "CO2: Develop proficiency in conducting electrical measurements and studying machine characteristics for practical applications",
+                    "CO3: Demonstrate skills in measuring power parameters and calculate energy consumption for residential applications",
+                    "CO4: Analyze the characteristics of semiconductor devices",
+                    "CO5: Find the frequency response of amplifiers using BJT",
+                    "CO6: Verify the truth tables of logic gates and basic flip flops"
+                  ]
+                },
+                {
+                  "subject_variant": "Engineering Workshop",
+                  "code": "23BEX06",
+                  "course_outcomes": [
+                    "CO1: Demonstrate the simple wooden components like Cross Lap joint, T-Lap joint, Dovetail Joint",
+                    "CO2: Develop the simple house hold items like Taper Tray, Square box, Open Scoop using sheet metal",
+                    "CO3: Build the V-Fit, Square fit, Dovetail fit using mild steel",
+                    "CO4: Understand simple house wiring circuits like Parallel/Series connection of three bulbs, Stair Case Wiring, Godown Wiring",
+                    "CO5: Create the Green Sand Mould for given the patterns like rectangular shape, circular shape",
+                    "CO6: Construct the metal joint using Arc Welding like: Lap joint, Butt joint"
+                  ]
+                }
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Computer Programming Lab",
+              "code": "23BEX07",
+              "course_outcomes": [
+                "CO1: Read, understand and trace program execution",
+                "CO2: Select proper control structures",
+                "CO3: Construct programs using homogeneous data types",
+                "CO4: Develop modular programs using functions",
+                "CO5: Formulate memory-efficient programs",
+                "CO6: Develop programs using files"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "ECA (Yoga/Sports)",
+              "code": "23HSX11",
+              "course_outcomes": [
+                "CO1: Understand the importance of yoga and sports for Physical fitness and sound health",
+                "CO2: Demonstrate an understanding of health-related fitness components",
+                "CO3: Compare and contrast various activities that help enhance their health",
+                "CO4: Assess current personal fitness levels",
+                "CO5: Develop Positive Personality"
+              ],
+              "category": "activity"
+            },
+            {
+              "name": "CCA (NSS/NCC/Community Service)",
+              "code": "23HSX12",
+              "course_outcomes": [
+                "CO1: Understand the importance of discipline, character and service motto",
+                "CO2: Solve some societal issues by applying acquired knowledge, facts, and techniques",
+                "CO3: Explore human relationships by analyzing social problems",
+                "CO4: Determine to extend their help for the fellow beings and downtrodden people",
+                "CO5: Develop leadership skills and civic responsibilities"
+              ],
+              "category": "activity"
+            },
+            {
+              "name": "IT Workshop",
+              "code": "23BEX08",
+              "course_outcomes": [
+                "CO1: Demonstrate assembling and disassembling PC",
+                "CO2: Illustrate OS installation steps",
+                "CO3: Configure IP address and perform safe downloads",
+                "CO4: Create projects using Word/LaTeX and spreadsheets",
+                "CO5: Design PowerPoint presentations",
+                "CO6: Improve conversational abilities using AI tools"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Communicative English Lab",
+              "code": "23HSX02",
+              "course_outcomes": [
+                "CO1: Acquire knowledge of English sound system and pronunciation",
+                "CO2: Apply accent and intonation patterns",
+                "CO3: Write emails and resume effectively",
+                "CO4: Exhibit professionalism in debates and discussions",
+                "CO5: Demonstrate verbal and non-verbal communication",
+                "CO6: Practice interpersonal communication in formal situations"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem2": {
+          "subjects": [
+            {
+              "name": "Communicative English/Engineering Graphics",
+              "variants": [
+                {
+                  "subject_variant": "Communicative English",
+                  "code": "23HSX01",
+                  "course_outcomes": [
+                    "CO1: Understand the context, topic, and specific information from social or transactional dialogues",
+                    "CO2: Speak clearly using discourse markers on a specific topic in formal as well as informal discussions",
+                    "CO3: Comprehend and appreciate literary texts by reading",
+                    "CO4: Write summaries, coherent paragraphs, essays, letters/e-mails and resume",
+                    "CO5: Apply grammatical structures to formulate sentence and use them appropriately",
+                    "CO6: Improve communicative competence with enhanced vocabulary in formal and informal contexts"
+                  ]
+                },
+                {
+                  "subject_variant": "Engineering Graphics",
+                  "code": "23BEX04",
+                  "course_outcomes": [
+                    "CO1: Understand the principles of engineering drawing, including engineering curves, scales",
+                    "CO2: Draw and interpret orthographic projections of points, lines, planes in front, top and side views",
+                    "CO3: Construct Orthographic projections of planes inclined to both reference planes and Projections of Solids in simple positions",
+                    "CO4: Understand and apply concepts of projections of solids inclined to a reference plane and sectional views of solids in simple positions using CAD software",
+                    "CO5: Gain a clear understanding of the principles behind development of surfaces and to understand how to unfold basic geometric shapes into flat patterns using CAD software",
+                    "CO6: Develop the ability to draw isometric views and orthographic views and convert isometric views to orthographic views and vice versa using CAD software"
+                  ]
+                }
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Differential Equations and Vector calculus/Linear Algebra & Calculus",
+              "variants": [
+                {
+                  "subject_variant": "Differential Equations and Vector calculus",
+                  "code": "23MAX02",
+                  "course_outcomes": [
+                    "CO1: Model and solve the first order differential equations",
+                    "CO2: Experiment with the practical importance of solving first and higher order differential equations in engineering",
+                    "CO3: Solve higher order differential equations and understand about initial value problems",
+                    "CO4: Identify methods for solving linear partial differential equations",
+                    "CO5: Make use of central concepts in partial differential equations and vector differentiation",
+                    "CO6: Apply vector calculus in the context of estimating the work done, circulation, flux and vector integral theorems"
+                  ]
+                },
+                {
+                  "subject_variant": "Linear Algebra & Calculus",
+                  "code": "23MAX01",
+                  "course_outcomes": [
+                    "CO1: Solve the system of linear equations",
+                    "CO2: Construct the eigenvectors of a matrix, use the applications of Cayley Hamilton theorem",
+                    "CO3: Identify the nature of the quadratic form using matrix theory",
+                    "CO4: Apply Mean value theorems to solve single variable problems",
+                    "CO5: Make use of partial derivatives to solve multivariable problems",
+                    "CO6: Utilize multiple integrals to find the area and volume of solids"
+                  ]
+                }
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Chemistry/Engineering Physics",
+              "variants": [
+                {
+                  "subject_variant": "Chemistry",
+                  "code": "23CYX01",
+                  "course_outcomes": [
+                    "CO1: Illustrate the Molecular Orbital diagrams for simple diatomic and polyatomic molecules",
+                    "CO2: Identify the applications of super conductors, semi conductors and super capacitors & nano materials",
+                    "CO3: Explain the working of spectroscopy and Chromatography",
+                    "CO4: Explain the properties and applications of polymers & fibres",
+                    "CO5: Estimate the analytes using potentiometric & conductometric titrations and electrochemical sensors",
+                    "CO6: Describe the construction and working of electrochemical cells"
+                  ]
+                },
+                {
+                  "subject_variant": "Engineering Physics",
+                  "code": "23PYX01",
+                  "course_outcomes": [
+                    "CO1: Comprehend the basic principle of diffraction and observe the diffraction pattern in various cases",
+                    "CO2: Illustrate the concepts of Interference and polarisation and their applications",
+                    "CO3: Understand the space lattices and crystal symmetry",
+                    "CO4: Summarize the fundamental concepts of quantum mechanics",
+                    "CO5: Explore the properties and applications of dielectric and magnetic materials",
+                    "CO6: Demonstrate the conduction process of charge carriers in semiconductors"
+                  ]
+                }
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Basic Civil & Mechanical/Basic Electrical and Electronics Engineering",
+              "variants": [
+                {
+                  "subject_variant": "Basic Civil & Mechanical",
+                  "code": "23BEX02",
+                  "course_outcomes": [
+                    "CO1: Describe the basics of civil engineering streams, water resources and environmental engineering",
+                    "CO2: Outline the concepts of surveying",
+                    "CO3: Demonstrate the pavements and the concept of Airport, Harbour, Tunnel & Railway Engineering",
+                    "CO4: Understand the different Engineering Materials, Manufacturing process and the role of mechanical Engineering in different sectors",
+                    "CO5: Understand the basic concepts of thermal engineering and working principles of different power plants",
+                    "CO6: Describe the working of different mechanical power transmission systems and basic configurations and applications of robots"
+                  ]
+                },
+                {
+                  "subject_variant": "Basic Electrical and Electronics Engineering",
+                  "code": "23BEX01",
+                  "course_outcomes": [
+                    "CO1: Demonstrate the electrical parameters of DC & AC circuits",
+                    "CO2: Illustrate the operation of electrical machines and power plants",
+                    "CO3: Summarize electrical measurements and safety measures",
+                    "CO4: Explain the operation of semiconductor devices and their characteristics",
+                    "CO5: Illustrate the operation of rectifiers",
+                    "CO6: Illustrate the number systems, binary codes, and combinational circuits using logic gates"
+                  ]
+                }
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Data Structures (CSE, CSE-AI&DS, CSE-AI&ML, IT)",
+              "code": "23CS201",
+              "course_outcomes": [
+                "CO1: Explain the role of linear data structures in organizing and accessing data efficiently in algorithms",
+                "CO2: Design, implement, and apply linked lists for dynamic data storage, demonstrating understanding of memory allocation",
+                "CO3: Develop programs using stacks to handle recursive algorithms, manage program states, and solve related problems",
+                "CO4: Apply queue-based algorithms for efficient task scheduling and breadth-first traversal in graphs and distinguish between deques and priority queues, and apply them appropriately to solve data management challenges",
+                "CO5: Devise novel solutions to small scale programming challenges involving data structures such as stacks, queues, Trees",
+                "CO6: Recognize scenarios where hashing is advantageous, and design hash-based solutions for specific problems"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Chemistry Lab/Engineering Physics Lab",
+              "variants": [
+                {
+                  "subject_variant": "Chemistry Lab",
+                  "code": "23CYX03",
+                  "course_outcomes": [
+                    "CO1: Determine the concentration of acids by Conductometry",
+                    "CO2: Prepare the Bakelite polymer and ZnO nanomaterial",
+                    "CO3: Estimate the strength of an acid present in secondary battery by pH metry",
+                    "CO4: Identify the organic compounds by IR Spectroscopy",
+                    "CO5: Verify the Beer-Lamberts law and measure the wavelength",
+                    "CO6: Estimate concentration of ferrous iron by potentiometry and dichrometry"
+                  ]
+                },
+                {
+                  "subject_variant": "Engineering Physics Lab",
+                  "code": "23PYX02",
+                  "course_outcomes": [
+                    "CO1: Infer the knowledge from the scientific methods and learn the process of measuring different physical parameters",
+                    "CO2: Develop the laboratory skills in handling of electrical and Optical instruments",
+                    "CO3: Demonstrate the interference and diffraction phenomena of light",
+                    "CO4: Inspect and experience physical principles of Magnetic fields and optical fiber communications",
+                    "CO5: Apply the principles of physics and measure the solid state properties of materials",
+                    "CO6: Design and analyze experiment based on physics concepts"
+                  ]
+                }
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Engineering Workshop/Electrical & Electronics Engineering workshop",
+              "variants": [
+                {
+                  "subject_variant": "Engineering Workshop",
+                  "code": "23BEX06",
+                  "course_outcomes": [
+                    "CO1: Demonstrate the simple wooden components like Cross Lap joint, T-Lap joint, Dovetail Joint",
+                    "CO2: Develop the simple house hold items like Taper Tray, Square box, Open Scoop using sheet metal",
+                    "CO3: Build the V-Fit, Square fit, Dovetail fit using mild steel",
+                    "CO4: Understand simple house wiring circuits like Parallel/Series connection of three bulbs, Stair Case Wiring, Godown Wiring",
+                    "CO5: Create the Green Sand Mould for given the patterns like rectangular shape, circular shape",
+                    "CO6: Construct the metal joint using Arc Welding like: Lap joint, Butt joint"
+                  ]
+                },
+                {
+                  "subject_variant": "Electrical & Electronics Engineering workshop",
+                  "code": "23BEX05",
+                  "course_outcomes": [
+                    "CO1: Apply fundamental electrical principles to resolve complex circuit problems",
+                    "CO2: Develop proficiency in conducting electrical measurements and studying machine characteristics for practical applications",
+                    "CO3: Demonstrate skills in measuring power parameters and calculate energy consumption for residential applications",
+                    "CO4: Analyze the characteristics of semiconductor devices",
+                    "CO5: Find the frequency response of amplifiers using BJT",
+                    "CO6: Verify the truth tables of logic gates and basic flip flops"
+                  ]
+                }
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "IT Workshop",
+              "code": "23BEX08",
+              "course_outcomes": [
+                "CO1: Demonstrate assembling and disassembling PC",
+                "CO2: Illustrate OS installation steps",
+                "CO3: Configure IP address and perform safe downloads",
+                "CO4: Create projects using Word/LaTeX and spreadsheets",
+                "CO5: Design PowerPoint presentations",
+                "CO6: Improve conversational abilities using AI tools"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Communicative English Lab",
+              "code": "23HSX02",
+              "course_outcomes": [
+                "CO1: Acquire knowledge of English sound system and pronunciation",
+                "CO2: Apply accent and intonation patterns",
+                "CO3: Write emails and resume effectively",
+                "CO4: Exhibit professionalism in debates and discussions",
+                "CO5: Demonstrate verbal and non-verbal communication",
+                "CO6: Practice interpersonal communication in formal situations"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Data Structures Lab (CSE, CSE-AI&DS, CSE-AI&ML, IT)",
+              "code": "23CS202",
+              "course_outcomes": [
+                "CO1: Explain the role of linear data structures in organizing and accessing data efficiently in algorithms",
+                "CO2: Design, implement, and apply linked lists for dynamic data storage, demonstrating understanding of memory allocation",
+                "CO3: Develop programs using stacks to handle recursive algorithms, manage program states, and solve related problems",
+                "CO4: Apply queue-based algorithms for efficient task scheduling and breadth-first traversal in graphs and distinguish between deques and priority queues",
+                "CO5: Devise novel solutions to small scale programming challenges involving data structures such as stacks, queues, Trees",
+                "CO6: Recognize scenarios where hashing is advantageous, and design hash-based solutions for specific problems"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "ECA (Yoga/Sports)",
+              "code": "23HSX11",
+              "course_outcomes": [
+                "CO1: Understand the importance of yoga and sports for Physical fitness and sound health",
+                "CO2: Demonstrate an understanding of health-related fitness components",
+                "CO3: Compare and contrast various activities that help enhance their health",
+                "CO4: Assess current personal fitness levels",
+                "CO5: Develop Positive Personality"
+              ],
+              "category": "activity"
+            },
+            {
+              "name": "CCA (NSS/NCC/Community Service)",
+              "code": "23HSX12",
+              "course_outcomes": [
+                "CO1: Understand the importance of discipline, character and service motto",
+                "CO2: Solve some societal issues by applying acquired knowledge, facts, and techniques",
+                "CO3: Explore human relationships by analyzing social problems",
+                "CO4: Determine to extend their help for the fellow beings and downtrodden people",
+                "CO5: Develop leadership skills and civic responsibilities"
+              ],
+              "category": "activity"
+            }
+          ]
+        },
+        "sem3": {
+          "subjects": [
+            { "name": "Problem Solving using Python", "code": "23CS301" },
+            { "name": "Engineering Economics and Project Management", "code": "23HSX10" },
+            { "name": "Design and Analysis of Algorithms", "code": "23CS303" },
+            { "name": "Digital Logic Design", "code": "23CS304" },
+            { "name": "Discrete Mathematical Structures", "code": "23CS305" },
+            { "name": "Object Oriented Programming with JAVA", "code": "23CS306" }
+          ]
+        },
+        "sem4": {
+          "subjects": [
+            { "name": "Database Management Systems", "code": "23IT304" },
+            { "name": "Operating Systems", "code": "23IT403" },
+            { "name": "Computer Organization and Architecture", "code": "23CS403" },
+            { "name": "Probability and Statistics using Python", "code": "23MA404" },
+            { "name": "Web Coding and Development", "code": "23CS405" }
+          ]
+        },
+        "sem5": {
+          "subjects": [
+            "Software Engineering",
+            "Compiler Design",
+            "Web Technologies",
+            "Computer Graphics",
+            "Cryptography and Network Security",
+            "Elective - I (Machine Learning / Cloud Computing / IoT)",
+            "Web Technologies Lab",
+            "Compiler Design Lab",
+            "Case Tools Lab"
+          ]
+        },
+        "sem6": {
+          "subjects": [
+            "Distributed Systems",
+            "Software Testing Methodologies",
+            "Data Warehousing and Data Mining",
+            "Mobile Application Development",
+            "Elective - II (Big Data Analytics / Blockchain / NLP)",
+            "Elective - III (Deep Learning / AR-VR / Cyber Security)",
+            "Mobile App Development Lab",
+            "Data Mining Lab",
+            "Mini Project"
+          ]
+        },
+        "sem7": {
+          "subjects": [
+            "Artificial Intelligence",
+            "Cloud Computing",
+            "Information Retrieval Systems",
+            "Elective - IV (DevOps / Quantum Computing / Image Processing)",
+            "Elective - V (Embedded Systems / Digital Forensics)",
+            "Open Elective",
+            "AI Lab",
+            "Project Phase - I",
+            "Seminar"
+          ]
+        },
+        "sem8": {
+          "subjects": [
+            "Elective - VI (Advanced Algorithms / Software Architecture)",
+            "Professional Ethics and Human Values",
+            "Management Science",
+            "Project Phase - II (Major Project)",
+            "Comprehensive Viva-Voce",
+            "Industry Internship / Training"
+          ]
+        }
+      }
+    },
+    "ECE": {
+      "branch_full_name": "Electronics and Communication Engineering",
+      "semesters": {
+        "sem1": {
+          "subjects": [
+            {
+              "name": "Engineering Mathematics - I",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Solve the system of linear equations",
+                "CO2: Construct eigenvectors of a matrix and use applications of Cayley Hamilton theorem",
+                "CO3: Identify the nature of quadratic form using matrix theory",
+                "CO4: Apply Mean value theorems to solve single variable problems",
+                "CO5: Make use of partial derivatives to solve multivariable problems",
+                "CO6: Utilize multiple integrals to find area and volume of solids"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Comprehend the basic principle of diffraction and observe the diffraction pattern in various cases",
+                "CO2: Illustrate the concepts of interference and polarisation and their applications",
+                "CO3: Understand the space lattices and crystal symmetry",
+                "CO4: Summarize the fundamental concepts of quantum mechanics",
+                "CO5: Explore the properties and applications of dielectric and magnetic materials",
+                "CO6: Demonstrate the conduction process of charge carriers in semiconductors"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Chemistry",
+              "code": "23CYX02",
+              "course_outcomes": [
+                "CO1: Assess the quality of water and its treatment methods",
+                "CO2: Estimate the potentials for electrochemical cells",
+                "CO3: Describe corrosion factors and implement prevention methods",
+                "CO4: Illustrate the types of polymers and fuels with applications",
+                "CO5: Describe the concepts of colloids, micelle and nanomaterials",
+                "CO6: Explain the uses of refractory materials, lubricants and cements"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Programming for Problem Solving (C)",
+              "course_outcomes": [
+                "CO1: Illustrate algorithms for programming and problem solving",
+                "CO2: Formulate sequential and iterative programming",
+                "CO3: Implement basic dynamic data structures",
+                "CO4: Develop modular program aspects for complex problems",
+                "CO5: Apply concepts for optimal utilization of memory",
+                "CO6: Understand techniques of storage and processing data"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Drawing",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Understand principles of engineering drawing including curves and scales",
+                "CO2: Draw and interpret orthographic projections of points, lines and planes",
+                "CO3: Construct projections of planes and solids in simple positions",
+                "CO4: Apply sectional views and projections using CAD software",
+                "CO5: Understand development of surfaces using CAD",
+                "CO6: Draw and convert isometric and orthographic views using CAD"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "English for Communication",
+              "code": "23HSX01",
+              "course_outcomes": [
+                "CO1: Understand context and specific information from dialogues",
+                "CO2: Speak clearly using discourse markers in discussions",
+                "CO3: Comprehend and appreciate literary texts",
+                "CO4: Write summaries, essays, letters/e-mails and resume",
+                "CO5: Apply grammatical structures appropriately",
+                "CO6: Improve communicative competence with enhanced vocabulary"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics Lab",
+              "code": "23PYX02",
+              "course_outcomes": [
+                "CO1: Infer knowledge from scientific methods and measure physical parameters",
+                "CO2: Develop laboratory skills in handling electrical and optical instruments",
+                "CO3: Demonstrate interference and diffraction phenomena",
+                "CO4: Inspect magnetic fields and optical fiber principles",
+                "CO5: Apply physics principles to measure solid state properties",
+                "CO6: Design and analyze physics experiments"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Engineering Chemistry Lab",
+              "code": "23CYX04",
+              "course_outcomes": [
+                "CO1: Assess percentage moisture of solid fuel",
+                "CO2: Prepare Bakelite polymer and ZnO nanomaterial",
+                "CO3: Determine acid number and viscosity of lubricating oil",
+                "CO4: Estimate iron and calcium in cement",
+                "CO5: Estimate hardness and dissolved oxygen in water",
+                "CO6: Determine strength of acid in lead acid battery"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Programming Lab",
+              "code": "23BEX07",
+              "course_outcomes": [
+                "CO1: Read, understand and trace program execution",
+                "CO2: Select proper control structures",
+                "CO3: Construct programs using homogeneous data types",
+                "CO4: Develop modular programs using functions",
+                "CO5: Formulate memory-efficient programs",
+                "CO6: Develop programs using files"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem2": {
+          "subjects": [
+            {
+              "name": "Engineering Mathematics - II",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Model and solve first order differential equations",
+                "CO2: Apply first and higher order differential equations in engineering",
+                "CO3: Solve higher order differential equations and initial value problems",
+                "CO4: Identify methods for solving linear partial differential equations",
+                "CO5: Use concepts in partial differential equations and vector differentiation",
+                "CO6: Apply vector calculus for work, circulation, flux and integral theorems"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Mechanics",
+              "code": "23ME201",
+              "course_outcomes": [
+                "CO1: Compute the resultant force in concurrent and coplanar force systems",
+                "CO2: Analyze equilibrium condition for different force systems with and without friction",
+                "CO3: Determine the forces and their nature in members of trusses",
+                "CO4: Determine centroids, centre of gravity and moment of inertia of geometrical shapes",
+                "CO5: Analyze kinematics of rectilinear and curvilinear motions",
+                "CO6: Assess kinetics of rectilinear, curvilinear and rigid body motion"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Basic Electrical & Electronics Engineering",
+              "code": "23BEX01",
+              "course_outcomes": [
+                "CO1: Demonstrate electrical parameters of DC & AC circuits",
+                "CO2: Illustrate operation of electrical machines and power plants",
+                "CO3: Summarize electrical measurements and safety measures",
+                "CO4: Explain operation of semiconductor devices and their characteristics",
+                "CO5: Illustrate operation of rectifiers",
+                "CO6: Illustrate number systems, binary codes and combinational circuits using logic gates"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Network Analysis",
+              "code": "23EC201",
+              "course_outcomes": [
+                "CO1: Apply network reduction techniques to DC circuits",
+                "CO2: Apply network theorems to simplify complex networks",
+                "CO3: Summarize behaviour of AC circuits",
+                "CO4: Explain series and parallel connected coupled circuits",
+                "CO5: Interpret parameters of two-port networks",
+                "CO6: Illustrate transient response of R, L, C circuits for DC and AC excitations"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Environmental Science",
+              "course_outcomes": [],
+              "category": "theory"
+            },
+            {
+              "name": "Basic Electrical Lab",
+              "code": "23BEX01",
+              "course_outcomes": [
+                "CO1: Apply electrical principles to resolve circuit problems",
+                "CO2: Develop proficiency in electrical measurements",
+                "CO3: Measure power parameters and calculate energy consumption",
+                "CO4: Analyze characteristics of semiconductor devices",
+                "CO5: Find frequency response of amplifiers using BJT",
+                "CO6: Verify truth tables of logic gates and flip flops"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Electronics Lab",
+              "course_outcomes": [
+                "CO1: Apply electrical principles to resolve circuit problems",
+                "CO2: Develop proficiency in electrical measurements",
+                "CO3: Measure power parameters and calculate energy consumption",
+                "CO4: Analyze characteristics of semiconductor devices",
+                "CO5: Find frequency response of amplifiers using BJT",
+                "CO6: Verify truth tables of logic gates and flip flops"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "IT Workshop",
+              "code": "23BEX08",
+              "course_outcomes": [
+                "CO1: Demonstrate assembling and disassembling PC",
+                "CO2: Illustrate OS installation steps",
+                "CO3: Configure IP address and perform safe downloads",
+                "CO4: Create projects using Word/LaTeX and spreadsheets",
+                "CO5: Design PowerPoint presentations",
+                "CO6: Improve conversational abilities using AI tools"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem3": {
+          "subjects": [
+            { "name": "Complex Variables", "code": "23MA301" },
+            { "name": "Electronic Devices and Circuits", "code": "23EC301" },
+            { "name": "Python Programming", "code": "23EC302" },
+            { "name": "Logic Circuit Design", "code": "23EC303" },
+            { "name": "Random Variables and Stochastic Processes", "code": "23EC304" },
+            { "name": "Signals & Systems", "code": "23EC305" }
+          ]
+        },
+        "sem4": {
+          "subjects": [
+            { "name": "Object Oriented Programming", "code": "23CSE01" },
+            { "name": "Analog and Digital Communications", "code": "23EC401" },
+            { "name": "Analog Electronic Circuits", "code": "23EC402" },
+            { "name": "Electromagnetic Waves & Transmission Lines", "code": "23EC403" },
+            { "name": "Linear Control System", "code": "23EC404" }
+          ]
+        },
+        "sem5": {
+          "subjects": [
+            "Digital Communications",
+            "Antennas and Wave Propagation",
+            "VLSI Design",
+            "Digital Signal Processing",
+            "Elective - I (Embedded Systems / IoT / Radar Systems)",
+            "Digital Signal Processing Lab",
+            "VLSI Lab",
+            "Digital Communications Lab"
+          ]
+        },
+        "sem6": {
+          "subjects": [
+            "Wireless Communications",
+            "Optical Fiber Communications",
+            "Computer Networks",
+            "Microwave Engineering",
+            "Elective - II (Image Processing / Satellite Communication / RF Design)",
+            "Elective - III (5G Networks / MIMO Systems)",
+            "Microwave Lab",
+            "Optical Fiber Lab",
+            "Mini Project"
+          ]
+        },
+        "sem7": {
+          "subjects": [
+            "Mobile Communications",
+            "Spread Spectrum and CDMA",
+            "MEMS Technology",
+            "Elective - IV (Cognitive Radio / Biomedical Signal Processing)",
+            "Elective - V (Machine Learning for ECE / Robotics)",
+            "Open Elective",
+            "Advanced Communications Lab",
+            "Project Phase - I",
+            "Seminar"
+          ]
+        },
+        "sem8": {
+          "subjects": [
+            "Elective - VI (Advanced VLSI / Network Security)",
+            "Professional Ethics and Human Values",
+            "Management Science",
+            "Project Phase - II (Major Project)",
+            "Comprehensive Viva-Voce",
+            "Industry Internship / Training"
+          ]
+        }
+      }
+    },
+    "EEE": {
+      "branch_full_name": "Electrical and Electronics Engineering",
+      "semesters": {
+        "sem1": {
+          "subjects": [
+            {
+              "name": "Engineering Mathematics - I",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Solve the system of linear equations",
+                "CO2: Construct eigenvectors of a matrix and use applications of Cayley Hamilton theorem",
+                "CO3: Identify the nature of quadratic form using matrix theory",
+                "CO4: Apply Mean value theorems to solve single variable problems",
+                "CO5: Make use of partial derivatives to solve multivariable problems",
+                "CO6: Utilize multiple integrals to find area and volume of solids"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Comprehend the basic principle of diffraction and observe the diffraction pattern in various cases",
+                "CO2: Illustrate the concepts of interference and polarisation and their applications",
+                "CO3: Understand the space lattices and crystal symmetry",
+                "CO4: Summarize the fundamental concepts of quantum mechanics",
+                "CO5: Explore the properties and applications of dielectric and magnetic materials",
+                "CO6: Demonstrate the conduction process of charge carriers in semiconductors"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Chemistry",
+              "code": "23CYX02",
+              "course_outcomes": [
+                "CO1: Assess the quality of water and its treatment methods",
+                "CO2: Estimate the potentials for electrochemical cells",
+                "CO3: Describe corrosion factors and implement prevention methods",
+                "CO4: Illustrate the types of polymers and fuels with applications",
+                "CO5: Describe the concepts of colloids, micelle and nanomaterials",
+                "CO6: Explain the uses of refractory materials, lubricants and cements"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Programming for Problem Solving (C)",
+              "course_outcomes": [
+                "CO1: Illustrate algorithms for programming and problem solving",
+                "CO2: Formulate sequential and iterative programming",
+                "CO3: Implement basic dynamic data structures",
+                "CO4: Develop modular program aspects for complex problems",
+                "CO5: Apply concepts for optimal utilization of memory",
+                "CO6: Understand techniques of storage and processing data"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Drawing",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Understand principles of engineering drawing including curves and scales",
+                "CO2: Draw and interpret orthographic projections of points, lines and planes",
+                "CO3: Construct projections of planes and solids in simple positions",
+                "CO4: Apply sectional views and projections using CAD software",
+                "CO5: Understand development of surfaces using CAD",
+                "CO6: Draw and convert isometric and orthographic views using CAD"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "English for Communication",
+              "code": "23HSX01",
+              "course_outcomes": [
+                "CO1: Understand context and specific information from dialogues",
+                "CO2: Speak clearly using discourse markers in discussions",
+                "CO3: Comprehend and appreciate literary texts",
+                "CO4: Write summaries, essays, letters/e-mails and resume",
+                "CO5: Apply grammatical structures appropriately",
+                "CO6: Improve communicative competence with enhanced vocabulary"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics Lab",
+              "code": "23PYX02",
+              "course_outcomes": [
+                "CO1: Infer knowledge from scientific methods and measure physical parameters",
+                "CO2: Develop laboratory skills in handling electrical and optical instruments",
+                "CO3: Demonstrate interference and diffraction phenomena",
+                "CO4: Inspect magnetic fields and optical fiber principles",
+                "CO5: Apply physics principles to measure solid state properties",
+                "CO6: Design and analyze physics experiments"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Engineering Chemistry Lab",
+              "code": "23CYX04",
+              "course_outcomes": [
+                "CO1: Assess percentage moisture of solid fuel",
+                "CO2: Prepare Bakelite polymer and ZnO nanomaterial",
+                "CO3: Determine acid number and viscosity of lubricating oil",
+                "CO4: Estimate iron and calcium in cement",
+                "CO5: Estimate hardness and dissolved oxygen in water",
+                "CO6: Determine strength of acid in lead acid battery"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Programming Lab",
+              "code": "23BEX07",
+              "course_outcomes": [
+                "CO1: Read, understand and trace program execution",
+                "CO2: Select proper control structures",
+                "CO3: Construct programs using homogeneous data types",
+                "CO4: Develop modular programs using functions",
+                "CO5: Formulate memory-efficient programs",
+                "CO6: Develop programs using files"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem2": {
+          "subjects": [
+            {
+              "name": "Engineering Mathematics - II",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Model and solve first order differential equations",
+                "CO2: Apply first and higher order differential equations in engineering",
+                "CO3: Solve higher order differential equations and initial value problems",
+                "CO4: Identify methods for solving linear partial differential equations",
+                "CO5: Use concepts in partial differential equations and vector differentiation",
+                "CO6: Apply vector calculus for work, circulation, flux and integral theorems"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Mechanics",
+              "code": "23ME201",
+              "course_outcomes": [
+                "CO1: Compute the resultant force in concurrent and coplanar force systems",
+                "CO2: Analyze equilibrium condition for different force systems with and without friction",
+                "CO3: Determine the forces and their nature in members of trusses",
+                "CO4: Determine centroids, centre of gravity and moment of inertia of geometrical shapes",
+                "CO5: Analyze kinematics of rectilinear and curvilinear motions",
+                "CO6: Assess kinetics of rectilinear, curvilinear and rigid body motion"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Basic Electronics Engineering",
+              "code": "23BEX01",
+              "course_outcomes": [
+                "CO1: Demonstrate the electrical parameters of DC & AC circuits",
+                "CO2: Illustrate the operation of electrical machines and power plants",
+                "CO3: Summarize electrical measurements and safety measures",
+                "CO4: Explain the operation of semiconductor devices and their characteristics",
+                "CO5: Illustrate the operation of rectifiers",
+                "CO6: Illustrate the number systems, binary codes, and combinational circuits using logic gates"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Network Theory",
+              "code": "23EC201",
+              "course_outcomes": [
+                "CO1: Apply network reduction techniques to DC circuits",
+                "CO2: Apply network theorems to simplify complex networks",
+                "CO3: Summarize the behavior of AC circuits",
+                "CO4: Explain series and parallel connected coupled circuits",
+                "CO5: Interpret various parameters for a given two-port network",
+                "CO6: Illustrate the transient response of R, L, C circuits for DC and AC excitations"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Environmental Science",
+              "course_outcomes": [],
+              "category": "theory"
+            },
+            {
+              "name": "Electronics Lab",
+              "course_outcomes": [
+                "CO1: Apply electrical principles to resolve circuit problems",
+                "CO2: Develop proficiency in electrical measurements",
+                "CO3: Measure power parameters and calculate energy consumption",
+                "CO4: Analyze characteristics of semiconductor devices",
+                "CO5: Find frequency response of amplifiers using BJT",
+                "CO6: Verify truth tables of logic gates and flip flops"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Electrical Circuits Lab",
+              "code": "23EE202",
+              "course_outcomes": [
+                "CO1: Demonstrate network reduction techniques using basic laws",
+                "CO2: Compute the parameters of electrical equipment",
+                "CO3: Compute the parameters of magnetic circuit",
+                "CO4: Analyse series and parallel resonant circuits",
+                "CO5: Analyse maximum Power transfer from source to load",
+                "CO6: Apply network theorems to solve electrical circuits"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "IT Workshop",
+              "code": "23BEX08",
+              "course_outcomes": [
+                "CO1: Demonstrate assembling and disassembling PC",
+                "CO2: Illustrate OS installation steps",
+                "CO3: Configure IP address and perform safe downloads",
+                "CO4: Create projects using Word/LaTeX and spreadsheets",
+                "CO5: Design PowerPoint presentations",
+                "CO6: Improve conversational abilities using AI tools"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem3": {
+          "subjects": [
+            { "name": "Engineering Mathematics III", "code": "23MA302" },
+            { "name": "DC Machines and Transformers", "code": "23EE302" },
+            { "name": "Electrical Circuit Analysis-II", "code": "23EE303" },
+            { "name": "Electromagnetic Field Theory", "code": "23EE304" },
+            { "name": "Semiconductor Devices and Circuits", "code": "23EE306" }
+          ]
+        },
+        "sem4": {
+          "subjects": [
+            { "name": "AC Machines", "code": "23EE401" },
+            { "name": "Linear and Digital Integrated Circuits", "code": "23EE402" },
+            { "name": "Power Electronics", "code": "23EE403" },
+            { "name": "Power Generation, Transmission and Distribution", "code": "23EE404" },
+            { "name": "Signals and Systems Theory", "code": "23EE405" }
+          ]
+        },
+        "sem5": {
+          "subjects": [
+            "Power Systems - II",
+            "Power Electronics",
+            "Digital Signal Processing",
+            "Switchgear and Protection",
+            "Elective - I (FACTS / Renewable Energy / Smart Grid)",
+            "Power Electronics Lab",
+            "Power Systems Simulation Lab",
+            "DSP Lab"
+          ]
+        },
+        "sem6": {
+          "subjects": [
+            "High Voltage Engineering",
+            "Utilization of Electric Power",
+            "Electric Drives",
+            "VLSI Design",
+            "Elective - II (Energy Audit / PLC & SCADA / Flexible AC Transmission)",
+            "Elective - III (IoT in Power Systems / Embedded Control)",
+            "Electric Drives Lab",
+            "High Voltage Lab",
+            "Mini Project"
+          ]
+        },
+        "sem7": {
+          "subjects": [
+            "Power System Operation and Control",
+            "Special Electrical Machines",
+            "SCADA and Energy Management",
+            "Elective - IV (Wind and Solar Energy / Advanced Power Electronics)",
+            "Elective - V (Machine Learning in EEE / Robotics)",
+            "Open Elective",
+            "Advanced Electrical Lab",
+            "Project Phase - I",
+            "Seminar"
+          ]
+        },
+        "sem8": {
+          "subjects": [
+            "Elective - VI (Power Quality / Distributed Generation)",
+            "Professional Ethics and Human Values",
+            "Management Science",
+            "Project Phase - II (Major Project)",
+            "Comprehensive Viva-Voce",
+            "Industry Internship / Training"
+          ]
+        }
+      }
+    },
+    "MECH": {
+      "branch_full_name": "Mechanical Engineering",
+      "semesters": {
+        "sem1": {
+          "subjects": [
+            {
+              "name": "Engineering Mathematics - I",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Solve the system of linear equations",
+                "CO2: Construct eigenvectors of a matrix and use applications of Cayley Hamilton theorem",
+                "CO3: Identify the nature of quadratic form using matrix theory",
+                "CO4: Apply Mean value theorems to solve single variable problems",
+                "CO5: Make use of partial derivatives to solve multivariable problems",
+                "CO6: Utilize multiple integrals to find area and volume of solids"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Comprehend the basic principle of diffraction and observe the diffraction pattern in various cases",
+                "CO2: Illustrate the concepts of interference and polarisation and their applications",
+                "CO3: Understand the space lattices and crystal symmetry",
+                "CO4: Summarize the fundamental concepts of quantum mechanics",
+                "CO5: Explore the properties and applications of dielectric and magnetic materials",
+                "CO6: Demonstrate the conduction process of charge carriers in semiconductors"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Chemistry",
+              "code": "23CYX02",
+              "course_outcomes": [
+                "CO1: Assess the quality of water and its treatment methods",
+                "CO2: Estimate the potentials for electrochemical cells",
+                "CO3: Describe corrosion factors and implement prevention methods",
+                "CO4: Illustrate the types of polymers and fuels with applications",
+                "CO5: Describe the concepts of colloids, micelle and nanomaterials",
+                "CO6: Explain the uses of refractory materials, lubricants and cements"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Programming for Problem Solving (C)",
+              "course_outcomes": [
+                "CO1: Illustrate algorithms for programming and problem solving",
+                "CO2: Formulate sequential and iterative programming",
+                "CO3: Implement basic dynamic data structures",
+                "CO4: Develop modular program aspects for complex problems",
+                "CO5: Apply concepts for optimal utilization of memory",
+                "CO6: Understand techniques of storage and processing data"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Drawing",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Understand principles of engineering drawing including curves and scales",
+                "CO2: Draw and interpret orthographic projections of points, lines and planes",
+                "CO3: Construct projections of planes and solids in simple positions",
+                "CO4: Apply sectional views and projections using CAD software",
+                "CO5: Understand development of surfaces using CAD",
+                "CO6: Draw and convert isometric and orthographic views using CAD"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "English for Communication",
+              "code": "23HSX01",
+              "course_outcomes": [
+                "CO1: Understand context and specific information from dialogues",
+                "CO2: Speak clearly using discourse markers in discussions",
+                "CO3: Comprehend and appreciate literary texts",
+                "CO4: Write summaries, essays, letters/e-mails and resume",
+                "CO5: Apply grammatical structures appropriately",
+                "CO6: Improve communicative competence with enhanced vocabulary"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics Lab",
+              "code": "23PYX02",
+              "course_outcomes": [
+                "CO1: Infer knowledge from scientific methods and measure physical parameters",
+                "CO2: Develop laboratory skills in handling electrical and optical instruments",
+                "CO3: Demonstrate interference and diffraction phenomena",
+                "CO4: Inspect magnetic fields and optical fiber principles",
+                "CO5: Apply physics principles to measure solid state properties",
+                "CO6: Design and analyze physics experiments"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Engineering Chemistry Lab",
+              "code": "23CYX04",
+              "course_outcomes": [
+                "CO1: Assess percentage moisture of solid fuel",
+                "CO2: Prepare Bakelite polymer and ZnO nanomaterial",
+                "CO3: Determine acid number and viscosity of lubricating oil",
+                "CO4: Estimate iron and calcium in cement",
+                "CO5: Estimate hardness and dissolved oxygen in water",
+                "CO6: Determine strength of acid in lead acid battery"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Programming Lab",
+              "code": "23BEX07",
+              "course_outcomes": [
+                "CO1: Read, understand and trace program execution",
+                "CO2: Select proper control structures",
+                "CO3: Construct programs using homogeneous data types",
+                "CO4: Develop modular programs using functions",
+                "CO5: Formulate memory-efficient programs",
+                "CO6: Develop programs using files"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem2": {
+          "subjects": [
+            {
+              "name": "Engineering Mathematics - II",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Model and solve first order differential equations",
+                "CO2: Apply first and higher order differential equations in engineering",
+                "CO3: Solve higher order differential equations and initial value problems",
+                "CO4: Identify methods for solving linear partial differential equations",
+                "CO5: Use concepts in partial differential equations and vector differentiation",
+                "CO6: Apply vector calculus for work, circulation, flux and integral theorems"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Mechanics",
+              "code": "23ME201",
+              "course_outcomes": [
+                "CO1: Compute the resultant force in concurrent and coplanar force systems",
+                "CO2: Analyze equilibrium condition for different force systems with and without friction",
+                "CO3: Determine the forces and their nature in members of trusses",
+                "CO4: Determine centroids, centre of gravity and moment of inertia of geometrical shapes",
+                "CO5: Analyze kinematics of rectilinear and curvilinear motions",
+                "CO6: Assess kinetics of rectilinear, curvilinear and rigid body motion"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Basic Electrical & Electronics Engineering",
+              "code": "23BEX01",
+              "course_outcomes": [
+                "CO1: Demonstrate electrical parameters of DC & AC circuits",
+                "CO2: Illustrate operation of electrical machines and power plants",
+                "CO3: Summarize electrical measurements and safety measures",
+                "CO4: Explain operation of semiconductor devices and their characteristics",
+                "CO5: Illustrate operation of rectifiers",
+                "CO6: Illustrate number systems, binary codes and combinational circuits using logic gates"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Manufacturing Processes",
+              "course_outcomes": [],
+              "category": "theory"
+            },
+            {
+              "name": "Environmental Science",
+              "course_outcomes": [],
+              "category": "theory"
+            },
+            {
+              "name": "Electrical & Electronics Lab",
+              "code": "23BEX01",
+              "course_outcomes": [
+                "CO1: Apply electrical principles to resolve circuit problems",
+                "CO2: Develop proficiency in electrical measurements",
+                "CO3: Measure power parameters and calculate energy consumption",
+                "CO4: Analyze characteristics of semiconductor devices",
+                "CO5: Find frequency response of amplifiers using BJT",
+                "CO6: Verify truth tables of logic gates and flip flops"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Manufacturing Processes Lab",
+              "course_outcomes": [],
+              "category": "lab"
+            },
+            {
+              "name": "IT Workshop",
+              "code": "23BEX08",
+              "course_outcomes": [
+                "CO1: Demonstrate assembling and disassembling PC",
+                "CO2: Illustrate OS installation steps",
+                "CO3: Configure IP address and perform safe downloads",
+                "CO4: Create projects using Word/LaTeX and spreadsheets",
+                "CO5: Design PowerPoint presentations",
+                "CO6: Improve conversational abilities using AI tools"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem3": {
+          "subjects": [
+            { "name": "Engineering Materials and Manufacturing Technology", "code": "23ME301" },
+            { "name": "Computer Aided Machine Drawing", "code": "23ME302" },
+            { "name": "Fundamentals of Python Programming", "code": "23ME303" },
+            { "name": "Fluid Mechanics and Hydraulic Machines", "code": "23ME304" },
+            { "name": "Kinematics of Machinery", "code": "23ME305" },
+            { "name": "Thermodynamics", "code": "23ME306" }
+          ]
+        },
+        "sem4": {
+          "subjects": [
+            { "name": "Object Oriented Programming through Java", "code": "23IT306" },
+            { "name": "Applied Thermodynamics", "code": "23ME401" },
+            { "name": "Dynamics of Machinery", "code": "23ME402" },
+            { "name": "Metal Cutting and Machine Tools", "code": "23ME403" },
+            { "name": "Mechanics of Solids", "code": "23ME404" }
+          ]
+        },
+        "sem5": {
+          "subjects": [
+            "Machine Design - I",
+            "Turbo Machinery",
+            "Refrigeration and Air Conditioning",
+            "Industrial Engineering and Management",
+            "Elective - I (FEA / Robotics / Composite Materials)",
+            "Machine Design Lab",
+            "Refrigeration Lab",
+            "CAD/CAM Lab"
+          ]
+        },
+        "sem6": {
+          "subjects": [
+            "Machine Design - II",
+            "Design of Transmission Systems",
+            "Automobile Engineering",
+            "Metrology and Instrumentation",
+            "Elective - II (Advanced Manufacturing / 3D Printing / Mechatronics)",
+            "Elective - III (CFD / Thermal Engineering / NDT)",
+            "Metrology Lab",
+            "Automobile Lab",
+            "Mini Project"
+          ]
+        },
+        "sem7": {
+          "subjects": [
+            "Power Plant Engineering",
+            "Operations Research",
+            "Computer Integrated Manufacturing",
+            "Elective - IV (Robotics / Nano Technology / Supply Chain Management)",
+            "Elective - V (Industrial Automation / Green Manufacturing)",
+            "Open Elective",
+            "CIM Lab",
+            "Project Phase - I",
+            "Seminar"
+          ]
+        },
+        "sem8": {
+          "subjects": [
+            "Elective - VI (Product Design / Advanced CAD-CAM)",
+            "Professional Ethics and Human Values",
+            "Management Science",
+            "Project Phase - II (Major Project)",
+            "Comprehensive Viva-Voce",
+            "Industry Internship / Training"
+          ]
+        }
+      }
+    },
+    "CIVIL": {
+      "branch_full_name": "Civil Engineering",
+      "semesters": {
+        "sem1": {
+          "subjects": [
+            {
+              "name": "Engineering Mathematics - I",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Solve the system of linear equations",
+                "CO2: Construct eigenvectors of a matrix and use applications of Cayley Hamilton theorem",
+                "CO3: Identify the nature of quadratic form using matrix theory",
+                "CO4: Apply Mean value theorems to solve single variable problems",
+                "CO5: Make use of partial derivatives to solve multivariable problems",
+                "CO6: Utilize multiple integrals to find area and volume of solids"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Comprehend the basic principle of diffraction and observe the diffraction pattern in various cases",
+                "CO2: Illustrate the concepts of interference and polarisation and their applications",
+                "CO3: Understand the space lattices and crystal symmetry",
+                "CO4: Summarize the fundamental concepts of quantum mechanics",
+                "CO5: Explore the properties and applications of dielectric and magnetic materials",
+                "CO6: Demonstrate the conduction process of charge carriers in semiconductors"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Chemistry",
+              "code": "23CYX02",
+              "course_outcomes": [
+                "CO1: Assess the quality of water and its treatment methods",
+                "CO2: Estimate the potentials for electrochemical cells",
+                "CO3: Describe corrosion factors and implement prevention methods",
+                "CO4: Illustrate the types of polymers and fuels with applications",
+                "CO5: Describe the concepts of colloids, micelle and nanomaterials",
+                "CO6: Explain the uses of refractory materials, lubricants and cements"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Programming for Problem Solving (C)",
+              "course_outcomes": [
+                "CO1: Illustrate algorithms for programming and problem solving",
+                "CO2: Formulate sequential and iterative programming",
+                "CO3: Implement basic dynamic data structures",
+                "CO4: Develop modular program aspects for complex problems",
+                "CO5: Apply concepts for optimal utilization of memory",
+                "CO6: Understand techniques of storage and processing data"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Drawing",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Understand principles of engineering drawing including curves and scales",
+                "CO2: Draw and interpret orthographic projections of points, lines and planes",
+                "CO3: Construct projections of planes and solids in simple positions",
+                "CO4: Apply sectional views and projections using CAD software",
+                "CO5: Understand development of surfaces using CAD",
+                "CO6: Draw and convert isometric and orthographic views using CAD"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "English for Communication",
+              "code": "23HSX01",
+              "course_outcomes": [
+                "CO1: Understand context and specific information from dialogues",
+                "CO2: Speak clearly using discourse markers in discussions",
+                "CO3: Comprehend and appreciate literary texts",
+                "CO4: Write summaries, essays, letters/e-mails and resume",
+                "CO5: Apply grammatical structures appropriately",
+                "CO6: Improve communicative competence with enhanced vocabulary"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics Lab",
+              "code": "23PYX02",
+              "course_outcomes": [
+                "CO1: Infer knowledge from scientific methods and measure physical parameters",
+                "CO2: Develop laboratory skills in handling electrical and optical instruments",
+                "CO3: Demonstrate interference and diffraction phenomena",
+                "CO4: Inspect magnetic fields and optical fiber principles",
+                "CO5: Apply physics principles to measure solid state properties",
+                "CO6: Design and analyze physics experiments"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Engineering Chemistry Lab",
+              "code": "23CYX04",
+              "course_outcomes": [
+                "CO1: Assess percentage moisture of solid fuel",
+                "CO2: Prepare Bakelite polymer and ZnO nanomaterial",
+                "CO3: Determine acid number and viscosity of lubricating oil",
+                "CO4: Estimate iron and calcium in cement",
+                "CO5: Estimate hardness and dissolved oxygen in water",
+                "CO6: Determine strength of acid in lead acid battery"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Programming Lab",
+              "code": "23BEX07",
+              "course_outcomes": [
+                "CO1: Read, understand and trace program execution",
+                "CO2: Select proper control structures",
+                "CO3: Construct programs using homogeneous data types",
+                "CO4: Develop modular programs using functions",
+                "CO5: Formulate memory-efficient programs",
+                "CO6: Develop programs using files"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem2": {
+          "subjects": [
+            {
+              "name": "Engineering Mathematics - II",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Model and solve first order differential equations",
+                "CO2: Apply first and higher order differential equations in engineering",
+                "CO3: Solve higher order differential equations and initial value problems",
+                "CO4: Identify methods for solving linear partial differential equations",
+                "CO5: Use concepts in partial differential equations and vector differentiation",
+                "CO6: Apply vector calculus for work, circulation, flux and integral theorems"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Mechanics",
+              "code": "23ME201",
+              "course_outcomes": [
+                "CO1: Compute the resultant force in concurrent and coplanar force systems",
+                "CO2: Analyze equilibrium condition for different force systems with and without friction",
+                "CO3: Determine the forces and their nature in members of trusses",
+                "CO4: Determine centroids, centre of gravity and moment of inertia of geometrical shapes",
+                "CO5: Analyze kinematics of rectilinear and curvilinear motions",
+                "CO6: Assess kinetics of rectilinear, curvilinear and rigid body motion"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Basic Electrical & Electronics Engineering",
+              "code": "23BEX01",
+              "course_outcomes": [
+                "CO1: Demonstrate electrical parameters of DC & AC circuits",
+                "CO2: Illustrate operation of electrical machines and power plants",
+                "CO3: Summarize electrical measurements and safety measures",
+                "CO4: Explain operation of semiconductor devices and their characteristics",
+                "CO5: Illustrate operation of rectifiers",
+                "CO6: Illustrate number systems, binary codes and combinational circuits using logic gates"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Building Materials and Construction",
+              "course_outcomes": [],
+              "category": "theory"
+            },
+            {
+              "name": "Environmental Science",
+              "course_outcomes": [],
+              "category": "theory"
+            },
+            {
+              "name": "Survey Lab",
+              "course_outcomes": [],
+              "category": "lab"
+            },
+            {
+              "name": "Building Materials Lab",
+              "course_outcomes": [],
+              "category": "lab"
+            },
+            {
+              "name": "IT Workshop",
+              "code": "23BEX08",
+              "course_outcomes": [
+                "CO1: Demonstrate assembling and disassembling PC",
+                "CO2: Illustrate OS installation steps",
+                "CO3: Configure IP address and perform safe downloads",
+                "CO4: Create projects using Word/LaTeX and spreadsheets",
+                "CO5: Design PowerPoint presentations",
+                "CO6: Improve conversational abilities using AI tools"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem3": {
+          "subjects": [
+            { "name": "Numerical Methods", "code": "23MA303" },
+            { "name": "Building Materials and Concrete Technology", "code": "23CE302" },
+            { "name": "Building Planning and Drawing", "code": "23CE303" },
+            { "name": "Fluid Mechanics", "code": "23CE304" },
+            { "name": "Solid Mechanics I", "code": "23CE305" },
+            { "name": "Surveying", "code": "23CE306" }
+          ]
+        },
+        "sem4": {
+          "subjects": [
+            { "name": "Hydraulics and Hydraulic Machinery", "code": "23CE401" },
+            { "name": "Soil Mechanics", "code": "23CE402" },
+            { "name": "Solid Mechanics II", "code": "23CE403" },
+            { "name": "Structural Analysis", "code": "23CE404" },
+            { "name": "Transportation Engineering", "code": "23CE405" }
+          ]
+        },
+        "sem5": {
+          "subjects": [
+            "Structural Analysis - II",
+            "Design of RC Structures",
+            "Transportation Engineering - II",
+            "Water Resources Engineering",
+            "Elective - I (GIS & Remote Sensing / Environmental Engineering / Bridge Engineering)",
+            "Structural Design Lab",
+            "Computer Aided Design Lab",
+            "Transportation Lab"
+          ]
+        },
+        "sem6": {
+          "subjects": [
+            "Design of Steel Structures",
+            "Foundation Engineering",
+            "Environmental Engineering",
+            "Estimation and Costing",
+            "Elective - II (Earthquake Engineering / Prestressed Concrete / Urban Planning)",
+            "Elective - III (Smart Infrastructure / Pavement Design)",
+            "Environmental Engineering Lab",
+            "Foundation Engineering Lab",
+            "Mini Project"
+          ]
+        },
+        "sem7": {
+          "subjects": [
+            "Construction Management",
+            "Water Supply and Sanitary Engineering",
+            "Advanced Structural Analysis",
+            "Elective - IV (Green Building / Tunnel Engineering / Coastal Engineering)",
+            "Elective - V (BIM Technology / Disaster Management)",
+            "Open Elective",
+            "Advanced Survey Lab",
+            "Project Phase - I",
+            "Seminar"
+          ]
+        },
+        "sem8": {
+          "subjects": [
+            "Elective - VI (Advanced Foundation Engineering / Smart Cities)",
+            "Professional Ethics and Human Values",
+            "Management Science",
+            "Project Phase - II (Major Project)",
+            "Comprehensive Viva-Voce",
+            "Industry Internship / Training"
+          ]
+        }
+      }
+    },
+    "IT": {
+      "branch_full_name": "Information Technology",
+      "semesters": {
+        "sem1": {
+          "subjects": [
+            {
+              "name": "Engineering Mathematics - I",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Solve the system of linear equations",
+                "CO2: Construct eigenvectors of a matrix and use applications of Cayley Hamilton theorem",
+                "CO3: Identify the nature of quadratic form using matrix theory",
+                "CO4: Apply Mean value theorems to solve single variable problems",
+                "CO5: Make use of partial derivatives to solve multivariable problems",
+                "CO6: Utilize multiple integrals to find area and volume of solids"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Comprehend the basic principle of diffraction and observe the diffraction pattern in various cases",
+                "CO2: Illustrate the concepts of interference and polarisation and their applications",
+                "CO3: Understand the space lattices and crystal symmetry",
+                "CO4: Summarize the fundamental concepts of quantum mechanics",
+                "CO5: Explore the properties and applications of dielectric and magnetic materials",
+                "CO6: Demonstrate the conduction process of charge carriers in semiconductors"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Chemistry",
+              "code": "23CYX02",
+              "course_outcomes": [
+                "CO1: Assess the quality of water and its treatment methods",
+                "CO2: Estimate the potentials for electrochemical cells",
+                "CO3: Describe corrosion factors and implement prevention methods",
+                "CO4: Illustrate the types of polymers and fuels with applications",
+                "CO5: Describe the concepts of colloids, micelle and nanomaterials",
+                "CO6: Explain the uses of refractory materials, lubricants and cements"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Programming for Problem Solving (C)",
+              "course_outcomes": [
+                "CO1: Illustrate algorithms for programming and problem solving",
+                "CO2: Formulate sequential and iterative programming",
+                "CO3: Implement basic dynamic data structures",
+                "CO4: Develop modular program aspects for complex problems",
+                "CO5: Apply concepts for optimal utilization of memory",
+                "CO6: Understand techniques of storage and processing data"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Drawing",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Understand principles of engineering drawing including curves and scales",
+                "CO2: Draw and interpret orthographic projections of points, lines and planes",
+                "CO3: Construct projections of planes and solids in simple positions",
+                "CO4: Apply sectional views and projections using CAD software",
+                "CO5: Understand development of surfaces using CAD",
+                "CO6: Draw and convert isometric and orthographic views using CAD"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "English for Communication",
+              "code": "23HSX01",
+              "course_outcomes": [
+                "CO1: Understand context and specific information from dialogues",
+                "CO2: Speak clearly using discourse markers in discussions",
+                "CO3: Comprehend and appreciate literary texts",
+                "CO4: Write summaries, essays, letters/e-mails and resume",
+                "CO5: Apply grammatical structures appropriately",
+                "CO6: Improve communicative competence with enhanced vocabulary"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics Lab",
+              "code": "23PYX02",
+              "course_outcomes": [
+                "CO1: Infer knowledge from scientific methods and measure physical parameters",
+                "CO2: Develop laboratory skills in handling electrical and optical instruments",
+                "CO3: Demonstrate interference and diffraction phenomena",
+                "CO4: Inspect magnetic fields and optical fiber principles",
+                "CO5: Apply physics principles to measure solid state properties",
+                "CO6: Design and analyze physics experiments"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Engineering Chemistry Lab",
+              "code": "23CYX04",
+              "course_outcomes": [
+                "CO1: Assess percentage moisture of solid fuel",
+                "CO2: Prepare Bakelite polymer and ZnO nanomaterial",
+                "CO3: Determine acid number and viscosity of lubricating oil",
+                "CO4: Estimate iron and calcium in cement",
+                "CO5: Estimate hardness and dissolved oxygen in water",
+                "CO6: Determine strength of acid in lead acid battery"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Programming Lab",
+              "code": "23BEX07",
+              "course_outcomes": [
+                "CO1: Read, understand and trace program execution",
+                "CO2: Select proper control structures",
+                "CO3: Construct programs using homogeneous data types",
+                "CO4: Develop modular programs using functions",
+                "CO5: Formulate memory-efficient programs",
+                "CO6: Develop programs using files"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem2": {
+          "subjects": [
+            {
+              "name": "Engineering Mathematics - II",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Model and solve first order differential equations",
+                "CO2: Apply first and higher order differential equations in engineering",
+                "CO3: Solve higher order differential equations and initial value problems",
+                "CO4: Identify methods for solving linear partial differential equations",
+                "CO5: Use concepts in partial differential equations and vector differentiation",
+                "CO6: Apply vector calculus for work, circulation, flux and integral theorems"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Mechanics",
+              "code": "23ME201",
+              "course_outcomes": [
+                "CO1: Compute the resultant force in concurrent and coplanar force systems",
+                "CO2: Analyze equilibrium condition for different force systems with and without friction",
+                "CO3: Determine the forces and their nature in members of trusses",
+                "CO4: Determine centroids, centre of gravity and moment of inertia of geometrical shapes",
+                "CO5: Analyze kinematics of rectilinear and curvilinear motions",
+                "CO6: Assess kinetics of rectilinear, curvilinear and rigid body motion"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Basic Electrical & Electronics Engineering",
+              "code": "23BEX01",
+              "course_outcomes": [
+                "CO1: Demonstrate electrical parameters of DC & AC circuits",
+                "CO2: Illustrate operation of electrical machines and power plants",
+                "CO3: Summarize electrical measurements and safety measures",
+                "CO4: Explain operation of semiconductor devices and their characteristics",
+                "CO5: Illustrate operation of rectifiers",
+                "CO6: Illustrate number systems, binary codes and combinational circuits using logic gates"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Data Structures",
+              "code": "23CS201",
+              "course_outcomes": [
+                "CO1: Explain the role of linear data structures in organizing and accessing data efficiently",
+                "CO2: Design and implement linked lists demonstrating memory allocation",
+                "CO3: Develop programs using stacks to handle recursion and manage program states",
+                "CO4: Apply queue-based algorithms and distinguish deques and priority queues",
+                "CO5: Devise solutions using stacks, queues and trees",
+                "CO6: Design hash-based solutions for suitable problem scenarios"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Environmental Science",
+              "course_outcomes": [],
+              "category": "theory"
+            },
+            {
+              "name": "Electronics Lab",
+              "course_outcomes": [
+                "CO1: Apply electrical principles to resolve circuit problems",
+                "CO2: Develop proficiency in electrical measurements",
+                "CO3: Measure power parameters and calculate energy consumption",
+                "CO4: Analyze characteristics of semiconductor devices",
+                "CO5: Find frequency response of amplifiers using BJT",
+                "CO6: Verify truth tables of logic gates and flip flops"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Data Structures Lab",
+              "code": "23CS202",
+              "course_outcomes": [
+                "CO1: Explain linear data structures in algorithm design",
+                "CO2: Implement linked lists with proper memory allocation",
+                "CO3: Develop stack-based recursive programs",
+                "CO4: Apply queue-based algorithms for task scheduling and BFS",
+                "CO5: Solve programming problems using stacks, queues and trees",
+                "CO6: Design and implement hashing techniques"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "IT Workshop",
+              "code": "23BEX08",
+              "course_outcomes": [
+                "CO1: Demonstrate assembling and disassembling PC",
+                "CO2: Illustrate OS installation steps",
+                "CO3: Configure IP address and perform safe downloads",
+                "CO4: Create projects using Word/LaTeX and spreadsheets",
+                "CO5: Design PowerPoint presentations",
+                "CO6: Improve conversational abilities using AI tools"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem3": {
+          "subjects": [
+            { "name": "Python Programming and Applications", "code": "23IT301" },
+            { "name": "Digital Logic Design", "code": "23CS304" },
+            { "name": "Discrete Mathematical Structures", "code": "23CS305" },
+            { "name": "Database Management Systems", "code": "23IT304" },
+            { "name": "Data Communication Systems", "code": "23IT305" },
+            { "name": "Object Oriented Programming through Java", "code": "23IT306" }
+          ]
+        },
+        "sem4": {
+          "subjects": [
+            { "name": "Probability and Statistics", "code": "23MA405" },
+            { "name": "Computer Organization and Architecture", "code": "23CS403" },
+            { "name": "Operating Systems", "code": "23IT403" },
+            { "name": "Design and Analysis of Algorithms", "code": "23CS303" },
+            { "name": "Web Technologies", "code": "23IT405" }
+          ]
+        },
+        "sem5": {
+          "subjects": [
+            "Web Technologies",
+            "Compiler Design",
+            "Information Security",
+            "Human Computer Interaction",
+            "Elective - I (Cloud Computing / Machine Learning / Mobile Computing)",
+            "Web Technologies Lab",
+            "Information Security Lab",
+            "Case Tools Lab"
+          ]
+        },
+        "sem6": {
+          "subjects": [
+            "Data Warehousing and Mining",
+            "Distributed Computing",
+            "Software Testing",
+            "Enterprise Resource Planning",
+            "Elective - II (Blockchain / NLP / AR-VR)",
+            "Elective - III (Big Data / IoT Security / AI)",
+            "Data Mining Lab",
+            "ERP Lab",
+            "Mini Project"
+          ]
+        },
+        "sem7": {
+          "subjects": [
+            "Service Oriented Architecture",
+            "Network Management",
+            "Digital Image Processing",
+            "Elective - IV (Cyber Forensics / DevOps / Quantum Computing)",
+            "Elective - V (Advanced Databases / Social Network Analysis)",
+            "Open Elective",
+            "Image Processing Lab",
+            "Project Phase - I",
+            "Seminar"
+          ]
+        },
+        "sem8": {
+          "subjects": [
+            "Elective - VI (Advanced Cloud / Software Architecture)",
+            "Professional Ethics and Human Values",
+            "Management Science",
+            "Project Phase - II (Major Project)",
+            "Comprehensive Viva-Voce",
+            "Industry Internship / Training"
+          ]
+        }
+      }
+    },
+    "AIML": {
+      "branch_full_name": "Artificial Intelligence and Machine Learning",
+      "semesters": {
+        "sem1": {
+          "subjects": [
+            {
+              "name": "Engineering Mathematics - I",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Solve the system of linear equations",
+                "CO2: Construct eigenvectors of a matrix and use applications of Cayley Hamilton theorem",
+                "CO3: Identify the nature of quadratic form using matrix theory",
+                "CO4: Apply Mean value theorems to solve single variable problems",
+                "CO5: Make use of partial derivatives to solve multivariable problems",
+                "CO6: Utilize multiple integrals to find area and volume of solids"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Comprehend the basic principle of diffraction and observe the diffraction pattern in various cases",
+                "CO2: Illustrate the concepts of interference and polarisation and their applications",
+                "CO3: Understand the space lattices and crystal symmetry",
+                "CO4: Summarize the fundamental concepts of quantum mechanics",
+                "CO5: Explore the properties and applications of dielectric and magnetic materials",
+                "CO6: Demonstrate the conduction process of charge carriers in semiconductors"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Chemistry",
+              "code": "23CYX02",
+              "course_outcomes": [
+                "CO1: Assess the quality of water and its treatment methods",
+                "CO2: Estimate the potentials for electrochemical cells",
+                "CO3: Describe corrosion factors and implement prevention methods",
+                "CO4: Illustrate the types of polymers and fuels with applications",
+                "CO5: Describe the concepts of colloids, micelle and nanomaterials",
+                "CO6: Explain the uses of refractory materials, lubricants and cements"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Programming for Problem Solving (Python)",
+              "course_outcomes": [
+                "CO1: Illustrate algorithms for programming and problem solving",
+                "CO2: Formulate sequential and iterative programming",
+                "CO3: Implement basic dynamic data structures",
+                "CO4: Develop modular program aspects for complex problems",
+                "CO5: Apply concepts for optimal utilization of memory",
+                "CO6: Understand techniques of storage and processing data"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Drawing",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Understand principles of engineering drawing including curves and scales",
+                "CO2: Draw and interpret orthographic projections of points, lines and planes",
+                "CO3: Construct projections of planes and solids in simple positions",
+                "CO4: Apply sectional views and projections using CAD software",
+                "CO5: Understand development of surfaces using CAD",
+                "CO6: Draw and convert isometric and orthographic views using CAD"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "English for Communication",
+              "code": "23HSX01",
+              "course_outcomes": [
+                "CO1: Understand context and specific information from dialogues",
+                "CO2: Speak clearly using discourse markers in discussions",
+                "CO3: Comprehend and appreciate literary texts",
+                "CO4: Write summaries, essays, letters/e-mails and resume",
+                "CO5: Apply grammatical structures appropriately",
+                "CO6: Improve communicative competence with enhanced vocabulary"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics Lab",
+              "code": "23PYX02",
+              "course_outcomes": [
+                "CO1: Infer knowledge from scientific methods and measure physical parameters",
+                "CO2: Develop laboratory skills in handling electrical and optical instruments",
+                "CO3: Demonstrate interference and diffraction phenomena",
+                "CO4: Inspect magnetic fields and optical fiber principles",
+                "CO5: Apply physics principles to measure solid state properties",
+                "CO6: Design and analyze physics experiments"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Engineering Chemistry Lab",
+              "code": "23CYX04",
+              "course_outcomes": [
+                "CO1: Assess percentage moisture of solid fuel",
+                "CO2: Prepare Bakelite polymer and ZnO nanomaterial",
+                "CO3: Determine acid number and viscosity of lubricating oil",
+                "CO4: Estimate iron and calcium in cement",
+                "CO5: Estimate hardness and dissolved oxygen in water",
+                "CO6: Determine strength of acid in lead acid battery"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Python Programming Lab",
+              "code": "23BEX03",
+              "course_outcomes": [
+                "CO1: Read, understand and trace program execution",
+                "CO2: Select proper control structures",
+                "CO3: Construct programs using homogeneous data types",
+                "CO4: Develop modular programs using functions",
+                "CO5: Formulate memory-efficient programs",
+                "CO6: Develop programs using files"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem2": {
+          "subjects": [
+            {
+              "name": "Engineering Mathematics - II",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Model and solve first order differential equations",
+                "CO2: Apply first and higher order differential equations in engineering",
+                "CO3: Solve higher order differential equations and initial value problems",
+                "CO4: Identify methods for solving linear partial differential equations",
+                "CO5: Use concepts in partial differential equations and vector differentiation",
+                "CO6: Apply vector calculus for work, circulation, flux and integral theorems"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Mechanics",
+              "code": "23ME201",
+              "course_outcomes": [
+                "CO1: Compute the resultant force in concurrent and coplanar force systems",
+                "CO2: Analyze equilibrium condition for different force systems with and without friction",
+                "CO3: Determine the forces and their nature in members of trusses",
+                "CO4: Determine centroids, centre of gravity and moment of inertia of geometrical shapes",
+                "CO5: Analyze kinematics of rectilinear and curvilinear motions",
+                "CO6: Assess kinetics of rectilinear, curvilinear and rigid body motion"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Basic Electrical & Electronics Engineering",
+              "code": "23BEX01",
+              "course_outcomes": [
+                "CO1: Demonstrate electrical parameters of DC & AC circuits",
+                "CO2: Illustrate operation of electrical machines and power plants",
+                "CO3: Summarize electrical measurements and safety measures",
+                "CO4: Explain operation of semiconductor devices and their characteristics",
+                "CO5: Illustrate operation of rectifiers",
+                "CO6: Illustrate number systems, binary codes and combinational circuits using logic gates"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Data Structures using Python",
+              "code": "23CS201",
+              "course_outcomes": [
+                "CO1: Explain the role of linear data structures in organizing and accessing data efficiently",
+                "CO2: Design and implement linked lists demonstrating memory allocation",
+                "CO3: Develop programs using stacks to handle recursion and manage program states",
+                "CO4: Apply queue-based algorithms and distinguish deques and priority queues",
+                "CO5: Devise solutions using stacks, queues and trees",
+                "CO6: Design hash-based solutions for suitable problem scenarios"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Environmental Science",
+              "course_outcomes": [],
+              "category": "theory"
+            },
+            {
+              "name": "Electronics Lab",
+              "course_outcomes": [
+                "CO1: Apply electrical principles to resolve circuit problems",
+                "CO2: Develop proficiency in electrical measurements",
+                "CO3: Measure power parameters and calculate energy consumption",
+                "CO4: Analyze characteristics of semiconductor devices",
+                "CO5: Find frequency response of amplifiers using BJT",
+                "CO6: Verify truth tables of logic gates and flip flops"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Data Structures Lab",
+              "code": "23CS202",
+              "course_outcomes": [
+                "CO1: Explain linear data structures in algorithm design",
+                "CO2: Implement linked lists with proper memory allocation",
+                "CO3: Develop stack-based recursive programs",
+                "CO4: Apply queue-based algorithms for task scheduling and BFS",
+                "CO5: Solve programming problems using stacks, queues and trees",
+                "CO6: Design and implement hashing techniques"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "IT Workshop",
+              "code": "23BEX08",
+              "course_outcomes": [
+                "CO1: Demonstrate assembling and disassembling PC",
+                "CO2: Illustrate OS installation steps",
+                "CO3: Configure IP address and perform safe downloads",
+                "CO4: Create projects using Word/LaTeX and spreadsheets",
+                "CO5: Design PowerPoint presentations",
+                "CO6: Improve conversational abilities using AI tools"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem3": {
+          "subjects": [
+            { "name": "Problem Solving using Python", "code": "23CS301" },
+            { "name": "Artificial Intelligence", "code": "23ML302" },
+            { "name": "Design and Analysis of Algorithms", "code": "23CS303" },
+            { "name": "Digital Logic Design", "code": "23CS304" },
+            { "name": "Mathematical Foundation for Data Science", "code": "23DS305" },
+            { "name": "Object Oriented Programming with JAVA", "code": "23CS306" }
+          ]
+        },
+        "sem4": {
+          "subjects": [
+            { "name": "Database Management Systems", "code": "23IT304" },
+            { "name": "Operating Systems", "code": "23IT403" },
+            { "name": "Computer Organization and Architecture", "code": "23CS403" },
+            { "name": "Probability and Statistics using Python", "code": "23MA404" },
+            { "name": "Foundations of Machine Learning", "code": "23ML405" }
+          ]
+        },
+        "sem5": {
+          "subjects": [
+            "Deep Learning",
+            "Natural Language Processing",
+            "Computer Vision",
+            "Data Warehousing and Mining",
+            "Elective - I (Reinforcement Learning / IoT / Cloud AI)",
+            "Deep Learning Lab",
+            "NLP Lab",
+            "Computer Vision Lab"
+          ]
+        },
+        "sem6": {
+          "subjects": [
+            "Artificial Intelligence",
+            "Big Data Analytics",
+            "Generative AI and LLMs",
+            "AI Ethics and Governance",
+            "Elective - II (Speech Processing / Autonomous Systems / Knowledge Graphs)",
+            "Elective - III (MLOps / Edge AI / Explainable AI)",
+            "Generative AI Lab",
+            "Big Data Lab",
+            "Mini Project"
+          ]
+        },
+        "sem7": {
+          "subjects": [
+            "Robotics and Autonomous Systems",
+            "AI in Healthcare",
+            "Federated Learning and Privacy",
+            "Elective - IV (Quantum ML / 3D Vision / AI in Finance)",
+            "Elective - V (Digital Twins / AI Security)",
+            "Open Elective",
+            "Advanced AI Lab",
+            "Project Phase - I",
+            "Seminar"
+          ]
+        },
+        "sem8": {
+          "subjects": [
+            "Elective - VI (AI Product Design / Advanced LLMs / Neural Architecture Search)",
+            "Professional Ethics and Human Values",
+            "Management Science",
+            "Project Phase - II (Major Project)",
+            "Comprehensive Viva-Voce",
+            "Industry Internship / Training"
+          ]
+        }
+      }
+    },
+    "AIDS": {
+      "branch_full_name": "Artificial Intelligence and Data Science",
+      "semesters": {
+        "sem1": {
+          "subjects": [
+            {
+              "name": "Engineering Mathematics - I",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Solve the system of linear equations",
+                "CO2: Construct eigenvectors of a matrix and use applications of Cayley Hamilton theorem",
+                "CO3: Identify the nature of quadratic form using matrix theory",
+                "CO4: Apply Mean value theorems to solve single variable problems",
+                "CO5: Make use of partial derivatives to solve multivariable problems",
+                "CO6: Utilize multiple integrals to find area and volume of solids"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Comprehend the basic principle of diffraction and observe the diffraction pattern in various cases",
+                "CO2: Illustrate the concepts of interference and polarisation and their applications",
+                "CO3: Understand the space lattices and crystal symmetry",
+                "CO4: Summarize the fundamental concepts of quantum mechanics",
+                "CO5: Explore the properties and applications of dielectric and magnetic materials",
+                "CO6: Demonstrate the conduction process of charge carriers in semiconductors"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Chemistry",
+              "code": "23CYX02",
+              "course_outcomes": [
+                "CO1: Assess the quality of water and its treatment methods",
+                "CO2: Estimate the potentials for electrochemical cells",
+                "CO3: Describe corrosion factors and implement prevention methods",
+                "CO4: Illustrate the types of polymers and fuels with applications",
+                "CO5: Describe the concepts of colloids, micelle and nanomaterials",
+                "CO6: Explain the uses of refractory materials, lubricants and cements"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Programming for Problem Solving (Python)",
+              "course_outcomes": [
+                "CO1: Illustrate algorithms for programming and problem solving",
+                "CO2: Formulate sequential and iterative programming",
+                "CO3: Implement basic dynamic data structures",
+                "CO4: Develop modular program aspects for complex problems",
+                "CO5: Apply concepts for optimal utilization of memory",
+                "CO6: Understand techniques of storage and processing data"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Drawing",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Understand principles of engineering drawing including curves and scales",
+                "CO2: Draw and interpret orthographic projections of points, lines and planes",
+                "CO3: Construct projections of planes and solids in simple positions",
+                "CO4: Apply sectional views and projections using CAD software",
+                "CO5: Understand development of surfaces using CAD",
+                "CO6: Draw and convert isometric and orthographic views using CAD"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "English for Communication",
+              "code": "23HSX01",
+              "course_outcomes": [
+                "CO1: Understand context and specific information from dialogues",
+                "CO2: Speak clearly using discourse markers in discussions",
+                "CO3: Comprehend and appreciate literary texts",
+                "CO4: Write summaries, essays, letters/e-mails and resume",
+                "CO5: Apply grammatical structures appropriately",
+                "CO6: Improve communicative competence with enhanced vocabulary"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Physics Lab",
+              "code": "23PYX02",
+              "course_outcomes": [
+                "CO1: Infer knowledge from scientific methods and measure physical parameters",
+                "CO2: Develop laboratory skills in handling electrical and optical instruments",
+                "CO3: Demonstrate interference and diffraction phenomena",
+                "CO4: Inspect magnetic fields and optical fiber principles",
+                "CO5: Apply physics principles to measure solid state properties",
+                "CO6: Design and analyze physics experiments"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Engineering Chemistry Lab",
+              "code": "23CYX04",
+              "course_outcomes": [
+                "CO1: Assess percentage moisture of solid fuel",
+                "CO2: Prepare Bakelite polymer and ZnO nanomaterial",
+                "CO3: Determine acid number and viscosity of lubricating oil",
+                "CO4: Estimate iron and calcium in cement",
+                "CO5: Estimate hardness and dissolved oxygen in water",
+                "CO6: Determine strength of acid in lead acid battery"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Python Programming Lab",
+              "code": "23BEX03",
+              "course_outcomes": [
+                "CO1: Read, understand and trace program execution",
+                "CO2: Select proper control structures",
+                "CO3: Construct programs using homogeneous data types",
+                "CO4: Develop modular programs using functions",
+                "CO5: Formulate memory-efficient programs",
+                "CO6: Develop programs using files"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem2": {
+          "subjects": [
+            {
+              "name": "Engineering Mathematics - II",
+              "code": "23PYX01",
+              "course_outcomes": [
+                "CO1: Model and solve first order differential equations",
+                "CO2: Apply first and higher order differential equations in engineering",
+                "CO3: Solve higher order differential equations and initial value problems",
+                "CO4: Identify methods for solving linear partial differential equations",
+                "CO5: Use concepts in partial differential equations and vector differentiation",
+                "CO6: Apply vector calculus for work, circulation, flux and integral theorems"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Engineering Mechanics",
+              "code": "23ME201",
+              "course_outcomes": [
+                "CO1: Compute the resultant force in concurrent and coplanar force systems",
+                "CO2: Analyze equilibrium condition for different force systems with and without friction",
+                "CO3: Determine the forces and their nature in members of trusses",
+                "CO4: Determine centroids, centre of gravity and moment of inertia of geometrical shapes",
+                "CO5: Analyze kinematics of rectilinear and curvilinear motions",
+                "CO6: Assess kinetics of rectilinear, curvilinear and rigid body motion"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Basic Electrical & Electronics Engineering",
+              "code": "23BEX01",
+              "course_outcomes": [
+                "CO1: Demonstrate electrical parameters of DC & AC circuits",
+                "CO2: Illustrate operation of electrical machines and power plants",
+                "CO3: Summarize electrical measurements and safety measures",
+                "CO4: Explain operation of semiconductor devices and their characteristics",
+                "CO5: Illustrate operation of rectifiers",
+                "CO6: Illustrate number systems, binary codes and combinational circuits using logic gates"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Data Structures using Python",
+              "code": "23CS201",
+              "course_outcomes": [
+                "CO1: Explain the role of linear data structures in organizing and accessing data efficiently",
+                "CO2: Design and implement linked lists demonstrating memory allocation",
+                "CO3: Develop programs using stacks to handle recursion and manage program states",
+                "CO4: Apply queue-based algorithms and distinguish deques and priority queues",
+                "CO5: Devise solutions using stacks, queues and trees",
+                "CO6: Design hash-based solutions for suitable problem scenarios"
+              ],
+              "category": "theory"
+            },
+            {
+              "name": "Environmental Science",
+              "course_outcomes": [],
+              "category": "theory"
+            },
+            {
+              "name": "Electronics Lab",
+              "course_outcomes": [
+                "CO1: Apply electrical principles to resolve circuit problems",
+                "CO2: Develop proficiency in electrical measurements",
+                "CO3: Measure power parameters and calculate energy consumption",
+                "CO4: Analyze characteristics of semiconductor devices",
+                "CO5: Find frequency response of amplifiers using BJT",
+                "CO6: Verify truth tables of logic gates and flip flops"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "Data Structures Lab",
+              "code": "23CS202",
+              "course_outcomes": [
+                "CO1: Explain linear data structures in algorithm design",
+                "CO2: Implement linked lists with proper memory allocation",
+                "CO3: Develop stack-based recursive programs",
+                "CO4: Apply queue-based algorithms for task scheduling and BFS",
+                "CO5: Solve programming problems using stacks, queues and trees",
+                "CO6: Design and implement hashing techniques"
+              ],
+              "category": "lab"
+            },
+            {
+              "name": "IT Workshop",
+              "code": "23BEX08",
+              "course_outcomes": [
+                "CO1: Demonstrate assembling and disassembling PC",
+                "CO2: Illustrate OS installation steps",
+                "CO3: Configure IP address and perform safe downloads",
+                "CO4: Create projects using Word/LaTeX and spreadsheets",
+                "CO5: Design PowerPoint presentations",
+                "CO6: Improve conversational abilities using AI tools"
+              ],
+              "category": "lab"
+            }
+          ]
+        },
+        "sem3": {
+          "subjects": [
+            { "name": "Problem Solving using Python", "code": "23CS301" },
+            { "name": "Artificial Intelligence", "code": "23ML302" },
+            { "name": "Design and Analysis of Algorithms", "code": "23CS303" },
+            { "name": "Digital Logic Design", "code": "23CS304" },
+            { "name": "Mathematical Foundation for Data Science", "code": "23DS305" },
+            { "name": "Object Oriented Programming with JAVA", "code": "23CS306" }
+          ]
+        },
+        "sem4": {
+          "subjects": [
+            { "name": "Database Management Systems", "code": "23IT304" },
+            { "name": "Operating Systems", "code": "23IT403" },
+            { "name": "Computer Organization and Architecture", "code": "23CS403" },
+            { "name": "Probability and Statistics using Python", "code": "23MA404" },
+            { "name": "Foundations of Data Science", "code": "23DS405" }
+          ]
+        },
+        "sem5": {
+          "subjects": [
+            "Deep Learning and Neural Networks",
+            "Natural Language Processing",
+            "Big Data Technologies (Hadoop & Spark)",
+            "Time Series Analysis",
+            "Elective - I (Cloud Data Engineering / Stream Processing / Graph Analytics)",
+            "Deep Learning Lab",
+            "Big Data Lab",
+            "NLP Lab"
+          ]
+        },
+        "sem6": {
+          "subjects": [
+            "Data Science and Analytics",
+            "Computer Vision",
+            "Recommender Systems",
+            "AI for Business Intelligence",
+            "Elective - II (MLOps / Explainable AI / Reinforcement Learning)",
+            "Elective - III (Knowledge Graphs / Spatial Data / Healthcare Analytics)",
+            "Data Science Lab",
+            "BI Tools Lab",
+            "Mini Project"
+          ]
+        },
+        "sem7": {
+          "subjects": [
+            "Generative AI and LLMs",
+            "Real-Time Data Pipelines",
+            "Data Privacy and Governance",
+            "Elective - IV (Federated Learning / Quantum Data Science / AI Ethics)",
+            "Elective - V (Social Network Analytics / Advanced Forecasting)",
+            "Open Elective",
+            "Generative AI Lab",
+            "Project Phase - I",
+            "Seminar"
+          ]
+        },
+        "sem8": {
+          "subjects": [
+            "Elective - VI (Advanced Analytics / Data Mesh Architecture / Edge Intelligence)",
+            "Professional Ethics and Human Values",
+            "Management Science",
+            "Project Phase - II (Major Project)",
+            "Comprehensive Viva-Voce",
+            "Industry Internship / Training"
+          ]
+        }
+      }
+    }
+  },
+  "first_year": {
+    "description": "Universal 1st Year subjects for all branches",
+    "subjects": [
+      {
+        "name": "Engineering Physics",
+        "code": "23PYX01",
+        "category": "theory",
+        "course_outcomes": [
+          "CO1: Comprehend the basic principle of diffraction and observe the diffraction pattern in various cases",
+          "CO2: Illustrate the concepts of interference and polarisation and their applications",
+          "CO3: Understand the space lattices and crystal symmetry",
+          "CO4: Summarize the fundamental concepts of quantum mechanics",
+          "CO5: Explore the properties and applications of dielectric and magnetic materials",
+          "CO6: Demonstrate the conduction process of charge carriers in semiconductors"
+        ]
+      },
+      {
+        "name": "Chemistry",
+        "code": "23CYX01",
+        "note": "EEE, ECE, CSE, IT, AI&ML, AI&DS",
+        "category": "theory",
+        "course_outcomes": [
+          "CO1: Illustrate the Molecular Orbital diagrams for simple diatomic and polyatomic molecules",
+          "CO2: Identify the applications of superconductors, semiconductors, super capacitors & nano materials",
+          "CO3: Explain the working of spectroscopy and chromatography",
+          "CO4: Explain the properties and applications of polymers & fibres",
+          "CO5: Estimate analytes using potentiometric & conductometric titrations and electrochemical sensors",
+          "CO6: Describe the construction and working of electrochemical cells"
+        ]
+      },
+      {
+        "name": "Engineering Chemistry",
+        "code": "23CYX02",
+        "note": "CIVIL, MECH",
+        "category": "theory",
+        "course_outcomes": [
+          "CO1: Assess the quality of water and its treatment methods",
+          "CO2: Estimate the potentials for electrochemical cells",
+          "CO3: Describe corrosion factors and implement prevention methods",
+          "CO4: Illustrate the types of polymers and fuels with applications",
+          "CO5: Describe the concepts of colloids, micelle and nanomaterials",
+          "CO6: Explain the uses of refractory materials, lubricants and cements"
+        ]
+      },
+      {
+        "name": "Linear Algebra & Calculus",
+        "code": "23MAX01",
+        "category": "theory",
+        "course_outcomes": [
+          "CO1: Solve the system of linear equations",
+          "CO2: Construct eigenvectors of a matrix and use applications of Cayley Hamilton theorem",
+          "CO3: Identify the nature of quadratic form using matrix theory",
+          "CO4: Apply Mean value theorems to solve single variable problems",
+          "CO5: Make use of partial derivatives to solve multivariable problems",
+          "CO6: Utilize multiple integrals to find area and volume of solids"
+        ]
+      },
+      {
+        "name": "Differential Equations & Vector Calculus",
+        "code": "23MAX02",
+        "category": "theory",
+        "course_outcomes": [
+          "CO1: Model and solve first order differential equations",
+          "CO2: Apply first and higher order differential equations in engineering",
+          "CO3: Solve higher order differential equations and initial value problems",
+          "CO4: Identify methods for solving linear partial differential equations",
+          "CO5: Use concepts in partial differential equations and vector differentiation",
+          "CO6: Apply vector calculus for work, circulation, flux and integral theorems"
+        ]
+      },
+      {
+        "name": "Basic Electrical & Electronics Engineering",
+        "code": "23BEX01",
+        "category": "theory",
+        "course_outcomes": [
+          "CO1: Demonstrate electrical parameters of DC & AC circuits",
+          "CO2: Illustrate operation of electrical machines and power plants",
+          "CO3: Summarize electrical measurements and safety measures",
+          "CO4: Explain operation of semiconductor devices and their characteristics",
+          "CO5: Illustrate operation of rectifiers",
+          "CO6: Illustrate number systems, binary codes and combinational circuits using logic gates"
+        ]
+      },
+      {
+        "name": "Basic Civil & Mechanical Engineering",
+        "code": "23BEX02",
+        "category": "theory",
+        "course_outcomes": [
+          "CO1: Describe basics of civil engineering streams, water resources and environmental engineering",
+          "CO2: Outline concepts of surveying",
+          "CO3: Demonstrate pavements and concept of Airport, Harbour, Tunnel & Railway Engineering",
+          "CO4: Understand engineering materials, manufacturing process and role of mechanical engineering",
+          "CO5: Understand basic concepts of thermal engineering and working principles of power plants",
+          "CO6: Describe working of mechanical power transmission systems and configurations of robots"
+        ]
+      },
+      {
+        "name": "Introduction to Programming",
+        "code": "23BEX03",
+        "category": "theory",
+        "course_outcomes": [
+          "CO1: Illustrate algorithms for programming and problem solving",
+          "CO2: Formulate sequential and iterative programming",
+          "CO3: Implement basic dynamic data structures",
+          "CO4: Develop modular program aspects for complex problems",
+          "CO5: Apply concepts for optimal utilization of memory",
+          "CO6: Understand techniques of storage and processing data"
+        ]
+      },
+      {
+        "name": "Engineering Graphics",
+        "code": "23BEX04",
+        "category": "theory",
+        "course_outcomes": [
+          "CO1: Understand principles of engineering drawing including curves and scales",
+          "CO2: Draw and interpret orthographic projections of points, lines and planes",
+          "CO3: Construct projections of planes and solids in simple positions",
+          "CO4: Apply sectional views and projections using CAD software",
+          "CO5: Understand development of surfaces using CAD",
+          "CO6: Draw and convert isometric and orthographic views using CAD"
+        ]
+      },
+      {
+        "name": "Communicative English",
+        "code": "23HSX01",
+        "category": "theory",
+        "course_outcomes": [
+          "CO1: Understand context and specific information from dialogues",
+          "CO2: Speak clearly using discourse markers in discussions",
+          "CO3: Comprehend and appreciate literary texts",
+          "CO4: Write summaries, essays, letters/e-mails and resume",
+          "CO5: Apply grammatical structures appropriately",
+          "CO6: Improve communicative competence with enhanced vocabulary"
+        ]
+      },
+      {
+        "name": "Engineering Mechanics",
+        "code": "23ME201",
+        "note": "CIVIL & MECH",
+        "category": "theory",
+        "course_outcomes": [
+          "CO1: Compute the resultant force in concurrent and coplanar force systems",
+          "CO2: Analyze equilibrium condition for different force systems with and without friction",
+          "CO3: Determine the forces and their nature in members of trusses",
+          "CO4: Determine centroids, centre of gravity and moment of inertia of geometrical shapes",
+          "CO5: Analyze kinematics of rectilinear and curvilinear motions",
+          "CO6: Assess kinetics of rectilinear, curvilinear and rigid body motion"
+        ]
+      },
+      {
+        "name": "Data Structures",
+        "code": "23CS201",
+        "note": "CSE, CSE-AI&DS, CSE-AI&ML, IT",
+        "category": "theory",
+        "course_outcomes": [
+          "CO1: Explain the role of linear data structures in organizing and accessing data efficiently",
+          "CO2: Design and implement linked lists demonstrating memory allocation",
+          "CO3: Develop programs using stacks to handle recursion and manage program states",
+          "CO4: Apply queue-based algorithms and distinguish deques and priority queues",
+          "CO5: Devise solutions using stacks, queues and trees",
+          "CO6: Design hash-based solutions for suitable problem scenarios"
+        ]
+      },
+      {
+        "name": "Electrical Circuit Analysis–I",
+        "code": "23EE201",
+        "note": "EEE",
+        "category": "theory",
+        "course_outcomes": [
+          "CO1: Summarize V-I relations of electrical circuit elements",
+          "CO2: Outline magnetic and coupled circuits",
+          "CO3: Apply network reduction techniques to DC circuits",
+          "CO4: Summarize behaviour of AC circuits",
+          "CO5: Apply network theorems to AC and DC circuits",
+          "CO6: Outline characteristics of series and parallel resonant circuits"
+        ]
+      },
+      {
+        "name": "Network Analysis",
+        "code": "23EC201",
+        "note": "ECE",
+        "category": "theory",
+        "course_outcomes": [
+          "CO1: Apply network reduction techniques to DC circuits",
+          "CO2: Apply network theorems to simplify complex networks",
+          "CO3: Summarize behaviour of AC circuits",
+          "CO4: Explain series and parallel connected coupled circuits",
+          "CO5: Interpret parameters of two-port networks",
+          "CO6: Illustrate transient response of R, L, C circuits for DC and AC excitations"
+        ]
+      },
+      {
+        "name": "Engineering Physics Lab",
+        "code": "23PYX02",
+        "category": "lab",
+        "course_outcomes": [
+          "CO1: Infer knowledge from scientific methods and measure physical parameters",
+          "CO2: Develop laboratory skills in handling electrical and optical instruments",
+          "CO3: Demonstrate interference and diffraction phenomena",
+          "CO4: Inspect magnetic fields and optical fiber principles",
+          "CO5: Apply physics principles to measure solid state properties",
+          "CO6: Design and analyze physics experiments"
+        ]
+      },
+      {
+        "name": "Chemistry Lab",
+        "code": "23CYX03",
+        "note": "EEE, ECE, CSE, IT, AI&ML, AI&DS",
+        "category": "lab",
+        "course_outcomes": [
+          "CO1: Determine concentration of acids by conductometry",
+          "CO2: Prepare Bakelite polymer and ZnO nanomaterial",
+          "CO3: Estimate strength of acid in secondary battery by pH metry",
+          "CO4: Identify organic compounds using IR spectroscopy",
+          "CO5: Verify Beer–Lambert’s law and measure wavelength",
+          "CO6: Estimate ferrous iron concentration by potentiometry and dichrometry"
+        ]
+      },
+      {
+        "name": "Engineering Chemistry Lab",
+        "code": "23CYX04",
+        "note": "CIVIL, MECH",
+        "category": "lab",
+        "course_outcomes": [
+          "CO1: Assess percentage moisture of solid fuel",
+          "CO2: Prepare Bakelite polymer and ZnO nanomaterial",
+          "CO3: Determine acid number and viscosity of lubricating oil",
+          "CO4: Estimate iron and calcium in cement",
+          "CO5: Estimate hardness and dissolved oxygen in water",
+          "CO6: Determine strength of acid in lead acid battery"
+        ]
+      },
+      {
+        "name": "Electrical & Electronics Engineering Workshop",
+        "code": "23BEX05",
+        "category": "lab",
+        "course_outcomes": [
+          "CO1: Apply electrical principles to resolve circuit problems",
+          "CO2: Develop proficiency in electrical measurements",
+          "CO3: Measure power parameters and calculate energy consumption",
+          "CO4: Analyze characteristics of semiconductor devices",
+          "CO5: Find frequency response of amplifiers using BJT",
+          "CO6: Verify truth tables of logic gates and flip flops"
+        ]
+      },
+      {
+        "name": "Engineering Workshop",
+        "code": "23BEX06",
+        "category": "lab",
+        "course_outcomes": [
+          "CO1: Demonstrate wooden joints (Cross lap, T-lap, Dovetail)",
+          "CO2: Develop sheet metal components",
+          "CO3: Build V-Fit, Square fit, Dovetail fit using mild steel",
+          "CO4: Understand house wiring circuits",
+          "CO5: Create green sand mould patterns",
+          "CO6: Construct metal joints using arc welding"
+        ]
+      },
+      {
+        "name": "Computer Programming Lab",
+        "code": "23BEX07",
+        "category": "lab",
+        "course_outcomes": [
+          "CO1: Read, understand and trace program execution",
+          "CO2: Select proper control structures",
+          "CO3: Construct programs using homogeneous data types",
+          "CO4: Develop modular programs using functions",
+          "CO5: Formulate memory-efficient programs",
+          "CO6: Develop programs using files"
+        ]
+      },
+      {
+        "name": "IT Workshop",
+        "code": "23BEX08",
+        "category": "lab",
+        "course_outcomes": [
+          "CO1: Demonstrate assembling and disassembling PC",
+          "CO2: Illustrate OS installation steps",
+          "CO3: Configure IP address and perform safe downloads",
+          "CO4: Create projects using Word/LaTeX and spreadsheets",
+          "CO5: Design PowerPoint presentations",
+          "CO6: Improve conversational abilities using AI tools"
+        ]
+      },
+      {
+        "name": "Communicative English Lab",
+        "code": "23HSX02",
+        "category": "lab",
+        "course_outcomes": [
+          "CO1: Acquire knowledge of English sound system and pronunciation",
+          "CO2: Apply accent and intonation patterns",
+          "CO3: Write emails and resume effectively",
+          "CO4: Exhibit professionalism in debates and discussions",
+          "CO5: Demonstrate verbal and non-verbal communication",
+          "CO6: Practice interpersonal communication in formal situations"
+        ]
+      },
+      {
+        "name": "Data Structures Lab",
+        "code": "23CS202",
+        "note": "CSE, CSE-AI&DS, CSE-AI&ML, IT",
+        "category": "lab",
+        "course_outcomes": [
+          "CO1: Explain linear data structures in algorithm design",
+          "CO2: Implement linked lists with proper memory allocation",
+          "CO3: Develop stack-based recursive programs",
+          "CO4: Apply queue-based algorithms for task scheduling and BFS",
+          "CO5: Solve programming problems using stacks, queues and trees",
+          "CO6: Design and implement hashing techniques"
+        ]
+      },
+      {
+        "name": "Engineering Mechanics Lab",
+        "code": "23ME202",
+        "note": "MECH",
+        "category": "lab",
+        "course_outcomes": [
+          "CO1: Demonstrate principles of Law of Forces through experiments",
+          "CO2: Achieve equilibrium in coplanar concurrent force systems",
+          "CO3: Assess friction effects in mechanical systems",
+          "CO4: Verify equilibrium under diverse forces and rotational dynamics",
+          "CO5: Apply static equilibrium principles to non-concurrent systems",
+          "CO6: Apply mechanics principles to pulley systems and levers"
+        ]
+      },
+      {
+        "name": "Network Analysis & Simulation Lab",
+        "code": "23EC202",
+        "note": "ECE",
+        "category": "lab",
+        "course_outcomes": [
+          "CO1: Analyze DC transients of RL and RC circuits",
+          "CO2: Apply network theorems to simplify circuits",
+          "CO3: Analyze DC transients of RL & RC circuits",
+          "CO4: Demonstrate characteristics of series RL & RC circuits",
+          "CO5: Demonstrate characteristics of series RLC and resonant circuits",
+          "CO6: Model networks using Kirchhoff’s laws, mesh and nodal analysis"
+        ]
+      },
+      {
+        "name": "Electrical Circuit Lab",
+        "code": "23EE202",
+        "note": "EEE",
+        "category": "lab",
+        "course_outcomes": [
+          "CO1: Demonstrate network reduction techniques using basic laws",
+          "CO2: Compute parameters of electrical equipment",
+          "CO3: Compute parameters of magnetic circuits",
+          "CO4: Analyze series and parallel resonant circuits",
+          "CO5: Analyze maximum power transfer theorem",
+          "CO6: Apply network theorems to solve circuits"
+        ]
+      },
+      {
+        "name": "Engineering Mechanics & Building Practices Lab",
+        "code": "23CE201",
+        "note": "CIVIL",
+        "category": "lab",
+        "course_outcomes": [
+          "CO1: Evaluate coefficient of friction between surfaces and inclined plane systems",
+          "CO2: Verify Law of Parallelogram of forces and Law of Moments",
+          "CO3: Determine centre of gravity of different configurations",
+          "CO4: Understand quality testing and assessment procedures",
+          "CO5: Understand principles of Non-Destructive Testing",
+          "CO6: Gain exposure to safety practices in construction industry"
+        ]
+      },
+      {
+        "name": "Health & Wellness, Yoga and Sports",
+        "code": "23HSX11",
+        "category": "activity",
+        "course_outcomes": [
+          "CO1: Understand importance of yoga and sports for fitness",
+          "CO2: Demonstrate understanding of health-related fitness",
+          "CO3: Compare activities enhancing health",
+          "CO4: Assess personal fitness levels",
+          "CO5: Develop positive personality"
+        ]
+      },
+      {
+        "name": "NSS/NCC/Community Service",
+        "code": "23HSX12",
+        "category": "activity",
+        "course_outcomes": [
+          "CO1: Understand discipline and service motto",
+          "CO2: Solve societal issues using knowledge",
+          "CO3: Explore human relationships in social problems",
+          "CO4: Extend help to downtrodden people",
+          "CO5: Develop leadership and civic responsibility"
+        ]
+      }
+    ]
+  }
+}

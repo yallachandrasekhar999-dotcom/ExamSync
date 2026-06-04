@@ -1,0 +1,868 @@
+[
+    {
+        "id": 1,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "step_number": 1,
+        "title": "Diffraction Principles",
+        "description": "Comprehend the basic principle of diffraction and observe the diffraction pattern in various cases.",
+        "roadmap_image": "images/roadmaps/physics_roadmap.jpg"
+    },
+    {
+        "id": 2,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "step_number": 2,
+        "title": "Interference & Polarisation",
+        "description": "Illustrate the concepts of interference and polarisation and their practical applications."
+    },
+    {
+        "id": 3,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "step_number": 3,
+        "title": "Crystallography",
+        "description": "Understand the space lattices and crystal symmetry in solid state physics."
+    },
+    {
+        "id": 4,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "step_number": 4,
+        "title": "Quantum Mechanics Foundations",
+        "description": "Summarize the fundamental concepts of quantum mechanics and wave theory."
+    },
+    {
+        "id": 5,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "step_number": 5,
+        "title": "Dielectric Materials",
+        "description": "Explore the properties and applications of dielectric materials in electrical systems."
+    },
+    {
+        "id": 6,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "step_number": 6,
+        "title": "Magnetic Materials",
+        "description": "Understand the behavior and classification of magnetic materials."
+    },
+    {
+        "id": 7,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "step_number": 7,
+        "title": "Semiconductor Physics",
+        "description": "Demonstrate the conduction process of charge carriers in semiconductors."
+    },
+    {
+        "id": 8,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "step_number": 8,
+        "title": "P-N Junctions",
+        "description": "Study the behavior and applications of p-n junction diodes."
+    },
+    {
+        "id": 9,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "step_number": 9,
+        "title": "Advanced Physics Applications",
+        "description": "Apply physics principles to solve real-world engineering problems."
+    },
+    {
+        "id": 10,
+        "subject_id": 1001,
+        "subject_name": "Chemistry",
+        "step_number": 1,
+        "title": "Molecular Orbital Theory",
+        "description": "Illustrate the Molecular Orbital diagrams for simple diatomic and polyatomic molecules.",
+        "roadmap_image": "images/roadmaps/chemistry_roadmap.jpg"
+    },
+    {
+        "id": 11,
+        "subject_id": 1001,
+        "subject_name": "Chemistry",
+        "step_number": 2,
+        "title": "Superconductors & Semiconductors",
+        "description": "Identify the applications of superconductors and semiconductors in modern tech."
+    },
+    {
+        "id": 12,
+        "subject_id": 1001,
+        "subject_name": "Chemistry",
+        "step_number": 3,
+        "title": "Nanomaterials",
+        "description": "Explore the synthesis and properties of nano materials for engineering."
+    },
+    {
+        "id": 13,
+        "subject_id": 1001,
+        "subject_name": "Chemistry",
+        "step_number": 4,
+        "title": "Spectroscopy Techniques",
+        "description": "Explain the working of spectroscopy for chemical analysis."
+    },
+    {
+        "id": 14,
+        "subject_id": 1001,
+        "subject_name": "Chemistry",
+        "step_number": 5,
+        "title": "Chromatography Methods",
+        "description": "Understand the principles of chromatography in separating mixtures."
+    },
+    {
+        "id": 15,
+        "subject_id": 1001,
+        "subject_name": "Chemistry",
+        "step_number": 6,
+        "title": "Polymers & Fibres",
+        "description": "Explain the properties and applications of industrial polymers and fibres."
+    },
+    {
+        "id": 16,
+        "subject_id": 1001,
+        "subject_name": "Chemistry",
+        "step_number": 7,
+        "title": "Electrochemical Titrations",
+        "description": "Estimate analytes using potentiometric and conductometric titrations."
+    },
+    {
+        "id": 17,
+        "subject_id": 1001,
+        "subject_name": "Chemistry",
+        "step_number": 8,
+        "title": "Electrochemical Cells",
+        "description": "Describe the construction and working of electrochemical cells and batteries."
+    },
+    {
+        "id": 18,
+        "subject_id": 1001,
+        "subject_name": "Chemistry",
+        "step_number": 9,
+        "title": "Chemical Engineering Practice",
+        "description": "Integrate chemical principles into engineering design and safety."
+    },
+    {
+        "id": 19,
+        "subject_id": 1002,
+        "subject_name": "Engineering Chemistry",
+        "step_number": 1,
+        "title": "Water Treatment",
+        "description": "Assess the quality of water and implement effective treatment methods."
+    },
+    {
+        "id": 20,
+        "subject_id": 1002,
+        "subject_name": "Engineering Chemistry",
+        "step_number": 2,
+        "title": "Electrochemical Potentials",
+        "description": "Estimate the potentials for various electrochemical cells and systems."
+    },
+    {
+        "id": 21,
+        "subject_id": 1002,
+        "subject_name": "Engineering Chemistry",
+        "step_number": 3,
+        "title": "Corrosion Factors",
+        "description": "Describe factors influencing corrosion in metals and materials."
+    },
+    {
+        "id": 22,
+        "subject_id": 1002,
+        "subject_name": "Engineering Chemistry",
+        "step_number": 4,
+        "title": "Corrosion Prevention",
+        "description": "Implement modern prevention methods to combat material degradation."
+    },
+    {
+        "id": 23,
+        "subject_id": 1002,
+        "subject_name": "Engineering Chemistry",
+        "step_number": 5,
+        "title": "Polymers & Fuels",
+        "description": "Illustrate the types of polymers and industrial fuels with their applications."
+    },
+    {
+        "id": 24,
+        "subject_id": 1002,
+        "subject_name": "Engineering Chemistry",
+        "step_number": 6,
+        "title": "Colloids & Micelles",
+        "description": "Describe the concepts of colloids, micelles, and their stability."
+    },
+    {
+        "id": 25,
+        "subject_id": 1002,
+        "subject_name": "Engineering Chemistry",
+        "step_number": 7,
+        "title": "Refractory Materials",
+        "description": "Explain the uses and properties of refractory materials in high-temp apps."
+    },
+    {
+        "id": 26,
+        "subject_id": 1002,
+        "subject_name": "Engineering Chemistry",
+        "step_number": 8,
+        "title": "Lubricants & Cements",
+        "description": "Understand the selection and use of lubricants and construction cements."
+    },
+    {
+        "id": 27,
+        "subject_id": 1002,
+        "subject_name": "Engineering Chemistry",
+        "step_number": 9,
+        "title": "Environmental Chemistry",
+        "description": "Analyze the impact of chemistry on the environment and sustainability."
+    },
+    {
+        "id": 28,
+        "subject_id": 1003,
+        "subject_name": "Linear Algebra & Calculus",
+        "step_number": 1,
+        "title": "Linear Systems",
+        "description": "Solve systems of linear equations using various algebraic methods."
+    },
+    {
+        "id": 29,
+        "subject_id": 1003,
+        "subject_name": "Linear Algebra & Calculus",
+        "step_number": 2,
+        "title": "Matrix Eigenvectors",
+        "description": "Construct eigenvectors of a matrix and understand their properties."
+    },
+    {
+        "id": 30,
+        "subject_id": 1003,
+        "subject_name": "Linear Algebra & Calculus",
+        "step_number": 3,
+        "title": "Cayley Hamilton Theorem",
+        "description": "Apply the Cayley Hamilton theorem to verify matrix relationships."
+    },
+    {
+        "id": 31,
+        "subject_id": 1003,
+        "subject_name": "Linear Algebra & Calculus",
+        "step_number": 4,
+        "title": "Quadratic Forms",
+        "description": "Identify the nature of quadratic forms using matrix theory."
+    },
+    {
+        "id": 32,
+        "subject_id": 1003,
+        "subject_name": "Linear Algebra & Calculus",
+        "step_number": 5,
+        "title": "Mean Value Theorems",
+        "description": "Apply Mean value theorems to solve complex single variable problems."
+    },
+    {
+        "id": 33,
+        "subject_id": 1003,
+        "subject_name": "Linear Algebra & Calculus",
+        "step_number": 6,
+        "title": "Partial Differentiation",
+        "description": "Make use of partial derivatives to solve multivariable calculus problems."
+    },
+    {
+        "id": 34,
+        "subject_id": 1003,
+        "subject_name": "Linear Algebra & Calculus",
+        "step_number": 7,
+        "title": "Optimization Techniques",
+        "description": "Use multivariable calculus for finding maxima and minima of functions."
+    },
+    {
+        "id": 35,
+        "subject_id": 1003,
+        "subject_name": "Linear Algebra & Calculus",
+        "step_number": 8,
+        "title": "Multiple Integrals",
+        "description": "Utilize double and triple integrals to find area and volume of solids."
+    },
+    {
+        "id": 36,
+        "subject_id": 1003,
+        "subject_name": "Linear Algebra & Calculus",
+        "step_number": 9,
+        "title": "Applied Calculus",
+        "description": "Relate calculus principles to real-world engineering simulations."
+    },
+    {
+        "id": 37,
+        "subject_id": 1004,
+        "subject_name": "Differential Equations & Vector Calculus",
+        "step_number": 1,
+        "title": "First Order ODEs",
+        "description": "Model and solve first order differential equations for engineering."
+    },
+    {
+        "id": 38,
+        "subject_id": 1004,
+        "subject_name": "Differential Equations & Vector Calculus",
+        "step_number": 2,
+        "title": "Higher Order ODEs",
+        "description": "Apply first and higher order differential equations in system modeling."
+    },
+    {
+        "id": 39,
+        "subject_id": 1004,
+        "subject_name": "Differential Equations & Vector Calculus",
+        "step_number": 3,
+        "title": "Initial Value Problems",
+        "description": "Solve higher order differential equations with specific initial conditions."
+    },
+    {
+        "id": 40,
+        "subject_id": 1004,
+        "subject_name": "Differential Equations & Vector Calculus",
+        "step_number": 4,
+        "title": "Linear PDEs",
+        "description": "Identify and solve linear partial differential equations."
+    },
+    {
+        "id": 41,
+        "subject_id": 1004,
+        "subject_name": "Differential Equations & Vector Calculus",
+        "step_number": 5,
+        "title": "PDE Applications",
+        "description": "Understand the use of PDEs in modeling physical phenomena."
+    },
+    {
+        "id": 42,
+        "subject_id": 1004,
+        "subject_name": "Differential Equations & Vector Calculus",
+        "step_number": 6,
+        "title": "Vector Differentiation",
+        "description": "Master the concepts of vector differentiation in multivariable space."
+    },
+    {
+        "id": 43,
+        "subject_id": 1004,
+        "subject_name": "Differential Equations & Vector Calculus",
+        "step_number": 7,
+        "title": "Vector Calculus Theorems",
+        "description": "Apply vector calculus for work, circulation, and flux calculations."
+    },
+    {
+        "id": 44,
+        "subject_id": 1004,
+        "subject_name": "Differential Equations & Vector Calculus",
+        "step_number": 8,
+        "title": "Integral Theorems",
+        "description": "Solve complex problems using Green's, Stokes', and Gauss's theorems."
+    },
+    {
+        "id": 45,
+        "subject_id": 1004,
+        "subject_name": "Differential Equations & Vector Calculus",
+        "step_number": 9,
+        "title": "Mathematical Modeling",
+        "description": "Synthesize DE and Vector Calculus for comprehensive system modeling."
+    },
+    {
+        "id": 46,
+        "subject_id": 1005,
+        "subject_name": "Basic Electrical & Electronics Engineering",
+        "step_number": 1,
+        "title": "DC Circuit Analysis",
+        "description": "Demonstrate electrical parameters and laws of DC circuits."
+    },
+    {
+        "id": 47,
+        "subject_id": 1005,
+        "subject_name": "Basic Electrical & Electronics Engineering",
+        "step_number": 2,
+        "title": "AC Circuit Analysis",
+        "description": "Understand the behavior of passive components in AC circuits."
+    },
+    {
+        "id": 48,
+        "subject_id": 1005,
+        "subject_name": "Basic Electrical & Electronics Engineering",
+        "step_number": 3,
+        "title": "Electrical Machines",
+        "description": "Illustrate the operation of DC and AC electrical machines."
+    },
+    {
+        "id": 49,
+        "subject_id": 1005,
+        "subject_name": "Basic Electrical & Electronics Engineering",
+        "step_number": 4,
+        "title": "Power Plants",
+        "description": "Understand the working and operation of various types of power plants."
+    },
+    {
+        "id": 50,
+        "subject_id": 1005,
+        "subject_name": "Basic Electrical & Electronics Engineering",
+        "step_number": 5,
+        "title": "Electrical Safety",
+        "description": "Summarize electrical measurements and essential safety measures."
+    },
+    {
+        "id": 51,
+        "subject_id": 1005,
+        "subject_name": "Basic Electrical & Electronics Engineering",
+        "step_number": 6,
+        "title": "Semiconductor Devices",
+        "description": "Explain the operation of semiconductor devices and their characteristics."
+    },
+    {
+        "id": 52,
+        "subject_id": 1005,
+        "subject_name": "Basic Electrical & Electronics Engineering",
+        "step_number": 7,
+        "title": "Rectifier Systems",
+        "description": "Illustrate the operation of half-wave and full-wave rectifiers."
+    },
+    {
+        "id": 53,
+        "subject_id": 1005,
+        "subject_name": "Basic Electrical & Electronics Engineering",
+        "step_number": 8,
+        "title": "Number Systems",
+        "description": "Master number systems and binary codes for digital logic."
+    },
+    {
+        "id": 54,
+        "subject_id": 1005,
+        "subject_name": "Basic Electrical & Electronics Engineering",
+        "step_number": 9,
+        "title": "Digital Logic Gates",
+        "description": "Illustrate combinational circuits using basic and universal logic gates."
+    },
+    {
+        "id": 55,
+        "subject_id": 1006,
+        "subject_name": "Basic Civil & Mechanical Engineering",
+        "step_number": 1,
+        "title": "Civil Engineering Basics",
+        "description": "Describe basics of civil engineering streams and water resources."
+    },
+    {
+        "id": 56,
+        "subject_id": 1006,
+        "subject_name": "Basic Civil & Mechanical Engineering",
+        "step_number": 2,
+        "title": "Surveying Concepts",
+        "description": "Outline the fundamental concepts and techniques of surveying."
+    },
+    {
+        "id": 57,
+        "subject_id": 1006,
+        "subject_name": "Basic Civil & Mechanical Engineering",
+        "step_number": 3,
+        "title": "Infrastructure Engineering",
+        "description": "Demonstrate pavements and concept of Airport, Harbour, and Railway systems."
+    },
+    {
+        "id": 58,
+        "subject_id": 1006,
+        "subject_name": "Basic Civil & Mechanical Engineering",
+        "step_number": 4,
+        "title": "Engineering Materials",
+        "description": "Understand properties and selection of common engineering materials."
+    },
+    {
+        "id": 59,
+        "subject_id": 1006,
+        "subject_name": "Basic Civil & Mechanical Engineering",
+        "step_number": 5,
+        "title": "Manufacturing Processes",
+        "description": "Explore the various manufacturing process used in mechanical engineering."
+    },
+    {
+        "id": 60,
+        "subject_id": 1006,
+        "subject_name": "Basic Civil & Mechanical Engineering",
+        "step_number": 6,
+        "title": "Thermal Engineering",
+        "description": "Understand basic concepts of thermodynamics and thermal systems."
+    },
+    {
+        "id": 61,
+        "subject_id": 1006,
+        "subject_name": "Basic Civil & Mechanical Engineering",
+        "step_number": 7,
+        "title": "Power Generation",
+        "description": "Explain the working principles of thermal and hydro power plants."
+    },
+    {
+        "id": 62,
+        "subject_id": 1006,
+        "subject_name": "Basic Civil & Mechanical Engineering",
+        "step_number": 8,
+        "title": "Power Transmission",
+        "description": "Describe working of mechanical power transmission systems like gears/belts."
+    },
+    {
+        "id": 63,
+        "subject_id": 1006,
+        "subject_name": "Basic Civil & Mechanical Engineering",
+        "step_number": 9,
+        "title": "Robotics & Automation",
+        "description": "Understand basic configurations and applications of industrial robots."
+    },
+    {
+        "id": 64,
+        "subject_id": 1007,
+        "subject_name": "Introduction to Programming",
+        "step_number": 1,
+        "title": "Algorithm Design",
+        "description": "Illustrate algorithms for systematic programming and problem solving."
+    },
+    {
+        "id": 65,
+        "subject_id": 1007,
+        "subject_name": "Introduction to Programming",
+        "step_number": 2,
+        "title": "Sequential Programming",
+        "description": "Formulate sequential logic and basic input/output operations."
+    },
+    {
+        "id": 66,
+        "subject_id": 1007,
+        "subject_name": "Introduction to Programming",
+        "step_number": 3,
+        "title": "Iterative Logic",
+        "description": "Master conditional statements and looping structures for repetitive tasks."
+    },
+    {
+        "id": 67,
+        "subject_id": 1007,
+        "subject_name": "Introduction to Programming",
+        "step_number": 4,
+        "title": "Data Structures Basics",
+        "description": "Implement basic dynamic data structures such as arrays and lists."
+    },
+    {
+        "id": 68,
+        "subject_id": 1007,
+        "subject_name": "Introduction to Programming",
+        "step_number": 5,
+        "title": "Modular Programming",
+        "description": "Develop modular program aspects for tackling complex problems."
+    },
+    {
+        "id": 69,
+        "subject_id": 1007,
+        "subject_name": "Introduction to Programming",
+        "step_number": 6,
+        "title": "Memory Optimization",
+        "description": "Apply concepts for the optimal utilization of computer memory."
+    },
+    {
+        "id": 70,
+        "subject_id": 1007,
+        "subject_name": "Introduction to Programming",
+        "step_number": 7,
+        "title": "Storage Techniques",
+        "description": "Understand various techniques for storage and retrieval of data."
+    },
+    {
+        "id": 71,
+        "subject_id": 1007,
+        "subject_name": "Introduction to Programming",
+        "step_number": 8,
+        "title": "File Processing",
+        "description": "Develop robust programs that use file systems for persistent data."
+    },
+    {
+        "id": 72,
+        "subject_id": 1007,
+        "subject_name": "Introduction to Programming",
+        "step_number": 9,
+        "title": "Problem Solving Mastery",
+        "description": "Apply integrated programming skills to solve advanced engineering puzzles."
+    },
+    {
+        "id": 73,
+        "subject_id": 1008,
+        "subject_name": "Engineering Graphics",
+        "step_number": 1,
+        "title": "Drawing Principles",
+        "description": "Understand principles of engineering drawing including curves and scales."
+    },
+    {
+        "id": 74,
+        "subject_id": 1008,
+        "subject_name": "Engineering Graphics",
+        "step_number": 2,
+        "title": "Orthographic Projections",
+        "description": "Draw and interpret projections of points, lines, and planes."
+    },
+    {
+        "id": 75,
+        "subject_id": 1008,
+        "subject_name": "Engineering Graphics",
+        "step_number": 3,
+        "title": "Projections of Solids",
+        "description": "Construct projections of planes and solids in various simple positions."
+    },
+    {
+        "id": 76,
+        "subject_id": 1008,
+        "subject_name": "Engineering Graphics",
+        "step_number": 4,
+        "title": "Sectional Views",
+        "description": "Apply sectional views to reveal internal details of engineering parts."
+    },
+    {
+        "id": 77,
+        "subject_id": 1008,
+        "subject_name": "Engineering Graphics",
+        "step_number": 5,
+        "title": "CAD Software Basics",
+        "description": "Introduction to using CAD software for digital engineering drawings."
+    },
+    {
+        "id": 78,
+        "subject_id": 1008,
+        "subject_name": "Engineering Graphics",
+        "step_number": 6,
+        "title": "Development of Surfaces",
+        "description": "Understand the geometric development of surfaces using CAD tools."
+    },
+    {
+        "id": 79,
+        "subject_id": 1008,
+        "subject_name": "Engineering Graphics",
+        "step_number": 7,
+        "title": "Isometric Views",
+        "description": "Draw and interpret isometric projections and 3D representations."
+    },
+    {
+        "id": 80,
+        "subject_id": 1008,
+        "subject_name": "Engineering Graphics",
+        "step_number": 8,
+        "title": "View Conversion",
+        "description": "Convert between isometric and orthographic views with precision."
+    },
+    {
+        "id": 81,
+        "subject_id": 1008,
+        "subject_name": "Engineering Graphics",
+        "step_number": 9,
+        "title": "Final Drawing Project",
+        "description": "Synthesize all drawing skills for a comprehensive engineering design."
+    },
+    {
+        "id": 82,
+        "subject_id": 1009,
+        "subject_name": "Communicative English",
+        "step_number": 1,
+        "title": "Active Listening",
+        "description": "Understand context and specific information from dialogues and talks."
+    },
+    {
+        "id": 83,
+        "subject_id": 1009,
+        "subject_name": "Communicative English",
+        "step_number": 2,
+        "title": "Verbal Communication",
+        "description": "Speak clearly using appropriate discourse markers in group discussions."
+    },
+    {
+        "id": 84,
+        "subject_id": 1009,
+        "subject_name": "Communicative English",
+        "step_number": 3,
+        "title": "Literary Appreciation",
+        "description": "Comprehend and appreciate various literary texts and styles."
+    },
+    {
+        "id": 85,
+        "subject_id": 1009,
+        "subject_name": "Communicative English",
+        "step_number": 4,
+        "title": "Summary Writing",
+        "description": "Write concise summaries and effective essays on diverse topics."
+    },
+    {
+        "id": 86,
+        "subject_id": 1009,
+        "subject_name": "Communicative English",
+        "step_number": 5,
+        "title": "Professional Writing",
+        "description": "Craft professional letters, e-mails, and modern resumes."
+    },
+    {
+        "id": 87,
+        "subject_id": 1009,
+        "subject_name": "Communicative English",
+        "step_number": 6,
+        "title": "Grammatical Mastery",
+        "description": "Apply grammatical structures accurately in professional settings."
+    },
+    {
+        "id": 88,
+        "subject_id": 1009,
+        "subject_name": "Communicative English",
+        "step_number": 7,
+        "title": "Vocabulary Expansion",
+        "description": "Improve communicative competence with an enhanced English vocabulary."
+    },
+    {
+        "id": 89,
+        "subject_id": 1009,
+        "subject_name": "Communicative English",
+        "step_number": 8,
+        "title": "Presentation Skills",
+        "description": "Develop skills for clear and persuasive oral presentations."
+    },
+    {
+        "id": 90,
+        "subject_id": 1009,
+        "subject_name": "Communicative English",
+        "step_number": 9,
+        "title": "Collaborative English",
+        "description": "Engage in effective collaborative communication in a diverse environment."
+    },
+    {
+        "id": 91,
+        "subject_id": 1010,
+        "subject_name": "Engineering Mechanics",
+        "step_number": 1,
+        "title": "Force Systems",
+        "description": "Compute the resultant force in concurrent and coplanar force systems."
+    },
+    {
+        "id": 92,
+        "subject_id": 1010,
+        "subject_name": "Engineering Mechanics",
+        "step_number": 2,
+        "title": "Equilibrium Analysis",
+        "description": "Analyze equilibrium conditions for different force systems."
+    },
+    {
+        "id": 93,
+        "subject_id": 1010,
+        "subject_name": "Engineering Mechanics",
+        "step_number": 3,
+        "title": "Friction Concepts",
+        "description": "Understand the impact of friction on mechanical systems and equilibrium."
+    },
+    {
+        "id": 94,
+        "subject_id": 1010,
+        "subject_name": "Engineering Mechanics",
+        "step_number": 4,
+        "title": "Structural Analysis",
+        "description": "Determine the forces and their nature in members of engineering trusses."
+    },
+    {
+        "id": 95,
+        "subject_id": 1010,
+        "subject_name": "Engineering Mechanics",
+        "step_number": 5,
+        "title": "Geometric Centroids",
+        "description": "Determine centroids and center of gravity for various geometric shapes."
+    },
+    {
+        "id": 96,
+        "subject_id": 1010,
+        "subject_name": "Engineering Mechanics",
+        "step_number": 6,
+        "title": "Moment of Inertia",
+        "description": "Calculate the moment of inertia for standard and complex shapes."
+    },
+    {
+        "id": 97,
+        "subject_id": 1010,
+        "subject_name": "Engineering Mechanics",
+        "step_number": 7,
+        "title": "Kinematics of Motion",
+        "description": "Analyze kinematics of rectilinear and curvilinear motions of particles."
+    },
+    {
+        "id": 98,
+        "subject_id": 1010,
+        "subject_name": "Engineering Mechanics",
+        "step_number": 8,
+        "title": "Kinetics of Rigid Bodies",
+        "description": "Assess kinetics of rectilinear, curvilinear, and rigid body motion."
+    },
+    {
+        "id": 99,
+        "subject_id": 1010,
+        "subject_name": "Engineering Mechanics",
+        "step_number": 9,
+        "title": "Dynamic Force Analysis",
+        "description": "Apply dynamic principles to solve complex mechanical engineering problems."
+    },
+    {
+        "id": 100,
+        "subject_id": 1011,
+        "subject_name": "Data Structures",
+        "step_number": 1,
+        "title": "Linear Data Structures",
+        "description": "Explain the role of linear data structures in efficient data organization."
+    },
+    {
+        "id": 101,
+        "subject_id": 1011,
+        "subject_name": "Data Structures",
+        "step_number": 2,
+        "title": "Linked List Design",
+        "description": "Design and implement linked lists demonstrating manual memory allocation."
+    },
+    {
+        "id": 102,
+        "subject_id": 1011,
+        "subject_name": "Data Structures",
+        "step_number": 3,
+        "title": "Stack Dynamics",
+        "description": "Develop programs using stacks to handle recursion and program states."
+    },
+    {
+        "id": 103,
+        "subject_id": 1011,
+        "subject_name": "Data Structures",
+        "step_number": 4,
+        "title": "Queue Management",
+        "description": "Apply queue-based algorithms and understand deques and priority queues."
+    },
+    {
+        "id": 104,
+        "subject_id": 1011,
+        "subject_name": "Data Structures",
+        "step_number": 5,
+        "title": "Tree Structures",
+        "description": "Devise solutions using hierarchical tree-based data structures."
+    },
+    {
+        "id": 105,
+        "subject_id": 1011,
+        "subject_name": "Data Structures",
+        "step_number": 6,
+        "title": "Algorithmic Efficiency",
+        "description": "Analyze time and space complexity of common data operations."
+    },
+    {
+        "id": 106,
+        "subject_id": 1011,
+        "subject_name": "Data Structures",
+        "step_number": 7,
+        "title": "Hash-Based Solutions",
+        "description": "Design and implement hashing techniques for fast data retrieval."
+    },
+    {
+        "id": 107,
+        "subject_id": 1011,
+        "subject_name": "Data Structures",
+        "step_number": 8,
+        "title": "Non-Linear Structures",
+        "description": "Explore graph-based structures and their traversal algorithms."
+    },
+    {
+        "id": 108,
+        "subject_id": 1011,
+        "subject_name": "Data Structures",
+        "step_number": 9,
+        "title": "Complex Data Integration",
+        "description": "Synthesize multiple data structures to solve real-world complex scenarios."
+    }
+]

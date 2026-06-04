@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "year_id": 1,
+        "semester_name": "Semester 1"
+    },
+    {
+        "id": 2,
+        "year_id": 1,
+        "semester_name": "Semester 2"
+    },
+    {
+        "id": 3,
+        "year_id": 2,
+        "semester_name": "Semester 3"
+    }
+]

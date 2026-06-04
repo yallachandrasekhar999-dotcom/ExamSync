@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Profile - Exam Sync</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: none;
+            z-index: 1;
+        }
+
+        .profile-container {
+            position: relative;
+            z-index: 10;
+            padding: 40px;
+            border-radius: 24px;
+            width: 100%;
+            max-width: 550px;
+            text-align: center;
+            animation: slideUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            color: var(--navy);
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .profile-header h2 {
+            margin-bottom: 10px;
+            color: var(--navy);
+            font-weight: 800;
+            font-size: 32px;
+        }
+
+        .profile-header p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .greeting-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .user-greeting {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: rgba(16, 24, 40, 0.88);
+            font-weight: 600;
+            font-size: 13px;
+            padding-left: 5px;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            font-size: 15px;
+            transition: all 0.3s;
+            color: var(--navy);
+            font-weight: 500;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23667085' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+        }
+
+        .form-group select:focus {
+            border-color: rgba(124, 119, 255, 0.35);
+            background: rgba(255, 255, 255, 0.92);
+            outline: none;
+            box-shadow: 0 0 0 6px rgba(124, 119, 255, 0.14);
+        }
+
+        select option {
+            background-color: #ffffff;
+            color: var(--navy);
+        }
+
+        .btn-block {
+            width: 100%;
+            margin-top: 20px;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #6c63ff, #5046e5);
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-block:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .logout-link {
+            display: inline-block;
+            margin-top: 25px;
+            font-size: 14px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .logout-link:hover {
+            color: var(--coral, #ff6b6b);
+        }
+    </style>
+</head>
+
+<body class="auth-page">
+    <div class="profile-container auth-card">
+        <div class="profile-header">
+            <div class="greeting-icon">🎓</div>
+            <p class="user-greeting" id="userGreeting">Welcome back!</p>
+            <h2>Select Your Subjects</h2>
+            <p>Choose the year and semester you'd like to view.</p>
+        </div>
+
+        <form id="academicForm">
+            <div class="form-group" id="yearGroup">
+                <label for="academicYear">Academic Year</label>
+                <select id="academicYear" required autocomplete="off">
+                    <option value="" disabled selected>Select Year</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="branchGroup">
+                <label for="branch">Academic Branch</label>
+                <select id="branch" required autocomplete="off">
+                    <option value="" disabled selected>Select your branch</option>
+                    <option value="CSE">CSE (Computer Science)</option>
+                    <option value="ECE">ECE (Electronics &amp; Comm)</option>
+                    <option value="EEE">EEE (Electrical &amp; Electronics)</option>
+                    <option value="IT">IT (Information Tech)</option>
+                    <option value="MECH">MECH (Mechanical)</option>
+                    <option value="AIML">AIML (AI &amp; Machine Learning)</option>
+                    <option value="AIDS">AIDS (AI &amp; Data Science)</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="semesterGroup">
+                <label for="semesterSelect">Current Semester</label>
+                <select id="semesterSelect" required autocomplete="off">
+                    <option value="" disabled selected>Select Semester</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn primary btn-block" id="continueBtn">View Subjects →</button>
+        </form>
+
+        <span class="logout-link" id="logoutBtn">← Logout</span>
+    </div>
+
+    <script type="module">
+        import { requireAuth, logout } from './js/auth.js';
+        import { showToast } from './js/notifications.js';
+
+        // Require student auth
+        const user = await requireAuth(['student']);
+        if (!user) {
+            window.location.href = 'Login.html';
+        }
+
+        // Greet the user
+        if (user) {
+            document.getElementById('userGreeting').textContent = `Welcome back, ${user.name.split(' ')[0]}!`;
+        }
+
+        document.getElementById('logoutBtn').onclick = () => logout('student_login.html');
+
+        // Elements
+        const yearSelect = document.getElementById('academicYear');
+        const branchGroup = document.getElementById('branchGroup');
+        const branchSelect = document.getElementById('branch');
+        const semesterGroup = document.getElementById('semesterGroup');
+        const semesterSelect = document.getElementById('semesterSelect');
+        const academicForm = document.getElementById('academicForm');
+        const continueBtn = document.getElementById('continueBtn');
+
+        // Dynamic Semester Logic
+        const semMap = {
+            "1": [1, 2],
+            "2": [3, 4],
+            "3": [5, 6],
+            "4": [7, 8]
+        };
+
+        yearSelect.addEventListener('change', () => {
+            const year = yearSelect.value;
+            const sems = semMap[year] || [];
+
+            if (year === '1') {
+                branchGroup.style.display = 'none';
+                branchSelect.required = false;
+                semesterGroup.style.display = 'none';
+                semesterSelect.required = false;
+                semesterSelect.innerHTML = '<option value="" disabled selected>Select Semester</option>';
+            } else {
+                branchGroup.style.display = 'block';
+                branchSelect.required = true;
+                semesterGroup.style.display = 'block';
+                semesterSelect.required = true;
+                semesterSelect.innerHTML = '<option value="" disabled selected>Select Semester</option>';
+                sems.forEach(sem => {
+                    const opt = document.createElement('option');
+                    opt.value = sem;
+                    opt.textContent = `Semester ${sem}`;
+                    semesterSelect.appendChild(opt);
+                });
+            }
+        });
+
+        // Pre-fill with user's saved profile if available
+        if (user && user.year) {
+            yearSelect.value = String(user.year);
+            yearSelect.dispatchEvent(new Event('change'));
+
+            if (user.branch && user.year !== 1) {
+                branchSelect.value = user.branch;
+            }
+            if (user.semester && user.year !== 1) {
+                setTimeout(() => {
+                    semesterSelect.value = String(user.semester);
+                }, 50);
+            }
+        }
+
+        // Form submit → redirect to dashboard with URL params
+        academicForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const year = yearSelect.value;
+            const branch = year === '1' ? 'ALL' : branchSelect.value;
+            const sem = year === '1' ? '1' : semesterSelect.value;
+
+            if (!year) {
+                showToast("Please select a year", "error");
+                return;
+            }
+            if (year !== '1' && !branchSelect.value) {
+                showToast("Please select a branch", "error");
+                return;
+            }
+            if (year !== '1' && !semesterSelect.value) {
+                showToast("Please select a semester", "error");
+                return;
+            }
+
+            const params = new URLSearchParams({ year, branch, sem });
+            window.location.href = `student_dashboard.html?${params.toString()}`;
+        });
+
+        continueBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (!academicForm.reportValidity()) return;
+            academicForm.dispatchEvent(new Event('submit'));
+        });
+    </script>
+</body>
+
+</html>

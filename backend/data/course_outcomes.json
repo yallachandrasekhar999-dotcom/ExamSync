@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "subject_id": 1,
+        "outcome_text": "CO1: Understand calculus basics.",
+        "order": 1
+    },
+    {
+        "id": 2,
+        "subject_id": 1,
+        "outcome_text": "CO2: Apply differential equations.",
+        "order": 2
+    },
+    {
+        "id": 3,
+        "subject_id": 5,
+        "outcome_text": "CO1: Analyze algorithms.",
+        "order": 1
+    },
+    {
+        "id": 4,
+        "subject_id": 5,
+        "outcome_text": "CO2: Implement linked lists and trees.",
+        "order": 2
+    }
+]

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Exam Sync</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 20px;
+            font-family: 'Poppins', sans-serif;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: none;
+            z-index: 1;
+        }
+
+        .login-container {
+            position: relative;
+            z-index: 10;
+            padding: 50px;
+            border-radius: 24px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            animation: slideUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            color: var(--navy);
+        }
+
+        .login-header h2 {
+            margin-bottom: 12px;
+            color: var(--navy);
+            font-weight: 800;
+            font-size: 36px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-header p {
+            color: var(--text-light);
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: rgba(16, 24, 40, 0.88);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            font-size: 16px;
+            transition: 0.3s;
+            color: var(--navy);
+            font-weight: 500;
+        }
+
+        .form-group input::placeholder {
+            color: rgba(102, 112, 133, 0.9);
+        }
+
+        .form-group input:focus {
+            border-color: rgba(124, 119, 255, 0.35);
+            background: rgba(255, 255, 255, 0.92);
+            outline: none;
+            box-shadow: 0 0 0 6px rgba(124, 119, 255, 0.14);
+        }
+
+        .btn-block {
+            width: 100%;
+            margin-top: 20px;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #6c63ff, #4338ca);
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-block:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .error-msg {
+            background: rgba(255, 107, 107, 0.1);
+            color: var(--coral);
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 20px;
+            display: none;
+            border: 1px solid rgba(255, 107, 107, 0.2);
+        }
+
+        .otp-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .footer-links {
+            margin-top: 25px;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+        }
+
+        .footer-links a {
+            color: #8b85ff;
+            text-decoration: none;
+            font-weight: 700;
+            margin-left: 5px;
+            transition: all 0.3s;
+        }
+
+        .footer-links a:hover {
+            text-shadow: 0 0 8px rgba(139, 133, 255, 0.5);
+            color: white;
+        }
+
+        .resend-otp {
+            margin-top: 15px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .resend-otp span {
+            color: var(--purple);
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* Faculty Theme Overrides */
+        .login-container.faculty-theme {
+            background: rgba(10, 40, 40, 0.7);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 201, 167, 0.3);
+            border-color: rgba(0, 201, 167, 0.2);
+        }
+
+        .faculty-theme .btn-block {
+            background: linear-gradient(90deg, #00c9a7, #00897b);
+        }
+
+        .faculty-theme .btn-block:hover {
+            box-shadow: 0 10px 20px rgba(0, 201, 167, 0.4);
+        }
+
+        .faculty-theme .form-group input:focus {
+            border-color: #00c9a7;
+            box-shadow: 0 0 15px rgba(0, 201, 167, 0.3);
+        }
+
+        .faculty-theme .footer-links a {
+            color: #00c9a7;
+        }
+    </style>
+</head>
+
+<body class="auth-page">
+    <a href="index.html" class="back-arrow"
+        style="position: fixed; top: 20px; left: 20px; text-decoration: none; color: white; font-size: 14px; font-weight: 600; background: rgba(0,0,0,0.3); padding: 8px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(4px); transition: 0.3s; z-index: 1000;">&larr; Back to Home</a>
+    <div class="login-container auth-card faculty-theme">
+        <!-- Step 1: Credentials -->
+        <div id="credentialsSection">
+            <div class="login-header">
+                <h2>Welcome Back</h2>
+                <p>Enter your details to access your dashboard.</p>
+            </div>
+ 
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Dr. Sarah Smith" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="name@example.com" required />
+                </div>
+ 
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required />
+                </div>
+ 
+                <button type="submit" class="btn primary btn-block" id="loginBtn">Login to Exam Sync</button>
+            </form>
+        </div>
+ 
+        <p class="error-msg" id="errorMsg"></p>
+ 
+        <div class="footer-links">
+            <a href="forgot_password.html?role=author" id="forgotPasswordLink">Forgot Password?</a>
+            <br><br>
+            <span style="color: rgba(255, 255, 255, 0.4); font-size: 12px;">Contact admin for faculty credentials.</span>
+        </div>
+    </div>
+ 
+    <script type="module">
+        import { login } from './js/auth.js';
+        import { showToast } from './js/notifications.js';
+ 
+        const loginForm = document.getElementById('loginForm');
+        const loginBtn = document.getElementById('loginBtn');
+ 
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+ 
+            loginBtn.disabled = true;
+            loginBtn.textContent = "Verifying Credentials...";
+ 
+            try {
+                const result = await login(email, password, name);
+                if (result.success) {
+                    showToast("Login Successful! Redirecting...", "success");
+                    setTimeout(() => {
+                        if (result.role === 'admin') window.location.href = 'admin_dashboard.html';
+                        else if (result.role === 'author') window.location.href = 'author_dashboard.html';
+                        else window.location.href = 'academic_profile.html';
+                    }, 1000);
+                } else {
+                    showToast(result.message || "Invalid name, email or password.", "error");
+                    loginBtn.disabled = false;
+                    loginBtn.textContent = "Try Again";
+                }
+            } catch (error) {
+                showToast("Server Error. Please try again.", "error");
+                loginBtn.disabled = false;
+                loginBtn.textContent = "Login to Exam Sync";
+            }
+        });
+    </script>
+</body>
+
+</html>

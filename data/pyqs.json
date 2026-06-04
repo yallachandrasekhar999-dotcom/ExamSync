@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "subject_id": 1,
+        "title": "2023 End Sem",
+        "link": "#",
+        "year": 2023
+    },
+    {
+        "id": 2,
+        "subject_id": 1,
+        "title": "2022 End Sem",
+        "link": "#",
+        "year": 2022
+    },
+    {
+        "id": 3,
+        "subject_id": 5,
+        "title": "2024 Mid Sem",
+        "link": "#",
+        "year": 2024
+    },
+    {
+        "id": 4,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "title": "model paer 1",
+        "link": "images/pyqs/physics_model_paper_1.jpeg",
+        "year": 2024
+    },
+    {
+        "id": 5,
+        "subject_id": 1000,
+        "subject_name": "Engineering Physics",
+        "title": "model paper 2",
+        "link": "images/pyqs/physics_model_paper_2.jpeg",
+        "year": 2024
+    }
+]

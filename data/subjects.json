@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "semester_id": 1,
+        "name": "Mathematics I",
+        "code": "MA101"
+    },
+    {
+        "id": 2,
+        "semester_id": 1,
+        "name": "Physics",
+        "code": "PH101"
+    },
+    {
+        "id": 3,
+        "semester_id": 1,
+        "name": "Programming in C",
+        "code": "CS101"
+    },
+    {
+        "id": 4,
+        "semester_id": 2,
+        "name": "Mathematics II",
+        "code": "MA102"
+    },
+    {
+        "id": 5,
+        "semester_id": 2,
+        "name": "Engineering Drawing",
+        "code": "ME101"
+    },
+    {
+        "id": 6,
+        "semester_id": 3,
+        "name": "Data Structures",
+        "code": "CS201"
+    },
+    {
+        "id": 7,
+        "semester_id": 4,
+        "name": "Algorithms",
+        "code": "CS202"
+    },
+    {
+        "id": 8,
+        "semester_id": 5,
+        "name": "Operating Systems",
+        "code": "CS301"
+    },
+    {
+        "id": 9,
+        "semester_id": 6,
+        "name": "Computer Networks",
+        "code": "CS302"
+    }
+]

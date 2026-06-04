@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Exam Sync</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: transparent;
+            color: var(--text-dark);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+
+        .dashboard-nav {
+            background: var(--surface);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-soft);
+            padding: 14px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--navy);
+        }
+
+        .nav-brand img {
+            height: 35px;
+            border-radius: 8px;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 5px;
+            background: rgba(16, 24, 40, 0.04);
+            padding: 5px;
+            border-radius: 12px;
+        }
+
+        .nav-tab {
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .nav-tab.active {
+            background: var(--surface-strong);
+            color: var(--navy);
+            box-shadow: var(--shadow-md);
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-pill {
+            background: rgba(124, 119, 255, 0.10);
+            color: var(--navy);
+            padding: 8px 18px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .role-badge {
+            background: var(--coral);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .logout-link {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: var(--surface-strong);
+            padding: 25px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border: 1px solid var(--border-soft);
+        }
+
+        .stat-val {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--navy);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .chart-container {
+            background: var(--surface-strong);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            margin-bottom: 30px;
+            height: 350px;
+            border: 1px solid var(--border-soft);
+        }
+
+        .admin-card {
+            background: var(--surface-strong);
+            border-radius: var(--radius-md);
+            padding: 30px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 30px;
+            border: 1px solid var(--border-soft);
+        }
+
+        .admin-card h2 {
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dashboard-section {
+            display: none;
+        }
+
+        .dashboard-section.active {
+            display: block;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid var(--border-soft);
+            background: rgba(255, 255, 255, 0.85);
+            color: var(--navy);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: rgba(124, 119, 255, 0.35);
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 0 0 6px rgba(124, 119, 255, 0.14);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        th {
+            font-weight: 700;
+            color: var(--text-light);
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        /* Logout Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(16, 24, 40, 0.4);
+            backdrop-filter: blur(8px);
+            z-index: 4000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInLogout 0.3s ease;
+        }
+
+        @keyframes fadeInLogout {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .logout-modal {
+            background: white;
+            width: 450px;
+            max-width: 90%;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            border: 1px solid var(--border-soft, #eee);
+            animation: slideUpLogout 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes slideUpLogout {
+            from { transform: translateY(40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .logout-modal h2 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--navy, #111827);
+            margin: 0 0 15px 0;
+            line-height: 1.3;
+        }
+
+        .logout-modal p {
+            font-size: 14px;
+            color: var(--text-light, #6b7280);
+            margin: 0 0 30px 0;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn-confirm-logout {
+            background: var(--coral, #ff6b6b);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+        }
+
+        .btn-confirm-logout:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn-cancel-logout {
+            background: #f1f5f9;
+            color: var(--text-light, #6b7280);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+        }
+
+        .btn-cancel-logout:hover {
+            background: #e2e8f0;
+            color: var(--navy, #111827);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="dashboard-nav">
+        <div class="nav-brand">
+            <img src="images/book.jpg" alt="Logo">
+            <span>Exam Sync Admin</span>
+        </div>
+        <div class="nav-tabs">
+            <div class="nav-tab active" data-section="overview">Overview</div>
+            <div class="nav-tab" data-section="authors">Authors</div>
+            <div class="nav-tab" data-section="students">Students</div>
+            <div class="nav-tab" data-section="subjects">Curriculum</div>
+        </div>
+        <div class="user-menu">
+            <div class="user-pill">
+                <span id="adminName">Admin</span>
+                <span class="role-badge">Super Admin</span>
+            </div>
+            <span id="logoutBtn" class="logout-link">Logout</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Overview Section -->
+        <div id="overview" class="dashboard-section active">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-val" id="totalStudents">0</div>
+                    <div class="stat-label">Students</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" id="totalAuthors">0</div>
+                    <div class="stat-label">Faculty</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" id="totalSubjects">0</div>
+                    <div class="stat-label">Subjects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" style="color: var(--mint);">Active</div>
+                    <div class="stat-label">System</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="platformChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Authors Section -->
+        <div id="authors" class="dashboard-section">
+            <div class="admin-card">
+                <h2>Manage Authors</h2>
+                <form id="addAuthorForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="authName" placeholder="Dr. Sarah Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" id="authEmail" placeholder="sarah@example.com" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn primary">Add New Faculty</button>
+                </form>
+                <div style="margin-top: 30px;">
+                    <h3>Author Directory</h3>
+                    <table id="authorsList">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Students Section -->
+        <div id="students" class="dashboard-section">
+            <div class="admin-card">
+                <h2>Student Management</h2>
+                <div style="margin-top: 10px;">
+                    <h3>Student Directory</h3>
+                    <table id="studentsList">
+                        <thead>
+                            <tr>
+                                <th>Student Details</th>
+                                <th>Email</th>
+                                <th>Academic Info</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Curriculum Section -->
+        <div id="subjects" class="dashboard-section">
+            <div class="admin-card">
+                <h2>Curriculum Builder</h2>
+                <form id="addSubjectForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Semester</label>
+                            <select id="subSem">
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                                <option value="7">Semester 7</option>
+                                <option value="8">Semester 8</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject Name</label>
+                            <input type="text" id="subName" placeholder="Data Structures" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn primary">Create Subject</button>
+                </form>
+            </div>
+        </div>
+        <!-- Subject Assignment Modal -->
+        <div class="modal" id="assignmentModal"
+            style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); backdrop-filter:blur(8px); z-index:2000; justify-content:center; align-items:center;">
+            <div class="modal-content"
+                style="background:white; width:500px; border-radius:24px; padding:40px; box-shadow:0 25px 50px rgba(0,0,0,0.2); border:1px solid #eee;">
+                <h2 style="font-weight:800; color:var(--navy); margin:0 0 10px;">Assign Subjects</h2>
+                <p style="color:var(--text-light); font-size:14px; margin-bottom:25px;">Assigning curriculum for <span
+                        id="assignAuthorName" style="color:var(--purple); font-weight:700;">Author</span></p>
+
+                <form id="assignmentForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Target Branch</label>
+                            <select id="assignBranch" required></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Semester</label>
+                            <select id="assignSem" disabled required>
+                                <option value="">Select Semester</option>
+                                <option value="1">Sem 1</option>
+                                <option value="2">Sem 2</option>
+                                <option value="3">Sem 3</option>
+                                <option value="4">Sem 4</option>
+                                <option value="5">Sem 5</option>
+                                <option value="6">Sem 6</option>
+                                <option value="7">Sem 7</option>
+                                <option value="8">Sem 8</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:10px;">
+                        <label style="display:block; margin-bottom:10px; font-weight:600; font-size:14px;">Select
+                            Subjects</label>
+                        <div id="assignSubjectList"
+                            style="max-height:200px; overflow-y:auto; border:1px solid #eee; border-radius:12px; padding:15px; background:#fafafa;">
+                            <p style="color:#999; font-size:13px; text-align:center;">Select Branch/Semester first</p>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; gap:15px; margin-top:30px;">
+                        <button type="button" class="btn" onclick="closeAssignmentModal()"
+                            style="background:#f1f5f9; color:var(--text-light); flex:1;">Cancel</button>
+                        <button type="submit" class="btn primary" style="flex:2;">Save Assignments</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Logout Modal -->
+        <div class="modal-overlay" id="logoutModal">
+            <div class="logout-modal">
+                <h2>Are you sure you want to log out?</h2>
+                <p>You will need to log in again to access your account.</p>
+                <div class="modal-buttons">
+                    <button class="btn-confirm-logout" id="confirmLogoutBtn">Log out</button>
+                    <button class="btn-cancel-logout" id="cancelLogoutBtn">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <script type="module">
+            import { usersAPI, curriculumAPI, authAPI } from './js/api.js';
+            import { requireAuth, logout } from './js/auth.js';
+            import { showToast } from './js/notifications.js';
+
+            const user = await requireAuth(['admin']);
+            if (user) {
+                document.getElementById('adminName').textContent = user.name;
+                initDashboard();
+            }
+
+            const logoutModal = document.getElementById('logoutModal');
+            const confirmLogoutBtn = document.getElementById('confirmLogoutBtn');
+            const cancelLogoutBtn = document.getElementById('cancelLogoutBtn');
+
+            document.getElementById('logoutBtn').onclick = () => {
+                logoutModal.style.display = 'flex';
+            };
+
+            cancelLogoutBtn.onclick = () => {
+                logoutModal.style.display = 'none';
+            };
+
+            confirmLogoutBtn.onclick = () => {
+                logout('admin_login.html');
+            };
+
+            // Navigation
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.onclick = () => {
+                    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.dashboard-section').forEach(s => s.classList.remove('active'));
+                    tab.classList.add('active');
+                    document.getElementById(tab.dataset.section).classList.add('active');
+                };
+            });
+
+            let platformChart = null;
+
+            // Load Data and Initialize Charts
+            async function initDashboard() {
+                const users = await usersAPI.listUsers();
+                const students = users.filter(u => u.role === 'student');
+                const authors = users.filter(u => u.role === 'author');
+
+                // Fetch dynamic subject data for statistics
+                let subjectCount = 0;
+                try {
+                    const response = await fetch('data/collegesubjects/subjects.json');
+                    const data = await response.json();
+                    Object.values(data.branches).forEach(branch => {
+                        Object.values(branch.semesters).forEach(sem => {
+                            subjectCount += sem.subjects.length;
+                        });
+                    });
+                } catch (e) {
+                    subjectCount = 120; // Default if file not accessible
+                }
+
+                document.getElementById('totalStudents').textContent = students.length;
+                document.getElementById('totalAuthors').textContent = authors.length;
+                document.getElementById('totalSubjects').textContent = subjectCount;
+
+                const ctx = document.getElementById('platformChart').getContext('2d');
+                
+                // Fix: Destroy existing chart before creating a new one
+                if (platformChart) {
+                    platformChart.destroy();
+                }
+
+                platformChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                        datasets: [{
+                            label: 'Student Growth',
+                            data: [10, 25, 45, students.length + 30, students.length + 50, students.length + 80],
+                            borderColor: '#6c63ff',
+                            backgroundColor: 'rgba(108, 99, 255, 0.1)',
+                            fill: true,
+                            tension: 0.4
+                        }, {
+                            label: 'Curriculum Coverage',
+                            data: [20, 40, 60, 80, 95, 100],
+                            borderColor: '#00c9a7',
+                            backgroundColor: 'rgba(0, 201, 167, 0.1)',
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                                labels: { usePointStyle: true, font: { weight: 600 } }
+                            }
+                        },
+                        scales: {
+                            y: { beginAtZero: true, grid: { display: false } },
+                            x: { grid: { display: false } }
+                        }
+                    }
+                });
+
+                // Populate Authors Table
+                const tbody = document.querySelector('#authorsList tbody');
+                tbody.innerHTML = authors.map(a => `
+                <tr>
+                    <td>
+                        <div style="font-weight: 700; color: var(--navy);">${a.name}</div>
+                        <div style="font-size: 11px; color: var(--text-light);">${a.username}</div>
+                    </td>
+                    <td>${a.email}</td>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <span class="role-badge" style="background: var(--mint)">Active</span>
+                            <button class="btn-icon" onclick="openAssignmentModal(${a.id}, '${a.name}')" title="Assign Subjects" 
+                                style="background: var(--purple); color: white; border: none; width: 30px; height: 30px; border-radius: 8px; cursor: pointer; font-weight: 800; display: flex; align-items: center; justify-content: center; transition: 0.3s;">
+                                +
+                            </button>
+                            <button class="btn-icon" onclick="deleteAuthor(${a.id}, '${a.name}')" title="Remove Author" 
+                                style="background: var(--coral); color: white; border: none; width: 30px; height: 30px; border-radius: 8px; cursor: pointer; font-weight: 800; display: flex; align-items: center; justify-content: center; transition: 0.3s;">
+                                &times;
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+
+                // Populate Students Table
+                const stbody = document.querySelector('#studentsList tbody');
+                stbody.innerHTML = students.map(s => `
+                <tr>
+                    <td>
+                        <div style="font-weight: 700; color: var(--navy);">${s.name}</div>
+                        <div style="font-size: 11px; color: var(--text-light);">${s.username}</div>
+                    </td>
+                    <td>${s.email}</td>
+                    <td>
+                        <div style="font-size: 13px; font-weight: 500; color: var(--navy);">
+                            ${s.branch || 'N/A'} - Year ${s.year || '?'}
+                        </div>
+                        <div style="font-size: 11px; color: var(--text-light);">
+                            Semester ${s.semester || '?'}
+                        </div>
+                    </td>
+                    <td>
+                        <button class="btn-icon" onclick="deleteStudent(${s.id}, '${s.name}')" title="Remove Student" 
+                            style="background: var(--coral); color: white; border: none; width: 30px; height: 30px; border-radius: 8px; cursor: pointer; font-weight: 800; display: flex; align-items: center; justify-content: center; transition: 0.3s;">
+                            &times;
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+            }
+
+            window.deleteStudent = async (userId, name) => {
+                if (!confirm(`Are you sure you want to remove student "${name}"?`)) return;
+                
+                try {
+                    await usersAPI.deleteUser(userId);
+                    showToast(`Student "${name}" removed successfully`, "success");
+                    await initDashboard();
+                } catch (err) {
+                    showToast("Failed to remove: " + err.message, "error");
+                }
+            };
+
+            window.deleteAuthor = async (userId, name) => {
+                if (!confirm(`Are you sure you want to remove author "${name}"?`)) return;
+                
+                try {
+                    await usersAPI.deleteUser(userId);
+                    showToast(`Author "${name}" removed successfully`, "success");
+                    await initDashboard();
+                } catch (err) {
+                    showToast("Failed to remove: " + err.message, "error");
+                }
+            };
+
+            initDashboard();
+
+            // Forms Logic
+            document.getElementById('addAuthorForm').onsubmit = async (e) => {
+                e.preventDefault();
+                const name = document.getElementById('authName').value;
+                const email = document.getElementById('authEmail').value;
+                const defaultPassword = 'faculty123';
+
+                const btn = e.target.querySelector('button[type="submit"]');
+                const originalBtnText = btn.textContent;
+                
+                try {
+                    // Visual feedback immediately
+                    btn.disabled = true;
+                    btn.textContent = 'Processing...';
+
+                    const result = await authAPI.signup(
+                        email, // username
+                        email, // email
+                        name,
+                        defaultPassword,
+                        'author'
+                    );
+
+                    // Note: api.js throws on response.ok == false, so result is always success here
+                    const isEmailSent = result && result.email_sent;
+                    
+                    // CRITICAL: Clear loading state and show message BEFORE awaiting the UI refresh
+                    e.target.reset();
+                    btn.disabled = false;
+                    btn.textContent = originalBtnText;
+
+                    if (typeof showToast === 'function') {
+                        showToast('faculty added sucessfully', 'success');
+                        setTimeout(() => {
+                            showToast('Email Sent Successfully', 'success');
+                        }, 1000);
+                    } else {
+                        alert('faculty added sucessfully\nEmail Sent Successfully');
+                    }
+                    
+                    // Now refresh the dashboard in the background
+                    await initDashboard(); 
+                } catch (error) {
+                    console.error('Signup Error:', error);
+                    const errorMsg = error.message || 'Error creating faculty';
+                    
+                    // Also clear loading state on error
+                    btn.disabled = false;
+                    btn.textContent = originalBtnText;
+
+                    if (typeof showToast === 'function') {
+                        showToast(errorMsg, 'error');
+                    } else {
+                        alert('Failed: ' + errorMsg);
+                    }
+                }
+            };
+
+            // Assignment Modal Logic
+            let currentAuthorId = null;
+            const assignmentModal = document.getElementById('assignmentModal');
+            const BRANCH_MAPPING = {
+                "First Year": 0,
+                "CSE": 1,
+                "ECE": 2,
+                "EEE": 3,
+                "IT": 4,
+                "MECH": 5,
+                "AIML": 6,
+                "AIDS": 7
+            };
+
+            function generateSubjectId(branch, semester, index) {
+                const branchIdx = BRANCH_MAPPING[branch] || 0;
+                return (branchIdx * 10000) + (semester * 100) + index;
+            }
+
+            window.openAssignmentModal = async (authorId, authorName) => {
+                currentAuthorId = authorId;
+                document.getElementById('assignAuthorName').textContent = authorName;
+                assignmentModal.style.display = 'flex';
+
+                // Load branches
+                const branches = ['First Year', 'CSE', 'ECE', 'EEE', 'IT', 'MECH', 'AIML', 'AIDS'];
+                const branchSelect = document.getElementById('assignBranch');
+                branchSelect.innerHTML = '<option value="">Select Branch</option>' +
+                    branches.map(b => `<option value="${b}">${b}</option>`).join('');
+            };
+
+            window.closeAssignmentModal = () => {
+                assignmentModal.style.display = 'none';
+            };
+
+            document.getElementById('assignBranch').onchange = async (e) => {
+                const branch = e.target.value;
+                const semSelect = document.getElementById('assignSem');
+                if (!branch) { semSelect.disabled = true; return; }
+                semSelect.disabled = false;
+            };
+
+            document.getElementById('assignSem').onchange = async (e) => {
+                const sem = e.target.value;
+                const branch = document.getElementById('assignBranch').value;
+                const subList = document.getElementById('assignSubjectList');
+                subList.innerHTML = 'Loading subjects...';
+
+                try {
+                    const response = await fetch('data/collegesubjects/subjects.json');
+                    const data = await response.json();
+                    const semNum = parseInt(sem);
+                    const isFirstYear = (semNum === 1 || semNum === 2);
+
+                    let subjects = [];
+                    if (isFirstYear && data.first_year && data.first_year.subjects) {
+                        subjects = data.first_year.subjects.map((s, i) => ({
+                            id: i + 1000,
+                            name: typeof s === 'object' ? s.name : s,
+                            code: typeof s === 'object' ? (s.code || `FY-${i + 1}`) : `FY-${i + 1}`
+                        }));
+                    } else {
+                        const semKey = 'sem' + sem;
+                        const branchData = data.branches?.[branch];
+                        if (branchData && branchData.semesters?.[semKey]) {
+                            subjects = branchData.semesters[semKey].subjects.map((s, i) => ({
+                                id: i + 1000,
+                                name: typeof s === 'object' ? s.name : s,
+                                code: typeof s === 'object' ? (s.code || `${branch}-${sem}-${i + 1}`) : `${branch}-${sem}-${i + 1}`
+                            }));
+                        }
+                    }
+
+                    if (subjects.length === 0) {
+                        subList.innerHTML = '<p style="color:#999; font-size:13px; text-align:center;">No subjects found for this branch/semester.</p>';
+                        return;
+                    }
+
+                    subList.innerHTML = subjects.map((s, i) => {
+                        const uniqueId = generateSubjectId(branch || "First Year", semNum, i);
+                        return `
+                        <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px; padding:10px; background:#f8f9fa; border-radius:8px;">
+                            <input type="checkbox" name="assignSub" value="${uniqueId}" style="width: auto;">
+                            <label style="margin:0; font-size:13px; font-weight:600;">${s.name} (${s.code})</label>
+                        </div>
+                    `;
+                    }).join('');
+                } catch (err) {
+                    subList.innerHTML = 'Error loading subjects.';
+                }
+            };
+
+            document.getElementById('assignmentForm').onsubmit = async (e) => {
+                e.preventDefault();
+                const selectedSubIds = Array.from(document.querySelectorAll('input[name="assignSub"]:checked')).map(cb => parseInt(cb.value));
+
+                if (selectedSubIds.length === 0) {
+                    showToast("Please select at least one subject.", "warning");
+                    return;
+                }
+
+                try {
+                    await usersAPI.assignSubjects(currentAuthorId, selectedSubIds);
+                    showToast("Subjects assigned successfully!", "success");
+                    closeAssignmentModal();
+                } catch (err) {
+                    showToast("Failed to assign: " + err.message, "error");
+                }
+            };
+        </script>
+</body>
+
+</html>
